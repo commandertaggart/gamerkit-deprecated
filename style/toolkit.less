@@ -1,0 +1,228 @@
+
+/* fonts */
+/* @import 'http://fonts.googleapis.com/css?family=Trade+Winds'; */
+@font-face {
+  font-family: 'Default Title';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Trade Winds'), local('TradeWinds'), url(fonts/TradeWinds.woff) format('woff');
+}
+@font-face {
+  font-family: 'Default Value';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto.woff) format('woff');
+}
+@font-face {
+  font-family: 'Narrow Value';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Wire One'), local('WireOne'), url(fonts/WireOne.woff) format('woff');
+}
+@font-face {
+  font-family: 'Heavy Label';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Russo One'), local('RussoOne-Regular'), url(fonts/RussoOne.woff) format('woff');
+}
+@font-face {
+  font-family: 'Default Label';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Graduate'), local('Graduate-Regular'), url(fonts/Graduate.woff) format('woff');
+}
+
+/* begin theme parameters */
+
+/* colors */
+@pagecolor: black;
+@bgcolor: white;
+@txtcolor: black;
+@bordercolor: gray;
+@color1: navy;
+@color2: aliceblue;
+
+/* fonts */
+@titlefont: 'Default Title', cursive;
+
+/* end theme parameters */
+
+.toolkit2.app_page {
+	position: relative;
+	margin: 0px;
+	overflow: hidden;
+
+	.app_header {
+		background-color: @color1;
+		color: @color2;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 40px;
+		
+		.sidebar_handle {
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: transparent center center no-repeat url(img/lists_tab.jpeg);
+			background-size: 40px 40px;
+		}
+		
+		.app_title {
+			font-family: @titlefont;
+			font-size: 18pt;
+			display: block;
+			padding-top: 5px;
+			padding-left: 20px;
+			margin-left: 40px;
+		}
+		
+		.company_logo {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			background: transparent center center no-repeat url(img/ae_logo.png);
+			background-size: 30px 30px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	
+	#sidebar-mover
+	{
+		left: -300px;
+		z-index: 100;
+	}
+	
+	#body_cover
+	{
+		position: fixed;
+		z-index: 99;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+	}
+	
+	.ContentPanel
+	{
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+
+		.ContentTabs
+		{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			width: 280px;
+			background-color: @bordercolor;
+			padding-bottom: 4px;
+			box-shadow: 5px 0px 5px #888888;
+			
+			.ContentTab
+			{
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				height: 40px;
+				box-sizing: border-box;
+				padding-left: 50px;
+				line-height: 40px;
+				font-family: 'Default Label';
+				color: black;
+				text-decoration: none;
+				border-bottom: 1px solid black;
+				
+				&.admin
+				{ 
+					background: lightgray left center no-repeat url(img/admin_tab.jpeg);
+					background-size: 40px 40px;
+				}
+				&.lists
+				{ 
+					background: transparent center center no-repeat url(img/lists_tab.jpeg);
+					background-size: 40px 40px;
+				}
+				
+				&.active
+				{
+					background-color: @color2;
+					
+/*					&:after
+					{
+						content: "►";
+						font-size: 24pt;
+						position: absolute;
+						right: 4px;
+						top: 2px;
+						color: @color1;
+					} */
+				}
+				
+				IMG
+				{
+					width: 36px;
+					height: 36px;
+					display: inline-block;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+				}
+			}
+		}
+		
+		.ContentWrapper
+		{
+			margin-right: 68px;
+			margin-left: 10px;
+		}
+		
+		.ContentPages
+		{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			
+			background-color: @bgcolor;
+			
+			.ContentPage
+			{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch;
+				
+				.async_container
+				{
+					position: relative;
+					margin: 5px;
+				}
+				
+				&#admin,
+				&#lists
+				{
+				}
+				
+				IFRAME
+				{
+					border: 0px solid transparent;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+

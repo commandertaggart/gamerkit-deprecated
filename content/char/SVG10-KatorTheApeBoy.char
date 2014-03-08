@@ -1,0 +1,97 @@
+<character system="SVG10" type="PC" display-name="Kator the Ape Boy">
+	<attribute name="Name"><![CDATA[Kator the Ape Boy]]></attribute>
+	<attribute name="Player"><![CDATA[]]></attribute>
+	<attribute name="Origin"><![CDATA[]]></attribute>
+	<attribute name="Rating"><![CDATA[Seasoned (25 XP)]]></attribute>
+	<attribute name="Destination"><![CDATA[]]></attribute>
+	<attribute name="Agility"><![CDATA[8]]></attribute>
+	<attribute name="Smarts"><![CDATA[6]]></attribute>
+	<attribute name="Strength"><![CDATA[6]]></attribute>
+	<attribute name="Spirit"><![CDATA[8]]></attribute>
+	<attribute name="Vigor"><![CDATA[8]]></attribute>
+	<attribute name="Charisma"><![CDATA[-2]]></attribute>
+	<attribute name="Pace"><![CDATA[6]]></attribute>
+	<attribute name="Parry"><![CDATA[8]]></attribute>
+	<attribute name="Toughness"><![CDATA[6]]></attribute>
+	<attribute name="Fatigue"><![CDATA[]]></attribute>
+	<attribute name="Wounds"><![CDATA[]]></attribute>
+	<attribute name="PowerPoints"><![CDATA[]]></attribute>
+	<attribute name="Bennies"><![CDATA[3]]></attribute>
+	<attribute name="Hindrances">
+		<item><![CDATA[Clueless]]></item>
+		<item><![CDATA[Illiterate]]></item>
+		<item><![CDATA[Outsider]]></item>
+	</attribute>
+	<attribute name="Edges">
+		<item><![CDATA[Acrobat]]></item>
+		<item><![CDATA[Sweep]]></item>
+		<item><![CDATA[Woodsman]]></item>
+	</attribute>
+	<attribute name="Equipment">
+		<item><![CDATA[Loin cloth]]></item>
+		<item><![CDATA[Pouch of goodies (like nuts & grub worms)]]></item>
+	</attribute>
+	<attribute name="ArmorHead"><![CDATA[]]></attribute>
+	<attribute name="ArmorTorso"><![CDATA[]]></attribute>
+	<attribute name="ArmorArms"><![CDATA[]]></attribute>
+	<attribute name="ArmorLegs"><![CDATA[]]></attribute>
+	<attribute name="WTCarried"><![CDATA[]]></attribute>
+	<attribute name="WTLimit"><![CDATA[]]></attribute>
+	<attribute name="WTPenalty"><![CDATA[]]></attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Fighting]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Guts]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Notice]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Survival]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Swimming]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Throwing]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Tracking]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+	</attribute>
+	<attribute name="Weapons">
+		<item>
+			<name><![CDATA[Spear]]></name>
+			<range><![CDATA[2]]></range>
+			<rof><![CDATA[]]></rof>
+			<damage><![CDATA[1da[Strength]+1da6]]></damage>
+			<ap><![CDATA[]]></ap>
+			<wt><![CDATA[]]></wt>
+			<notes><![CDATA[Parry +1]]></notes>
+		</item>
+	</attribute>
+	<attribute name="Injuries"><![CDATA[]]></attribute>
+	<attribute name="Wealth"><![CDATA[]]></attribute>
+	<attribute name="Description"><![CDATA[]]></attribute>
+	<attribute name="Personality"><![CDATA[]]></attribute>
+	<attribute name="Background"><![CDATA[Buck and the crew discovered Kator on a trip deep into darkest Africa less than six months ago. Incredibly, Kator seems to have been orphaned in the jungle and raised by apes! He is incredibly tough and strong, and quite intelligent as well, though his lack of education makes him seem savage and ignorant. He speaks broken English now—“Kator want candy bar!”—and has only begun to learn to write his name. He’s quite eager for combat and ruthless when he wins. The Law of the Jungle frequently conflicts with the Dares’ more “civilized” ways. Kator loves Virginia and often fights with Buck over his jealousy. Virginia loves Kator in a motherly way, but the mixed signals confuse the unsophisticated ape boy.]]></attribute>
+	<attribute name="Notes"><![CDATA[Languages: English, Ape, Swahili]]></attribute>
+	<attribute name="DieRolls">
+	</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:SVG10-Kator]]></attribute>
+</character>

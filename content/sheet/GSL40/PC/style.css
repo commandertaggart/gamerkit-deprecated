@@ -1,0 +1,825 @@
+.section#top_bar
+{
+	margin-left: 20%;
+	position: relative;
+	@media (max-width: 360px)
+	{ margin-left: 72px; }
+	@media (min-width: 680px)
+	{ margin-left: 136px; }
+}
+
+.block#vitals
+{
+	margin: 0px;
+	position: relative;
+
+	.attribute
+	{
+		&#Token IMG
+		{
+			position: absolute;
+			top: 0px;
+			right: 100%;
+			padding: 0px;
+			padding-right: 10px;
+			float: left;
+			
+			width: 23%;
+			@media (max-width: 360px)
+			{ width: 64px; }
+			@media (min-width: 680px)
+			{ width: 128px; }
+		}
+		
+		&#Name { width: 49%; margin-right: 1%; }
+		&#Player { width: 50%; }
+		&#Class,
+		&#Race,
+		&#Level { width: 24%; margin-right: 1%; }
+		&#Size { width: 25%; }
+		&#Paragon,
+		&#Epic { width: 32%; margin-right: 1%; }
+		&#XP { width: 34%; }
+	}
+}
+
+&.print .block#vitals .attribute#Token IMG
+{
+	max-width: 110px;
+}
+
+.block#vitals2
+{
+	.attribute
+	{
+		&#Age,
+		&#Gender,
+		&#Height { width: 24%; margin-right: 1%; }
+		&#Weight { width: 25%; }
+		&#Align,
+		&#Deity { width: 32%; margin-right: 1%; }
+		&#Company { width: 34%; }
+	}
+}
+
+.block#attributes
+{
+	margin-top: 3px;
+	margin-bottom: 5px;
+	width: 42%;
+	margin-right: 7%;
+	display: inline-block;
+	
+	.attribute
+	{
+		display: inline-block;
+		width: 66%;
+		height: 30px;
+		border-top: 1px solid black;
+		border-right: 1px solid black;
+
+		&#Str,
+		&#Dex,
+		&#Con,
+		&#Int,
+		&#Wis,
+		&#Cha
+		{
+			width: 33%;
+			.attribute-label
+			{ display: none; }
+
+			.attribute-value
+			{ width: 100%; }
+		}
+		&#ChaBase,
+		&#Cha
+		{ border-bottom: 1px solid black; }
+
+		.attribute-label
+		{
+			font-size: 14pt;
+			font-family: 'Heavy Label', 'Default Label';
+			text-align: center;
+			width: 50%;
+			height: auto;
+			background-color: black;
+			color: white;
+			text-transform: uppercase;
+			border: 0px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+
+		.attribute-value
+		{
+			font-size: 14pt;
+			font-family: sans-serif;
+			text-align: center;
+			width: 50%;
+			height: auto;
+			margin: 0px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+	}
+	
+	.rollbutton
+	{
+		right: -66%;
+		top: 4px;
+	}
+}
+&.print .block#attributes
+{
+	.attribute
+	{
+		height: 25px;
+	
+		.attribute-label,
+		.attribute-value
+		{
+			font-size: 11pt;
+		}
+	}
+}
+	
+.block#defenses
+{
+	width: 49%;
+	margin-left: 0%;
+	display: inline-block;
+	
+	.attribute
+	{
+		width: 48.5%;
+		margin-left: 1%;
+	}
+	.attribute#AP
+	{
+		width: 100%;
+	}
+}
+
+.block#hp
+{
+	.attribute
+	{
+		&#SecondWind { width: 19%; margin-right: 1%; }
+		&#MaxHP { width: 19%; margin-right: 1%; }
+		&#TempHP { width: 19%; margin-right: 1%; }
+		&#Surges { width: 19%; margin-right: 1%; }
+		&#DeathSave { width: 20%; }
+	}
+}
+
+.block#stuff
+{
+	.list#Equipment
+	{
+		position: relative;
+		
+		.block#miused
+		{
+			text-align: center;
+			.attribute-label
+			{
+				font-size: 12pt;
+				color: black;
+				text-align: right;
+				margin-right: 10px;
+				width: auto;
+				height: auto;
+				border: 0px;
+			}
+			.attribute-value
+			{
+				width: auto;
+			}
+		}
+		
+		.dataset#weapon
+		{
+			width: auto;
+			.attribute
+			{
+				&#name { width: 49%; margin-right: 1%; }
+				&#bonus { width: 19%; margin-right: 1%; }
+				&#attack { width: 9%; margin-right: 1%; }
+				&#damage { width: 20%; }
+			}
+		}
+		
+	}
+}
+
+&.print .block#stuff 
+{
+	.list#Equipment
+	{
+		.block#miused
+		{
+			.attribute-label
+			{
+				font-size: 9pt;
+			}
+			.attribute-pip
+			{
+				width: 10px;
+				height: 10px;
+				border-radius: 6px;
+			}
+		}
+	}
+}
+
+.block#powers
+{
+	.list#Powers
+	{
+		.dataset#power
+		{
+			.attribute
+			{
+				&#keywords { width: 100%; }
+				&#action-type { width: 32%; margin-right: 1%; }
+				&#category { width: 32%; margin-right: 1%; }
+				&#range-type 
+				{
+					width: 33%;
+					.attribute-label
+					{ width: 200%; }
+				}
+				&#range-value
+				{
+					width: 33%;
+					.attribute-value
+					{ margin-top: 12px; }
+				}
+			}
+			.list#entries 
+			{
+				text-align: right;
+				
+				.list-body
+				{
+					text-align: left;
+					
+					.attribute, .dataset
+					{ border: 0px solid transparent; }
+				}
+				
+				.edit-button,
+				.unedit-button
+				{
+					position: relative;
+					top: auto;
+					right: auto;
+					&:after
+					{ content: " Power Entries"; }
+					margin-bottom: 4px;
+				}
+				.list-type-buttons
+				{
+					left: auto;
+					right: 100px;
+				}
+				.add-button
+				{
+					bottom: 2px;
+					width: auto;
+					height: auto;
+					border-radius: 4px;
+					text-align: center;
+					margin: 0px;
+					padding: 0px;
+					border: 1px solid grey;
+					font-size: 14px;
+				}
+				.add-button:before
+				{
+					content: "Add Power Entry";
+					margin-left: 10px;
+					margin-right: 10px;
+					font-size: 14px;
+				}
+			}
+	
+			.dataset-content
+			{
+				.list#weapons
+				{
+					#name
+					{ width: 49%; margin-right: 1%; }
+					#attack
+					{ width: 19%; margin-right: 1%; }
+					#damage
+					{ width: 30%; }
+				}
+			}
+		
+			.dataset-collapse
+			{
+				height: 20px;
+				.attribute#used
+				{
+					position: absolute;
+					width: 30px;
+					left: 20px;
+					top: -3px;
+					z-index: 1;
+					text-align: center;
+				}
+				.attribute#name
+				{
+					position: absolute;
+					width: auto;
+					top: 0px;
+					left: 49px;
+					right: 105px;
+					z-index: 1;
+			
+					INPUT
+					{ background-color: transparent; }
+				}
+				.attribute#use-type
+				{
+					position: absolute;
+					top: -2px;
+					right: 3px;
+					left: 0px;
+			
+					.attribute-value
+					{
+						direction: rtl;
+						font-family: 'Default Label';
+						font-size: 12pt;
+						padding-right: 8px;
+						padding-top: 2px;
+						padding-bottom: 2px;
+					}
+				}
+				.attribute-value#use-type[value=AtWill]
+				{ background-color: green; color: white; }
+				.attribute-value#use-type[value=Encounter]
+				{ background-color: darkred; color: white; }
+				.attribute-value#use-type[value=Daily]
+				{ background-color: black; color: white; }
+			}
+
+			.dataset#power-attack
+			{
+				.attribute
+				{
+					&#attack-attribute
+					{
+						width: 25%; margin-right: 1%;
+						.attribute-label
+						{ width: 400%; }
+					}
+					&#attack-bonus {
+						width: 49%;
+						margin-right: 1%;
+						margin-top: 12px;
+						
+						.attribute-value
+						{ width: 50%; }
+						
+						&:after
+						{
+							content: " vs. ";
+							font-size: 14pt;
+						}
+					}
+					&#defense
+					{
+						width: 24%;
+						margin-top: 9pt;
+					}
+				}
+			}
+			
+			.dataset#power-damage
+			{
+				.attribute
+				{
+					&#roll
+					{
+						width: 25%; margin-right: 1%;
+						.attribute-label
+						{ width: 400%; }
+						&:after
+						{
+							content: " + ";
+							font-size: 14pt;
+							position: absolute;
+							right: 0px;
+							bottom: 0px;
+						}
+					}
+					&#attribute
+					{
+						width: 24%; margin-right: 1%;
+						margin-top: 12px;
+					}
+					&#type
+					{
+						width: 49%;
+						margin-top: 12px;
+						.attribute-value
+						{ width: 50%; }
+						&:after
+						{
+							content: " damage";
+							font-size: 14pt;
+						}
+					}
+				}
+			}
+		}
+		
+		.dataset#magicweapon
+		{
+			border: 2px solid orange;
+			margin-bottom: 3px;
+			padding-left: 4px;
+			padding-right: 4px;
+			
+			.dataset-collapse
+			{
+				background-color: orange;
+				color: black;
+				padding-right: 32px;
+				margin-left: -4px;
+				margin-right: -4px;
+			}
+			
+			.dataset-content
+			{
+				margin-bottom: 4px;
+			}
+						
+			.attribute#name
+			{
+				&,
+				.attribute-value
+				{
+					background-color: orange;
+					font-family: 'Default Value';
+					color: black;
+					height: 25px;
+				}
+				
+				.attribute-label
+				{ display: none; }
+			}
+			
+			.attribute
+			{
+				&#name { width: 49%; margin-right: 1%; }
+				&#attack { width: 19%; margin-right: 1%; }
+				&#damage
+				{
+					width: 30%;
+					
+					.attribute-value
+					{
+						background-color: transparent;
+						font-family: inherit;
+						color: inherit;
+						height: 25px;
+					}
+				}
+
+				&#type
+				{ width: 50%; margin-right: 1%; }
+				&#level
+				{ width: 24%; margin-right: 1%; }
+				&#bonus
+				{ width: 24%; }
+				&#crit
+				{ width: 49%; margin-right: 1%; }
+				&#goldvalue
+				{ width: 50%; }
+				
+				&#powers .list-title
+				{ height: 28px; }
+			}
+		}
+		
+		.dataset#magicitem
+		{
+			border: 2px solid orange;
+			margin-bottom: 3px;
+			padding-left: 4px;
+			padding-right: 4px;
+			
+			.dataset-collapse
+			{
+				background-color: orange;
+				color: black;
+				margin-left: -4px;
+				margin-right: -4px;
+			}
+			
+			.dataset-content
+			{
+				width: 100%;
+				margin-bottom: 4px;
+			}
+			
+			.attribute#name
+			{
+				&,
+				.attribute-value
+				{
+					background-color: orange;
+					font-family: 'Default Value';
+					color: black;
+					height: 25px;
+				}
+				
+				.attribute-label
+				{ display: none; }
+			}
+			
+			.attribute#slot .attribute-value[value=Slot]
+			{
+				color: gray;
+			}
+			
+			.attribute
+			{
+				&#name { width: 69%; margin-right: 1%; }
+				&#slot { width: 30%; 
+					.attribute-value
+					{
+						background-color: transparent;
+						font-family: inherit;
+						color: inherit;
+						height: 25px;
+					}
+				}
+
+				&#powers .list-title
+				{ height: 28px; }
+			}
+		}
+
+		.list#powers
+		{
+			width: 100%;
+			
+			.list-title
+			{
+				background-color: white;
+				font-family: 'Default Label';
+				font-size: 11pt;
+				border-top: 1px solid gray;
+				text-align: left;
+				color: gray;
+			}
+			
+			.add-button
+			{
+				position: absolute;
+				top: 0px;
+				margin-top: 0px;
+				right: 60px;
+				border: 1px solid gray;
+				border-radius: 4px;
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+				height: 20px;
+				&:before
+				{
+					font-size: 11pt;
+				}
+			}
+			
+			.edit-button
+			{
+				top: 0px;
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+			}
+			
+			.dataset#magicpower
+			{
+				.attribute#type
+				{
+					width: 39%;
+					margin-right: 1%;
+				
+					.attribute-value#type[value=AtWill]
+					{ background-color: green; color: white; }
+					.attribute-value#type[value=Encounter]
+					{ background-color: darkred; color: white; }
+					.attribute-value#type[value=Daily]
+					{ background-color: black; color: white; }
+				}
+			
+				.attribute#keywords
+				{
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+&.print .page#powercards
+{
+	height: auto;
+	page-break-inside: auto;
+	padding-bottom: 1px;
+	text-align: center;
+	
+	.section
+	{ text-align: left; }
+}
+&.print .block#powers
+{
+	display: block;
+	
+	.list#Powers
+	{
+		display: block;
+		
+		.list-title
+		{ display: none; }
+		.list-body
+		{ display: block; }
+		
+		.dataset#attack-power,
+		.dataset#utility-power
+		{
+			&:nth-child(9n)
+			{
+				page-break-after: always;
+			}
+			
+			page-break-inside: avoid;
+			display: inline-block;
+			width: 2.45in;
+			height: 3.25in;
+			border: 1px solid black;
+			padding: 0.05in;
+			
+			.attribute-value { font-size: 8pt; }
+			.attribute-label { font-size: 6pt; }
+			
+			.dataset-collapse
+			{
+				.attribute#used
+				{ display: none; }
+				.attribute#name
+				{
+					left: 3px; 
+					right: 3px;
+					
+					.attribute-value
+					{ font-size: 11pt; }
+				}
+				.attribute#use-type .attribute-value
+				{
+					font-size: 6pt;
+					height: 22px;
+				}
+			}
+			
+			.dataset-content
+			{ width: 100%; }
+		}
+	}
+}
+
+.block#skills
+{
+	.list#skills
+	{
+		.list-labels 
+		{
+			position: relative;
+			height: 14px;
+
+			.attribute-label
+			{
+				position: absolute;
+				top: 0px;
+				width: auto;
+				&#name { left: 0px; right: 251px; }
+				&#trained { right: 192px; width: 54px; text-align: center; }
+				&#attribute { right: 108px; width: 79px; text-align: center; }
+				&#attrbonus { display: none; }
+				&#bonus { right: 69px; width: 34px; text-align: center; }
+				&#total { right: 0px; width: 64px; }
+			}
+		}
+		
+		.dataset
+		{
+			position: relative;
+			height: 32px;
+			
+			.attribute
+			{
+				position: absolute;
+				top: auto;
+				width: auto;
+				&#name { left: 0px; right: 231px; }
+				&#trained { right: 192px; width: 34px; }
+				&#attribute { right: 147px; width: 40px; }
+				&#attrbonus { right: 108px; width: 34px; text-align: center; }
+				&#bonus { right: 69px; width: 34px; }
+				&#total { right: 30px; width: 34px; text-align: center; }
+			}
+			
+			INPUT.attribute-value#bonus
+			{ text-align: center; }
+
+			.attribute#trained
+			{ padding-top: 5px; }
+		}
+	}
+}
+&.print .block#skills
+{
+	.list#skills
+	{
+		.dataset
+		{
+			height: 26px;
+		}
+	}
+}
+
+.attribute
+{
+	
+	&#Wealth .attribute-label,
+	&#Description .attribute-label,
+	&#Personality .attribute-label,
+	&#Background .attribute-label,
+	&#Appearance .attribute-label,
+	&#Allies .attribute-label,
+	&#Notes .attribute-label
+	{
+		color: white;
+		background-color: black;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+		font-family: 'Default Title';
+		font-size: 24px;
+		height: auto;
+	}
+}
+
+&.print .attribute
+{
+	&#Wealth .attribute-label,
+	&#Description .attribute-label,
+	&#Personality .attribute-label,
+	&#Background .attribute-label,
+	&#Appearance .attribute-label,
+	&#Allies .attribute-label,
+	&#Notes .attribute-label
+	{
+		font-size: 11pt;
+	}
+	
+	&#Wealth .attribute-value,
+	&#Description .attribute-value,
+	&#Personality .attribute-value,
+	&#Appearance .attribute-value,
+	&#Allies .attribute-value
+	{ height: 97px; }
+	
+	&#Background .attribute-value
+	{ height: 193px; }
+	
+	&#Notes .attribute-value
+	{ height: 426px; }
+}
+
+.list
+{
+	
+	&#DieRolls 
+	{
+		.attribute
+		{
+			&#name { width: 39%; margin-right: 1%; }
+			&#roll { width: 60%; }
+		}
+		
+		.rollbutton
+		{
+			width: 32px;
+			height: 32px;
+			background-size: 32px;
+			top: 8px;
+		}
+	}
+}

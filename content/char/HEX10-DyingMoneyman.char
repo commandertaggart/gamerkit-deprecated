@@ -1,0 +1,98 @@
+<character system="HEX10" display-name="Dying Moneyman" type="PC">
+	<attribute name="Name">Dying Moneyman</attribute>
+	<attribute name="Player"></attribute>
+	<attribute name="Archetype">Moneyman</attribute>
+	<attribute name="Motivation">Survival</attribute>
+	<attribute name="Body">2</attribute>
+	<attribute name="Dexterity">2</attribute>
+	<attribute name="Strength">2</attribute>
+	<attribute name="Charisma">3</attribute>
+	<attribute name="Intelligence">3</attribute>
+	<attribute name="Willpower">3</attribute>
+	<attribute name="Size">0</attribute>
+	<attribute name="Style">3</attribute>
+	<attribute name="Health">5</attribute>
+	<attribute name="Skills">
+		<item>
+			<name>Brawl</name>
+			<attribute>Strength</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Bureaucracy</name>
+			<attribute>Intelligence</attribute>
+			<ranks>4</ranks>
+		</item>
+		<item>
+			<name>Diplomacy</name>
+			<attribute>Charisma</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Firearms</name>
+			<attribute>Dexterity</attribute>
+			<ranks>3</ranks>
+		</item>
+		<item>
+			<name>Gambling</name>
+			<attribute>Intelligence</attribute>
+			<ranks>2</ranks>
+		</item>
+	</attribute>
+	<attribute name="Specializations">
+	</attribute>
+	<attribute name="Talents">
+	</attribute>
+	<attribute name="Resources">
+		<item>Wealth 2</item>
+	</attribute>
+	<attribute name="Flaws">
+		<item>Dying</item>
+	</attribute>
+	<attribute name="Weapons">
+		<item>
+			<name>.38 Special</name>
+			<lethal>true</lethal>
+			<damage>2</damage>
+			<modifier>0</modifier>
+			<attack>8</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+		<item>
+			<name>Punch</name>
+			<lethal>false</lethal>
+			<damage>0</damage>
+			<modifier>0</modifier>
+			<attack>4</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+	</attribute>
+	<attribute name="Equipment">
+	</attribute>
+	<attribute name="Wealth"></attribute>
+	<attribute name="Age"></attribute>
+	<attribute name="Gender"></attribute>
+	<attribute name="Height"></attribute>
+	<attribute name="Eyes"></attribute>
+	<attribute name="Hair"></attribute>
+	<attribute name="Skin"></attribute>
+	<attribute name="Languages">
+	</attribute>
+	<attribute name="Background"></attribute>
+	<attribute name="Notes"></attribute>
+	<attribute name="Campaign"></attribute>
+	<attribute name="Experience">0</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:HEX10-Moneyman]]></attribute>
+</character>

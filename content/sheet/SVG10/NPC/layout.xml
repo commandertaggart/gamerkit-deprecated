@@ -1,0 +1,84 @@
+<sheet system="SVG10" type="PC">
+	<block id="token" priority="placed">
+		<attribute name="Token" />
+	</block>
+	<block id="vitals" priority="placed">
+		<attribute name="Token" />
+		<attribute name="Name" />
+		<attribute name="Rating" />
+		<attribute name="Wounds" />
+		<attribute name="Fatigue" />
+		<attribute name="Agility" />
+		<attribute name="Smarts" />
+		<attribute name="Strength" />
+		<attribute name="Spirit" />
+		<attribute name="Vigor" />
+		<attribute name="Charisma" />
+		<attribute name="Pace" />
+		<attribute name="Parry" />
+		<attribute name="Toughness" />
+	</block>
+	<block id="skills" priority="required">
+		<attribute name="Skills" />
+	</block>
+	<block id="hindrances_edges" priority="required">
+		<attribute name="Hindrances" />
+		<attribute name="Edges" />
+	</block>
+	<block id="power_points" priority="placed">
+		<attribute name="PowerPoints" />
+	</block>
+	<block id="powers" priority="optional">
+		<attribute name="Powers">
+			<header id="power_points" />
+		</attribute>
+	</block>
+	<block id="weapons" priority="required">
+		<attribute name="Weapons" />
+	</block>
+	<block id="stuff" priority="required">
+		<attribute name="Equipment" />
+		<attribute name="ArmorHead" />
+		<attribute name="ArmorTorso" />
+		<attribute name="ArmorArms" />
+		<attribute name="ArmorLegs" />
+	</block>
+	<block id="injuries" priority="required">
+		<attribute name="Injuries" />
+	</block>
+	<block id="description" priority="required">
+		<attribute name="Description" />
+	</block>
+	<block id="notes" priority="required">
+		<attribute name="Notes" />
+	</block>
+	<block id="dice" priority="optional">
+		<attribute name="DieRolls" />
+	</block>
+	
+	<layout type="display" name="default" display-name="Default">
+		<section id='top_bar'>
+			<block id="vitals" />
+		</section>
+		<section id='main_body' column-width="600">
+			<tabs id='main_tabs'>
+				<section id="abilities" display="Abilities" column-bias='0'>
+					<block id="skills" />
+					<block id="hindrances_edges" />
+					<block id="powers" />
+				</section>
+				<section id="notes" display="Notes" column-bias='0'>
+					<block id="description" />
+					<block id="notes" />
+				</section>
+				<section id="stuff" display="Stuff" column-bias='1'>
+					<block id="weapons" />
+					<block id="stuff" />
+				</section>
+				<section id="dice" display="Dice" column-bias='1'>
+					<block id="dice" />
+				</section>
+			</tabs>
+		</section>
+	</layout>
+</sheet>

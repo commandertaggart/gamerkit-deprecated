@@ -1,0 +1,191 @@
+<sheet system="GSL40" type="PC">
+	<block id="token" priority="placed">
+		<attribute name="Token" />
+	</block>
+	<block id="vitals" priority="placed">
+		<attribute name="Token" />
+		<attribute name="Name" />
+		<attribute name="Player" />
+		<attribute name="Level" />
+		<attribute name="Class" />
+		<attribute name="Race" />
+		<attribute name="Size" />
+		<attribute name="Paragon" />
+		<attribute name="Epic" />
+		<attribute name="XP" />
+	</block>
+	<block id="vitals2" priority="placed">
+		<attribute name="Age" />
+		<attribute name="Gender" />
+		<attribute name="Height" />
+		<attribute name="Weight" />
+		<attribute name="Align" />
+		<attribute name="Deity" />
+		<attribute name="Company" />
+	</block>
+	<block id="attributes" priority="required">
+		<attribute name="StrBase" />
+		<attribute name="Str" />
+		<attribute name="DexBase" />
+		<attribute name="Dex" />
+		<attribute name="ConBase" />
+		<attribute name="Con" />
+		<attribute name="IntBase" />
+		<attribute name="Int" />
+		<attribute name="WisBase" />
+		<attribute name="Wis" />
+		<attribute name="ChaBase" />
+		<attribute name="Cha" />
+	</block>
+	<block id="defenses" priority="required">
+		<attribute name="AC" />
+		<attribute name="Fort" />
+		<attribute name="Ref" />
+		<attribute name="Will" />
+		<attribute name="Init" />
+		<attribute name="Speed" />
+		<attribute name="AP" />
+	</block>
+	<block id="hp" priority="required">
+		<attribute name="MaxHP" />
+		<attribute name="TempHP" />
+		<attribute name="Surges" />
+		<attribute name="SecondWind" />
+		<attribute name="DeathSave" />
+	</block>
+	<block id="saves" priority="required">
+		<attribute name="SaveMods" />
+		<attribute name="Resist" />
+		<attribute name="Conditions" />
+	</block>
+	<block id="features" priority="required">
+		<attribute name="RaceFeatures" />
+		<attribute name="ClassFeatures" />
+		<attribute name="ParagonFeatures" />
+		<attribute name="EpicFeatures" />
+	</block>
+	<block id="skills" priority="required">
+		<attribute name="Skills" />
+	</block>
+	<block id="feats">
+		<attribute name="Feats" />
+		<attribute name="Languages" />
+	</block>
+	<block id="powers" priority="required">
+		<attribute name="Powers" />
+	</block>
+	<block id="miused">
+		<attribute name="MIUsed" />
+	</block>
+	<block id="stuff">
+		<attribute name="Wealth" />
+		<attribute name="Equipment" header="miused" />
+		<attribute name="Rituals" />
+		<attribute name="Allies" />
+	</block>
+	<block id="description">
+		<attribute name="Personality" />
+		<attribute name="Appearance" />
+		<attribute name="Background" />
+	</block>
+	<block id="notes">
+		<attribute name="Notes" />
+	</block>
+	<block id="dice" priority="optional">
+		<attribute name="DieRolls" />
+	</block>
+	
+	<layout type="display" name="default" display-name="Default">
+		<section id='top_bar'>
+			<block id="vitals" />
+		</section>
+		<section id='top_bar2'>
+			<block id="vitals2" />
+		</section>
+		<section id='main_body'>
+			<tabs id='main_tabs'>
+				<section id="abilities" display="Abilities" column-bias="0">
+					<block id="attributes" />
+					<block id="defenses" />
+					<block id="hp" />
+					<block id="saves" />
+				</section>
+				<section id="stuff" display="Stuff" column-bias="0">
+					<block id="stuff" />
+				</section>
+				<section id="notes" display="Notes" column-bias="0">
+					<block id="description" />
+					<block id="notes" />
+				</section>
+				<section id="powers" display="Powers" column-bias="1">
+					<block id="powers" />
+				</section>
+				<section id="skills" display="Skills" column-bias="1">
+					<block id="skills" />
+					<block id="features" />
+				</section>
+				<section id="dice" display="Dice" column-bias="1">
+					<block id="dice" />
+				</section>
+			</tabs>
+		</section>
+	</layout>
+	
+	<layout type="print" name="default" display-name="Default">
+		<page>
+			<section id='top_bar'>
+				<block id="vitals" />
+			</section>
+			<section id='top_bar2'>
+				<block id="vitals2" />
+			</section>
+			<section id='page1_body'>
+				<column>
+					<section id="abilities" display="Abilities">
+						<block id="attributes" />
+						<block id="defenses" />
+						<block id="hp" />
+						<block id="saves" />
+						<block id="feats" />
+					</section>
+				</column>
+				<column>
+					<section id="skills" display="Skills">
+						<block id="skills" />
+					</section>
+				</column>
+			</section>
+		</page>
+		<page>
+			<section id='page2'>
+				<column>
+					<section id="stuff" display="Stuff">
+						<block id="stuff" />
+					</section>
+				</column>
+				<column>
+					<section id="notes" display="Notes">
+						<block id="features" />
+					</section>
+				</column>
+			</section>
+		</page>
+		<page>
+			<section id='page3'>
+				<block id="description" />
+				<block id="notes" />
+			</section>
+		</page>
+		<page id='powercards'>
+			<section id="powers">
+				<block id="powers" />
+			</section>
+		</page>
+	</layout>
+	
+	<layout type="print" name="powercards" display-name="Power Cards">
+		<section id="powers">
+			<block id="powers" />
+		</section>
+	</layout>
+</sheet>

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Gamers' Toolkit - 2.0</title>
+		<script data-main="js/char.js" src="/js/util/require.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text.css" href="/style/char.css" />
+		<link rel="stylesheet" type="text.css" href="/style/core.css" />
+		<link rel="stylesheet" type="text.css" href="/style/dice.css" />
+		
+		<!-- script src="http://tellim.dyndns.org/bricks/bricks/js/brick.js"></script -->
+		<script type="text/javascript">
+		
+		if (window.brick)
+		{
+			brick.setInfo({
+				name: "Gamers' Toolkit",
+				developer: "Abject Entertainment"
+			});
+		}
+		
+		function updateTitle(title)
+		{
+			if (window.brick)
+			{
+				brick.setInfo({
+					name: "GT2: " + title
+				});
+			}
+		}
+		
+		function goToFeedback(context)
+		{
+			if (window.parent != window)
+			{
+				window.parent.postMessage("feedback:" + JSON.stringify(context), "*");
+			}
+		}
+		</script>
+	</head>
+	<body class='toolkit2 char_page'>
+	</body>
+</html>

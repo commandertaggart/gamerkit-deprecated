@@ -1,0 +1,176 @@
+/* DIV.async_container
+{
+	position: absolute;
+	top: 40px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+} */
+
+DIV.lists_tabs
+{
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	
+	A
+	{
+		display: inline-block;
+		text-align: center;
+		height: 20px;
+		border: 1px solid black;
+		border-radius: 5px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		margin-bottom: -1px;
+		padding-top: 2px;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-decoration: none;
+		font-family: 'Default Label';
+		font-size: 10pt;
+		color: black;
+		
+		&:hover
+		{	
+			color: darkgray;
+		}
+		
+		&.active
+		{
+			background-color: lightgray;
+		}
+	}
+}
+
+DIV.lists_page
+{
+	position: absolute;
+	top: 69px;
+	bottom: 0px;
+	width: 280px;
+	
+	.char.list
+	{
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		overflow-x: visible;
+		overflow-y: auto;
+		
+		.char.preview
+		{
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			min-height: 41px;
+			background-color: lightgray;
+			border-bottom: 1px solid black;
+			padding-left: 0px;
+			height: auto;
+			cursor: pointer;
+
+			.title
+			{
+				display: block;
+				font-size: 14pt;
+				font-weight: bold;
+				height: 22px;
+				margin: 0px;
+				font-family: 'Default Title';
+				margin-left: 45px;
+				line-height: 28px;
+			}
+			
+			.token
+			{
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
+			}
+			
+			.subtitle
+			{
+				display: block;
+				font-size: 8pt;
+				font-weight: bold;
+				margin: 0px;
+				margin-bottom: 4px;
+				font-family: 'Default Label';
+				margin-left: 45px;
+				line-height: 14px;
+			}
+			
+			.body
+			{
+				display: block;
+				font-size: 10pt;
+				line-height: 14px;
+				font-weight: normal;
+				margin: 10px;
+				font-family: 'Default Value';
+				position: relative;
+			}
+			
+			.close-content
+			{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 20px;
+				height: 20px;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				font-size: 0px;
+				background: transparent center center no-repeat url(../img/rembtn16.png);
+				background-size: 20px 20px;
+				border: 0px;
+				z-index: 3;
+			}
+			
+			.info
+			{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 20px;
+				height: 20px;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				font-size: 0px;
+				background: transparent center center no-repeat url(../img/info.png);
+				background-size: 20px 20px;
+				border: 0px;
+				z-index: 2;
+			}
+		}
+	}
+	
+	.token.list
+	{
+		margin-top: 10px;
+		margin-left: 10px;
+		.token.preview
+		{
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom: 10px;
+
+			IMG
+			{
+				width: 64px;
+				height: 64px;
+				border: 1px solid black;
+				border-radius: 4px;
+			}
+		}
+	}
+}

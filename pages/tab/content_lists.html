@@ -1,0 +1,54 @@
+<script>
+	listClasses = {
+		char: 'content/char/CharacterList',
+		token: 'content/token/TokenList'
+	};
+	function showListsPage(page)
+	{
+		var $page = $("DIV.lists_page").empty();
+		
+		$.ajax({
+			url: "/api/list/" + page,
+			dataType: 'json',
+			success: function getListSuccess(list)
+			{
+				if (listClasses[page] != null)
+				{
+					require([listClasses[page]], function (listClass)
+					{
+						$page.append((new listClass(list)).$());
+					});
+				}
+			},
+			error: function getListError()
+			{
+				$page.append("<div class='error'>Could not retrieve content list.</div>");
+			}
+		});
+		
+		$("DIV.lists_tabs A").removeClass('active');
+		$("DIV.lists_tabs A#list_" + page).addClass('active');
+		window.__toolkit_lists_page = page;
+	}
+	
+	loadStyle('tab/lists.css');
+</script>
+<div class='lists_tabs'>
+	<a href='javascript:void(0);' id='list_char' onclick='javascript:showListsPage("char")'>Characters</a>
+	<a href='javascript:void(0);' id='list_token' onclick='javascript:showListsPage("token")'>Tokens</a>
+	<a href='javascript:void(0);' id='list_map' onclick='javascript:showListsPage("map")'>Maps</a>
+	<!-- a href='javascript:void(0);' id='list_list' onclick='javascript:showListsPage("list")'>Lists</a -->
+</div>
+
+<div class='lists_page'>
+</div>
+
+<script>
+	setTimeout(function () 
+	{
+		if (window.__toolkit_lists_page == null)
+		{ showListsPage("char"); }
+		else
+		{ showListsPage(window.__toolkit_lists_page); }
+	}, 0);
+</script>

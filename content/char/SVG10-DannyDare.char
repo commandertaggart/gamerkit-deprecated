@@ -1,0 +1,115 @@
+<character system="SVG10" type="PC" display-name="Danny Dare">
+	<attribute name="Name"><![CDATA[Danny Dare]]></attribute>
+	<attribute name="Player"><![CDATA[]]></attribute>
+	<attribute name="Origin"><![CDATA[]]></attribute>
+	<attribute name="Rating"><![CDATA[Seasoned (25 XP)]]></attribute>
+	<attribute name="Destination"><![CDATA[]]></attribute>
+	<attribute name="Agility"><![CDATA[8]]></attribute>
+	<attribute name="Smarts"><![CDATA[8]]></attribute>
+	<attribute name="Strength"><![CDATA[6]]></attribute>
+	<attribute name="Spirit"><![CDATA[6]]></attribute>
+	<attribute name="Vigor"><![CDATA[4]]></attribute>
+	<attribute name="Charisma"><![CDATA[0]]></attribute>
+	<attribute name="Pace"><![CDATA[6]]></attribute>
+	<attribute name="Parry"><![CDATA[4]]></attribute>
+	<attribute name="Toughness"><![CDATA[4]]></attribute>
+	<attribute name="Fatigue"><![CDATA[]]></attribute>
+	<attribute name="Wounds"><![CDATA[]]></attribute>
+	<attribute name="PowerPoints"><![CDATA[10]]></attribute>
+	<attribute name="Bennies"><![CDATA[3]]></attribute>
+	<attribute name="Hindrances">
+		<item><![CDATA[Bad Eyes (Minor-Lose glasses in fight 50%)]]></item>
+		<item><![CDATA[Big Mouth]]></item>
+		<item><![CDATA[Curious]]></item>
+	</attribute>
+	<attribute name="Edges">
+		<item><![CDATA[Investigator]]></item>
+		<item><![CDATA[Level Headed]]></item>
+		<item><![CDATA[Thief]]></item>
+	</attribute>
+	<attribute name="Equipment">
+		<item><![CDATA[Camera]]></item>
+		<item><![CDATA[5 rolls of film (20 pictures each)]]></item>
+		<item><![CDATA[Pad & pens]]></item>
+	</attribute>
+	<attribute name="ArmorHead"><![CDATA[]]></attribute>
+	<attribute name="ArmorTorso"><![CDATA[]]></attribute>
+	<attribute name="ArmorArms"><![CDATA[]]></attribute>
+	<attribute name="ArmorLegs"><![CDATA[]]></attribute>
+	<attribute name="WTCarried"><![CDATA[]]></attribute>
+	<attribute name="WTLimit"><![CDATA[]]></attribute>
+	<attribute name="WTPenalty"><![CDATA[]]></attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Climbing]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Fighting]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Guts]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Investigation]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Lockpicking]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Notice]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Persuasion]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Shooting]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Streetwise]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+	</attribute>
+	<attribute name="Powers"><![CDATA[
+	]]></attribute>
+	<attribute name="Weapons">
+		<item>
+			<name><![CDATA[Knife]]></name>
+			<range><![CDATA[1]]></range>
+			<rof><![CDATA[]]></rof>
+			<damage><![CDATA[1da[Strength]+1da4]]></damage>
+			<ap><![CDATA[]]></ap>
+			<wt><![CDATA[]]></wt>
+			<notes><![CDATA[]]></notes>
+		</item>
+		<item>
+			<name><![CDATA[.32 Pistol]]></name>
+			<range><![CDATA[12/24/48]]></range>
+			<rof><![CDATA[1]]></rof>
+			<damage><![CDATA[2da6-1]]></damage>
+			<ap><![CDATA[]]></ap>
+			<wt><![CDATA[]]></wt>
+			<notes><![CDATA[]]></notes>
+		</item>
+	</attribute>
+	<attribute name="Injuries"><![CDATA[]]></attribute>
+	<attribute name="Wealth"><![CDATA[]]></attribute>
+	<attribute name="Description"><![CDATA[]]></attribute>
+	<attribute name="Personality"><![CDATA[]]></attribute>
+	<attribute name="Background"><![CDATA[Danny is Virginia’s younger brother. He’s a gifted writer and journalist, and sometimes follows his sister around on her expeditions. Danny’s stories are known for their wild embellishments, but most are far more true than his loyal readers know!Danny starts a lot of trouble but tends to get out of the way fast. He’s weak up close so when fists start flying he usually gets behind Buck and uses his environment—or his trusty .32 pistol if pressed—to stay out of reach.]]></attribute>
+	<attribute name="Notes"><![CDATA[Languages: English, French, German, Spanish]]></attribute>
+	<attribute name="DieRolls"><![CDATA[
+	]]></attribute>
+	<attribute name="Token"><![CDATA[contentId,token:SVG10-Danny]]></attribute>
+</character>

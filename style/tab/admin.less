@@ -1,0 +1,90 @@
+
+DIV.admin_tabs
+{
+	border: 2px solid gray;
+	border-radius: 15px;
+	padding: 15px;
+	
+	A
+	{
+		display: inline-block;
+		text-align: center;
+		width: 100px;
+		height: 20px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-top: 2px;
+		text-decoration: none;
+		font-family: 'Default Label';
+		
+		&:hover
+		{	
+			border: 1px solid red;
+		}
+		
+		&.active
+		{
+			background-color: grey;
+			color: white;
+		}
+	}
+}
+
+DIV.admin_page
+{
+	position: relative;
+	top: -20px;
+	
+	.admin_page_title
+	{
+		font-family: 'Heavy Label';
+		font-size: 24pt;
+		border-left: 2px solid gray;
+		border-bottom: 2px solid gray;
+		border-bottom-left-radius: 15px;
+		margin: 0px;
+		margin-right: 30px;
+		min-height: 30px;
+		padding: 10px;
+		padding-top: 30px;
+	}
+	
+	.admin_page_subtitle
+	{
+		font-family: 'Default Label';
+		font-size: 10pt;
+		border-top: 2px solid gray;
+		border-right: 2px solid gray;
+		border-top-right-radius: 10px;
+		text-align: right;
+		margin: 0px;
+		margin-left: 30px;
+		min-height: 20px;
+		position: relative;
+		top: -2px;
+		padding: 5px;
+		padding-bottom: 20px;
+	}
+	
+	.admin_page_body
+	{
+		position: relative;
+		top: -20px;
+		border: 2px solid gray;
+		border-radius: 20px;
+		padding: 15px;
+		
+		H2
+		{
+			font-family: 'Default Title';
+			margin: 0px;
+			margin-bottom: 5px;
+		}
+		
+		P
+		{
+			margin: 0px;
+			margin-top: 10px;
+		}
+	}
+}

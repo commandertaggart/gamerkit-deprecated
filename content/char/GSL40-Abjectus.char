@@ -1,0 +1,428 @@
+<character system="GSL40" display-name="Abjectus" type="PC">
+	<attribute name="Player" />
+	<attribute name="Name"><![CDATA[Abjectus]]></attribute>
+	<attribute name="Level"><![CDATA[3]]></attribute>
+	<attribute name="Class"><![CDATA[Fighter]]></attribute>
+	<attribute name="Paragon" />
+	<attribute name="Epic" />
+	<attribute name="XP"><![CDATA[2250]]></attribute>
+	<attribute name="Race"><![CDATA[Human]]></attribute>
+	<attribute name="Size"><![CDATA[M]]></attribute>
+	<attribute name="Age" />
+	<attribute name="Gender" />
+	<attribute name="Height" />
+	<attribute name="Weight" />
+	<attribute name="Align"><![CDATA[Good]]></attribute>
+	<attribute name="Deity" />
+	<attribute name="Company" />
+	<attribute name="StrBase"><![CDATA[20]]></attribute>
+	<attribute name="DexBase"><![CDATA[10]]></attribute>
+	<attribute name="ConBase"><![CDATA[14]]></attribute>
+	<attribute name="IntBase"><![CDATA[10]]></attribute>
+	<attribute name="WisBase"><![CDATA[11]]></attribute>
+	<attribute name="ChaBase"><![CDATA[8]]></attribute>
+	<attribute name="AC"><![CDATA[20]]></attribute>
+	<attribute name="Fort"><![CDATA[20]]></attribute>
+	<attribute name="Ref"><![CDATA[15]]></attribute>
+	<attribute name="Will"><![CDATA[13]]></attribute>
+	<attribute name="Init"><![CDATA[1]]></attribute>
+	<attribute name="Speed"><![CDATA[5]]></attribute>
+	<attribute name="AP"><![CDATA[1]]></attribute>
+	<attribute name="MaxHP" max="46"><![CDATA[46]]></attribute>
+	<attribute name="CurHP" />
+	<attribute name="TempHP" />
+	<attribute name="Surges" max="11"><![CDATA[11]]></attribute>
+	<attribute name="SecondWind"><![CDATA[false]]></attribute>
+	<attribute name="DeathSave" />
+	<attribute name="SaveMods" />
+	<attribute name="Resist" />
+	<attribute name="Conditions" />
+	<attribute name="RaceFeatures">
+		<item><![CDATA[Bonus Feat]]></item>
+		<item><![CDATA[Bonus Skill]]></item>
+		<item><![CDATA[Bonus At-Will Power]]></item>
+		<item><![CDATA[Human Defense Bonuses]]></item>
+	</attribute>
+	<attribute name="ClassFeatures">
+		<item><![CDATA[Combat Challenge]]></item>
+		<item><![CDATA[Combat Superiority]]></item>
+		<item><![CDATA[Fighter Talents]]></item>
+		<item><![CDATA[Battlerager Vigor]]></item>
+	</attribute>
+	<attribute name="ParagonFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="EpicFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="Languages">
+		<item><![CDATA[Common]]></item>
+		<item><![CDATA[Draconic]]></item>
+	</attribute>
+	<attribute name="Feats">
+		<item><![CDATA[Toughness]]></item>
+		<item><![CDATA[Weapon Expertise (Axe)]]></item>
+		<item><![CDATA[Improved Vigor]]></item>
+	</attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Acrobatics]]></name>
+			<bonus><![CDATA[-2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Arcana]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Athletics]]></name>
+			<bonus><![CDATA[8]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Str]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Bluff]]></name>
+			<bonus><![CDATA[2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Diplomacy]]></name>
+			<bonus><![CDATA[2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Dungeoneering]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Endurance]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Con]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Heal]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[History]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Insight]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Intimidate]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Nature]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Perception]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Religion]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<bonus><![CDATA[-2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Streetwise]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Thievery]]></name>
+			<bonus><![CDATA[-2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+		<item>
+			<name><![CDATA[Melee Basic Attack]]></name>
+			<keywords>Weapon</keywords>
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<range-type>Melee</range-type>
+			<range-value>weapon</range-value>
+			<entries>
+				<item type="power-target"><value>One creature</value></item>
+				<item type="power-attack">
+					<attack-attribute>Str</attack-attribute>
+					<attack-bonus />
+					<defense>AC</defense>
+				</item>
+				<item type="power-damage">
+					<roll>1[W]</roll>
+					<attribute>Str</attribute>
+					<type></type>
+				</item>
+			</entries>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Ranged Basic Attack]]></name>
+			<keywords>Weapon</keywords>
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<range-type>Ranged</range-type>
+			<range-value>weapon</range-value>
+			<entries>
+				<item type="power-target"><value>One creature</value></item>
+				<item type="power-attack">
+					<attack-attribute>dex</attack-attribute>
+					<attack-bonus />
+					<defense>AC</defense>
+				</item>
+				<item type="power-damage">
+					<roll>1[W]</roll>
+					<attribute>Dex</attribute>
+					<type></type>
+				</item>
+			</entries>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Crushing Surge]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. AC, Damage: 1d10+6.
+Battleaxe: Strength vs. AC, Damage: 1d10+5.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Combat Challenge]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type />
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Brash Strike]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. AC, Damage: 1d10+8.
+Battleaxe: Strength vs. AC, Damage: 1d10+7.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Sure Strike]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. AC, Damage: 1d10+1.
+Battleaxe: Strength vs. AC, Damage: 1d10.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Bell Ringer]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. Fortitude, Damage: 0+2.
+Battleaxe: Strength vs. Fortitude, Damage: 0+2.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Get Over Here]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Move]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Dance of Steel]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. AC, Damage: 2d10+6.
+Battleaxe: Strength vs. AC, Damage: 2d10+5.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Second Wind]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Action Point]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Free]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Knee Breaker]]></name>
+			<keywords />
+			<use-type><![CDATA[Daily]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Battlecrazed Battleaxe +1: Strength vs. AC, Damage: 2d10+8.
+Battleaxe: Strength vs. AC, Damage: 2d10+7.
+]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+	</attribute>
+	<attribute name="MagicItems">
+		<item><![CDATA[Amulet of Physical Resolve +1]]></item>
+		<item><![CDATA[Chainmail, Skald's Armor +1]]></item>
+		<item><![CDATA[Battleaxe, Battlecrazed Weapon +1]]></item>
+	</attribute>
+	<attribute name="MIUsed" />
+	<attribute name="Rituals"><![CDATA[
+	]]></attribute>
+	<attribute name="Allies" />
+	<attribute name="Equipment">
+		<item><![CDATA[Heavy Shield]]></item>
+		<item><![CDATA[Adventurer's Kit]]></item>
+		<item type='weapon'>
+			<name><![CDATA[Battleaxe]]></name>
+			<stat>Str</stat>
+			<damage>1d10</damage>
+		</item>
+		<item><![CDATA[Chainmail]]></item>
+	</attribute>
+	<attribute name="Personality" />
+	<attribute name="Appearance" />
+	<attribute name="Background">This is an awesome character.  So awesome that his background is too much for you, puny gamer.  Just imagine the awesomest background ever, and know that this one is better than that one.</attribute>
+	<attribute name="Wealth" />
+	<attribute name="Notes" />
+	<attribute name="Token"><![CDATA[contentId,token:GSL40-Abjectus]]></attribute>
+	<attribute name="DieRolls">
+		<item>
+			<name>test</name>
+			<roll>1d20+4</roll>
+			<result>
+				[
+					{
+						"label":"Last Result",
+						"notation":"1d20+4",
+						"tree":
+						{
+							"type":"op",
+							"op":"+",
+							"left":
+							{
+								"type":"die",
+								"count":
+								{
+									"type":"number",
+									"value":1,
+									"total":1
+								},
+								"ace":false,
+								"sides":
+								{
+									"type":"number",
+									"value":20,
+									"total":20
+								},
+								"rerollOn":null,
+								"rerollHigh":false,
+								"dropCount":null,
+								"dropHigh":false,
+								"keepCount":null,
+								"keepLow":false,
+								"notation":"1d20",
+								"results":
+								{
+									"count":1,
+									"sides":20,
+									"rerollOn":null,
+									"dropCount":null,
+									"keepCount":null,
+									"rolls":
+									[
+										{
+											"type":"roll",
+											"value":11
+										}
+									]
+								},
+								"total":11
+							},
+							"right":
+							{
+								"type":"number",
+								"value":4,
+								"total":4
+							},
+							"total":15
+						}
+					}
+				]
+			</result>
+		</item>
+	</attribute>
+</character>

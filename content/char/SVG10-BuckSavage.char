@@ -1,0 +1,123 @@
+<character system="SVG10" type="PC" display-name="Buck Savage">
+	<attribute name="Name"><![CDATA[Buck Savage]]></attribute>
+	<attribute name="Player"></attribute>
+	<attribute name="Origin"></attribute>
+	<attribute name="Rating"><![CDATA[Seasoned (25 XP)]]></attribute>
+	<attribute name="Destination"></attribute>
+	<attribute name="Agility"><![CDATA[8]]></attribute>
+	<attribute name="Smarts"><![CDATA[6]]></attribute>
+	<attribute name="Strength"><![CDATA[6]]></attribute>
+	<attribute name="Spirit"><![CDATA[8]]></attribute>
+	<attribute name="Vigor"><![CDATA[8]]></attribute>
+	<attribute name="Charisma"><![CDATA[-2]]></attribute>
+	<attribute name="Pace"><![CDATA[6]]></attribute>
+	<attribute name="Parry"><![CDATA[6]]></attribute>
+	<attribute name="Toughness"><![CDATA[7]]></attribute>
+	<attribute name="Fatigue"></attribute>
+	<attribute name="Wounds"><![CDATA[2]]></attribute>
+	<attribute name="PowerPoints" max=""></attribute>
+	<attribute name="Bennies"><![CDATA[3]]></attribute>
+	<attribute name="Hindrances">
+		<item><![CDATA[Heroic]]></item>
+		<item><![CDATA[Mean]]></item>
+		<item><![CDATA[Stubborn]]></item>
+	</attribute>
+	<attribute name="Edges">
+		<item><![CDATA[Brawny]]></item>
+		<item><![CDATA[Combat Reflexes]]></item>
+		<item><![CDATA[Rock and Roll]]></item>
+	</attribute>
+	<attribute name="Equipment">
+		<item><![CDATA[2 clips for Colt 1911]]></item>
+		<item><![CDATA[2 50-round drums of .45 caliber ammo]]></item>
+	</attribute>
+	<attribute name="ArmorHead"></attribute>
+	<attribute name="ArmorTorso"></attribute>
+	<attribute name="ArmorArms"></attribute>
+	<attribute name="ArmorLegs"></attribute>
+	<attribute name="WTCarried"></attribute>
+	<attribute name="WTLimit"></attribute>
+	<attribute name="WTPenalty"></attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Climbing]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Fighting]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Guts]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Intimidation]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Notice]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Shooting]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Survival]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Swimming]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+	</attribute>
+	<attribute name="Powers"><![CDATA[
+	]]></attribute>
+	<attribute name="Weapons">
+		<item>
+			<name><![CDATA[Machete]]></name>
+			<range><![CDATA[1]]></range>
+			<rof></rof>
+			<damage><![CDATA[1da[Strength]+1da6]]></damage>
+			<ap></ap>
+			<wt></wt>
+			<notes></notes>
+		</item>
+		<item>
+			<name><![CDATA[Tommy Gun]]></name>
+			<range><![CDATA[12/24/48]]></range>
+			<rof><![CDATA[3]]></rof>
+			<damage><![CDATA[2da6+1]]></damage>
+			<ap><![CDATA[1]]></ap>
+			<wt></wt>
+			<notes><![CDATA[50 shots, auto]]></notes>
+		</item>
+		<item>
+			<name><![CDATA[Colt 1911]]></name>
+			<range><![CDATA[12/24/48]]></range>
+			<rof><![CDATA[1]]></rof>
+			<damage><![CDATA[2da6+1]]></damage>
+			<ap><![CDATA[1]]></ap>
+			<wt></wt>
+			<notes><![CDATA[7 shots, semi-auto]]></notes>
+		</item>
+	</attribute>
+	<attribute name="Injuries"></attribute>
+	<attribute name="Wealth"></attribute>
+	<attribute name="Description"><![CDATA[Buck father was a former boxer who legally changed his name to “Savage” for his career. He wanted a better life for his son though, and forced him to go to school in New York City. Buck went just long enough to get involved in a few anthropology digs, but it soon became obvious that finding treasure and fighting off competitors was more suited to Buck’s nature. Now Buck travels the world, searching for lost treasures and giving them to the museums of the world—in exchange for a small finder’s fee, of course. He’s deeply in love with Virginia Dare, but his surly nature keeps ruining any chance he might have to make their partnership permanent.]]></attribute>
+	<attribute name="Personality"></attribute>
+	<attribute name="Background"><![CDATA[Buck father was a former boxer who legally changed his name to “Savage” for his career. He wanted a better life for his son though, and forced him to go to school in New York City. Buck went just long enough to get involved in a few anthropology digs, but it soon became obvious that finding treasure and fighting off competitors was more suited to Buck’s nature. Now Buck travels the world, searching for lost treasures and giving them to the museums of the world—in exchange for a small finder’s fee, of course. He’s deeply in love with Virginia Dare, but his surly nature keeps ruining any chance he might have to make their partnership permanent.]]></attribute>
+	<attribute name="Notes"><![CDATA[Languages: English, Arabic, Spanish]]></attribute>
+	<attribute name="DieRolls">
+		<item>
+			<name><![CDATA[Test]]></name>
+			<roll><![CDATA[3d6+2]]></roll>
+		</item>
+	</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:SVG10-Buck]]></attribute>
+</character>

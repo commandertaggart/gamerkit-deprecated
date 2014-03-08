@@ -1,0 +1,73 @@
+{
+	"database":{
+		"content":{
+			"id":"varchar(64)",
+			"content":"longtext",
+			"name":"text",
+			"preview":"text",
+			"token":"text"
+		},
+		"access":{
+			"content":"varchar(64)",
+			"user":"varchar(128)",
+			"access":"int(11)"
+		},
+		"feedback":{
+			"time":"timestamp DEFAULT CURRENT_TIMESTAMP",
+			"email":"varchar(128)",
+			"type":"varchar(16)",
+			"about":"varchar(16)",
+			"about_specific":"varchar(256)",
+			"body":"text",
+			"data":"text"
+		}
+	},
+	"content":{
+		"system":["GSL40","OGL35","SVG10","HEX10"],
+	
+		"sheet":["GSL40.PC","OGL35.PC","SVG10.PC","SVG10.NPC","HEX10.PC"],
+
+		"char":[
+			"GSL40-Abjectus",
+			"GSL40-Hammerthorn",
+			"GSL40-Infaledill",
+			"GSL40-Kirana",
+			"GSL40-Korth",
+			"OGL35-Abjectus",
+			"SVG10-BuckSavage",
+			"SVG10-DannyDare",
+			"SVG10-DocGold",
+			"SVG10-KatorTheApeBoy",
+			"SVG10-VirginiaDare",
+			"HEX10-BigGameHunter",
+			"HEX10-DyingMoneyman",
+			"HEX10-FieldBiologist",
+			"HEX10-FortuneHunter",
+			"HEX10-ImperiledActress",
+			"HEX10-IntrepidReporter"
+		],
+
+		"token":[
+			"GSL40-Abjectus",
+			"GSL40-Dwarf",
+			"GSL40-Elf",
+			"GSL40-HalfOrc",
+			"GSL40-Kirana",
+			"SVG10-Buck",
+			"SVG10-Danny",
+			"SVG10-Doc",
+			"SVG10-Kator",
+			"SVG10-Virginia",
+			"HEX10-Academic",
+			"HEX10-Adventurer",
+			"HEX10-Celebrity",
+			"HEX10-Explorer",
+			"HEX10-Hunter",
+			"HEX10-Missionary",
+			"HEX10-Moneyman",
+			"HEX10-Reporter",
+			"HEX10-Scientist",
+			"HEX10-Survivor"
+		]
+	}
+}

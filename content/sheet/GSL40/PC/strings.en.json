@@ -1,0 +1,425 @@
+{
+	"system": { "label": "4th Edition Fantasy" },
+	"datasets":
+	{
+		"skill":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"trained": { "label": "Trained" },
+				"attribute": { "label": "Attr" },
+				"attrbonus": { "label": "" },
+				"bonus": { "label": "Mods" },
+				"total": { "label": "Total" }
+			}
+		},
+		"weapon":
+		{
+			"attributes":
+			{
+				"name": { "label": "Weapon" },
+				"bonus": { "label": "Enh. Bonus" },
+				"attack": { "label": "Stat" },
+				"damage": { "label": "Damage" }
+			}
+		},
+		"magicweapon":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"attack": { "label": "Stat" },
+				"damage": { "label": "Base Damage" },
+				"type": { "label": "Type" },
+				"level": { "label": "Level" },
+				"bonus": { "label": "Enhance. Bonus" },
+				"enhance": { "label": "Enhancement" },
+				"goldvalue": { "label": "Gold Value" },
+				"crit": { "label": "Critical" },
+				"powers": { "label": "Powers" }
+			}
+		},
+		"magicitem":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"slot": 
+				{
+					"label": "Body Slot",
+					"options":
+					{
+						"Slot": { "label": "Slot" },
+						"Arms": { "label": "Arms" },
+						"Feet": { "label": "Feet" },
+						"Hands": { "label": "Hands" },
+						"Head": { "label": "Head" },
+						"Neck": { "label": "Neck" },
+						"Ring": { "label": "Ring" },
+						"Waist": { "label": "Waist" },
+						"Wondrous": { "label": "Wondrous Item" },
+						"Weapon": { "label": "Weapon/Implement" }
+					}
+				},
+				"level": { "label": "Level" },
+				"bonus": { "label": "Enhance. Bonus" },
+				"enhance": 
+				{ 
+					"label": "Enhancement",
+					"options":
+					{
+						"offense": { "label": "Attack &amp; Damage" },
+						"defense": { "label": "Fort, Ref &amp; Will" },
+						"ac": { "label": "AC" },
+						"none": { "label": "None" }
+					}
+				},
+				"goldvalue": { "label": "Gold Value" },
+				"powers": { "label": "Powers" }
+			}
+		},
+		"magicpower":
+		{
+			"attributes":
+			{
+				"type": 
+				{ 
+					"label": "Type",
+					"options":
+					{
+						"Property": { "label": "Property" },
+						"AtWill": { "label": "At-Will" },
+						"Encounter": { "label": "Encounter" },
+						"Daily": { "label": "Daily" },
+						"Surge": { "label": "Healing Surge" },
+						"Consumable": { "label": "Consumable" },
+						"Special": { "label": "Special" }
+					}
+				},
+				"keywords": { "label": "Keywords" },
+				"info": { "label": "Text" }
+			}
+		},
+		"power":
+		{
+			"attributes":
+			{
+				"use-type":
+				{
+					"options":
+					{
+						"AtWill": { "label": "At-Will" },
+						"Encounter": { "label": "Encounter" },
+						"Daily": { "label": "Daily" }
+					}
+				},
+				"keywords": { "label": "Keywords" },
+				"action-type": 
+				{ 
+					"label": "Action Type",
+					"options":
+					{
+						"Free": { "label": "Free" },
+						"Interrupt": { "label": "Interrupt" },
+						"Minor": { "label": "Minor" },
+						"Move": { "label": "Move" },
+						"Standard": { "label": "Standard" }
+					}
+				},
+				"range-type": 
+				{ 
+					"label": "Range",
+					"options":
+					{
+						"Melee": { "label": "Melee" },
+						"Ranged": { "label": "Ranged" },
+						"Close": { "label": "Close" },
+						"Area": { "label": "Area" }
+					}
+				},
+				"range-value": { "label": "Range Value" },
+				"entries":
+				{
+					"type-labels":
+					{
+						"power-attack": { "label": "Primary Attack" },
+						"power-damage": { "label": "Hit (Damage)" },
+						"power-hit": { "label": "Hit (Other)" },
+						"power-miss": { "label": "Miss" },
+						"power-attack2": { "label": "Additional Attack" },
+						"power-effect": { "label": "Effect" },
+						"power-target": { "label": "Target" }
+					}
+				}
+			}
+		},
+		"power-hit":
+		{
+			"attributes":
+			{
+				"value": { "label": "Hit" }
+			}
+		},
+		"power-miss":
+		{
+			"attributes":
+			{
+				"value": { "label": "Miss" }
+			}
+		},
+		"power-effect":
+		{
+			"attributes":
+			{
+				"value": { "label": "Effect" }
+			}
+		},
+		"power-target":
+		{
+			"attributes":
+			{
+				"value": { "label": "Target" }
+			}
+		},
+		"power-attack":
+		{
+			"attributes":
+			{
+				"attack-attribute": 
+				{ 
+					"label": "Attack",
+					"options":
+					{
+						"Str": { "label": "Str" },
+						"Dex": { "label": "Dex" },
+						"Con": { "label": "Con" },
+						"Int": { "label": "Int" },
+						"Wis": { "label": "Wis" },
+						"Cha": { "label": "Cha" }
+					}
+				},
+				"attack-bonus": { "label": "Bonus" },
+				"defense":
+				{
+					"options":
+					{
+						"AC": { "label": "AC" },
+						"Fort": { "label": "Fort" },
+						"Ref": { "label": "Ref" },
+						"Will": { "label": "Will" }
+					}
+				}
+			}
+		},
+		"power-damage":
+		{
+			"attributes":
+			{
+				"roll": { "label": "Hit" },
+				"type": { "label": "Type" }
+			}
+		},
+		"power-attack2":
+		{
+			"attributes":
+			{
+				"which":
+				{
+					"options":
+					{
+						"Additional": { "label": "Additional Attack" },
+						"Secondary": { "label": "Secondary Attack" },
+						"Tertiary": { "label": "Tertiary Attack" }
+					}
+				},
+				"range-type": 
+				{ 
+					"label": "Range",
+					"options":
+					{
+						"Melee": { "label": "Melee" },
+						"Ranged": { "label": "Ranged" },
+						"Close": { "label": "Close" },
+						"Area": { "label": "Area" }
+					}
+				},
+				"range-value": { "label": "Range Value" },
+				"target": { "label": "Target" },
+				"attack": { "label": "Attack" },
+				"entries":
+				{
+					"type-labels":
+					{
+						"power-hit": { "label": "Hit" },
+						"power-miss": { "label": "Miss" },
+						"power-effect": { "label": "Effect" }
+					}
+				}
+			}
+		},
+		"powerweapon":
+		{
+			"attributes":
+			{
+				"name": { "label": "Weapon" },
+				"attack": { "label": "Attack Bonus" },
+				"damage": { "label": "Damage" }
+			}
+		},
+		"utility-power":
+		{
+			"attributes":
+			{
+				"keywords": { "label": "Keywords" },
+				"use-type":
+				{
+					"options":
+					{
+						"AtWill": { "label": "At-Will" },
+						"Encounter": { "label": "Encounter" },
+						"Daily": { "label": "Daily" }
+					}
+				},
+				"action-type": 
+				{ 
+					"label": "Action Type",
+					"options":
+					{
+						"Free": { "label": "Free" },
+						"Interrupt": { "label": "Interrupt" },
+						"Minor": { "label": "Minor" },
+						"Move": { "label": "Move" },
+						"Standard": { "label": "Standard" }
+					}
+				},
+				"effect": { "label": "Effect" }
+			}
+		},
+		"roll": {
+			"attributes":
+			{
+				"name": {
+					"label": "Tag",
+					"tooltip": "Name this roll so you know what it is for."
+				},
+				"roll": {
+					"label": "Notation",
+					"tooltip": "Enter dice notation to roll."
+				}
+			}
+		}
+	},
+
+	"attributes":
+	{
+		"Name": { "label": "Name" },
+		"Player": { "label": "Player Name" },
+		"Level": { "label": "Level" },
+		"StrBase": { "label": "Str" },
+		"Str": { "label": "Str" },
+		"ConBase": { "label": "Con" },
+		"Con": { "label": "Con" },
+		"DexBase": { "label": "Dex" },
+		"Dex": { "label": "Dex" },
+		"IntBase": { "label": "Int" },
+		"Int": { "label": "Int" },
+		"WisBase": { "label": "Wis" },
+		"Wis": { "label": "Wis" },
+		"ChaBase": { "label": "Cha" },
+		"Cha": { "label": "Cha" },
+		"Align": 
+		{ 
+			"label": "Alignment",
+			"options":
+			{
+				"LG": { "label": "Lawful Good" },
+				"LN": { "label": "Lawful Neutral" },
+				"LE": { "label": "Lawful Evil" },
+				"NG": { "label": "Neutral Good" },
+				"NN": { "label": "True Neutral" },
+				"NE": { "label": "Neutral Evil" },
+				"CG": { "label": "Chaotic Good" },
+				"CN": { "label": "Chaotic Neutral" },
+				"CE": { "label": "Chaotic Evil" }
+			}
+		},
+		"Race": { "label": "Race" },
+		"Class": { "label": "Class" },
+		"Paragon": { "label": "Paragon Path" },
+		"Epic": { "label": "Epic Destiny" },
+		"XP": { "label": "Experience Points" },
+		"Size": 
+		{ 
+			"label": "Size",
+			"options": 
+			{
+				"D": { "label": "Diminutive" },
+				"T": { "label": "Tiny" },
+				"S": { "label": "Small" },
+				"M": { "label": "Medium" },
+				"L": { "label": "Large" },
+				"G": { "label": "Gigantic" },
+				"C": { "label": "Collosal" }
+			}
+		},
+		"Age": { "label": "Age" },
+		"Gender": { "label": "Gender" },
+		"Height": { "label": "Height" },
+		"Weight": { "label": "Weight" },
+		"Deity": { "label": "Deity" },
+		"Company": { "label": "Adventuring Company" },
+		"AC": { "label": "Armor Class" },
+		"Fort": { "label": "Fortitude" },
+		"Ref": { "label": "Reflex" },
+		"Will": { "label": "Willpower" },
+		"Init": { "label": "Initiative" },
+		"Speed": { "label": "Speed" },
+		"AP": { "label": "Action Pts." },
+		"MaxHP": { "label": "Hit Points" },
+		"TempHP": { "label": "Temp HP" },
+		"Surges": { "label": "Heal Surges" },
+		"SecondWind": { "label": "2nd Wind" },
+		"DeathSave": { "label": "Death Save" },
+		"SaveMods": { "label": "Saving Throw Mods" },
+		"Resist": { "label": "Resistances" },
+		"Conditions": { "label": "Current Conditions and Effects" },
+		"RaceFeatures": { "label": "Race Features" },
+		"ClassFeatures": { "label": "Class Features" },
+		"ParagonFeatures": { "label": "Paragon Path Features" },
+		"EpicFeatures": { "label": "Epic Destiny Features" },
+		"Languages": { "label": "Languages Known" },
+		"Feats": { "label": "Feats" },
+		"Skills": { "label": "Skills" },
+		"Powers": 
+		{ 
+			"label": "Powers",
+			"type-labels":
+			{
+				"magicitem": { "label": "Magic Item" },
+				"power": { "label": "Power" }
+			}
+		},
+		"MagicItems": { "label": "Magic Items" },
+		"MIUsed": { "label": "Daily Item Powers Used" },
+		"Rituals": { "label": "Rituals" },
+		"Allies": { "label": "Companions and Allies" },
+		"Equipment": 
+		{ 
+			"label": "Equipment",
+			"type-labels":
+			{
+				"weapon": { "label": "Weapon or Implement" },
+				"string": { "label": "Other Item" }
+			}
+		},
+		"Personality": { "label": "Personality Traits" },
+		"Appearance": { "label": "Mannerisms and Appearance" },
+		"Background": { "label": "Character Background" },
+		"Wealth": { "label": "Coins and Other Wealth" },
+		"Notes": { "label": "Session and Campaign Notes" },
+	
+		"DieRolls": { "label": "Common Die Rolls" },
+		"Token": { "label": "Token" }
+	}
+}

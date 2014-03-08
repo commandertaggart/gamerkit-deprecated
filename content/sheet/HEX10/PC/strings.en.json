@@ -1,0 +1,94 @@
+{
+	"system": { "label": "Savage Worlds" },
+
+	"datasets":
+	{
+		"skill":
+		{
+			"attributes":
+			{
+				"name": { "label": "Skill" },
+				"rank": { "label": "Rank" }
+			}
+		},
+		"power":
+		{
+			"attributes":
+			{
+				"name": { "label": "Power" },
+				"trapping": { "label": "Trapping" },
+				"cost": { "label": "Cost" },
+				"range": { "label": "Range" },
+				"duration": { "label": "Duration" },
+				"effect": { "label": "Effect/Damage" }
+			}
+		},
+		"weapon":
+		{
+			"attributes":
+			{
+				"name": { "label": "Weapon" },
+				"range": { "label": "Range" },
+				"damage": { "label": "Damage" },
+				"rof": { "label": "ROF" },
+				"ap": { "label": "AP" },
+				"wt": { "label": "WT" },
+				"notes": { "label": "Notes" }
+			}
+		},
+		"roll":
+		{
+			"attributes":
+			{
+				"name": { "label": "Tag" },
+				"roll": { "label": "Notation" }
+			}
+		}
+	},
+
+	"attributes":
+	{
+		"Name": { "label": "Name" },
+		"Player": { "label": "Player Name" },
+		"Origin": { "label": "Port of Origin" },
+		"Rating": { "label": "Rating (XP)" },
+		"Agility": { "label": "Agility" },
+		"Smarts": { "label": "Smarts" },
+		"Strength": { "label": "Strength" },
+		"Spirit": { "label": "Spirit" },
+		"Vigor": { "label": "Vigor" },
+		"Charisma": { "label": "Charisma" },
+		"Pace": { "label": "Pace" },
+		"Parry": { "label": "Parry" },
+		"Toughness": { "label": "Toughness" },
+		"Fatigue": { "label": "Fatigue" },
+		"Wounds": { "label": "Wounds" },
+		"PowerPoints": { "label": "Power Points" },
+		"Bennies": { "label": "Bennies" },
+		
+		"Hindrances": { "label": "Hindrances" },
+		"Edges": { "label": "Edges" },
+		"Equipment": { "label": "Equipment" },
+		"ArmorHead": { "label": "Head Armor" },
+		"ArmorTorso": { "label": "Torso Armor" },
+		"ArmorArms": { "label": "Arms Armor" },
+		"ArmorLegs": { "label": "Legs Armor" },
+		"WTCarried": { "label": "Total WT Carried" },
+		"WTLimit": { "label": "Weight Limit" },
+		"WTPenalty": { "label": "Enc. Penalty" },
+		
+		"Skills": { "label": "Skills" },
+		"Powers": { "label": "Powers/Trappings" },
+		"Weapons": { "label": "Weapons" },
+		
+		"Injuries": { "label": "Permanent Injuries" },
+
+		"Wealth": { "label": "Money" },
+		"Description": { "label": "Description" },
+		"Personality": { "label": "Personality" },
+		"Background": { "label": "Background" },
+		"Notes": { "label": "Session and Campaign Notes" },
+		
+		"DieRolls": { "label": "Common Die Rolls" }
+	}
+}

@@ -1,0 +1,298 @@
+<character system="GSL40" display-name="Korth" type="PC">
+	<attribute name="Player" />
+	<attribute name="Name"><![CDATA[Korth]]></attribute>
+	<attribute name="Level"><![CDATA[2]]></attribute>
+	<attribute name="Class"><![CDATA[Sorcerer]]></attribute>
+	<attribute name="Paragon" />
+	<attribute name="Epic" />
+	<attribute name="XP"><![CDATA[1000]]></attribute>
+	<attribute name="Race"><![CDATA[Half-Orc]]></attribute>
+	<attribute name="Size"><![CDATA[M]]></attribute>
+	<attribute name="Age" />
+	<attribute name="Gender" />
+	<attribute name="Height" />
+	<attribute name="Weight" />
+	<attribute name="Align"><![CDATA[Chaotic Evil]]></attribute>
+	<attribute name="Deity" />
+	<attribute name="Company" />
+	<attribute name="Str"><![CDATA[12]]></attribute>
+	<attribute name="Dex"><![CDATA[16]]></attribute>
+	<attribute name="Con"><![CDATA[11]]></attribute>
+	<attribute name="Int"><![CDATA[10]]></attribute>
+	<attribute name="Wis"><![CDATA[8]]></attribute>
+	<attribute name="Cha"><![CDATA[18]]></attribute>
+	<attribute name="AC"><![CDATA[15]]></attribute>
+	<attribute name="Fort"><![CDATA[13]]></attribute>
+	<attribute name="Ref"><![CDATA[15]]></attribute>
+	<attribute name="Will"><![CDATA[18]]></attribute>
+	<attribute name="Init"><![CDATA[4]]></attribute>
+	<attribute name="Speed"><![CDATA[6]]></attribute>
+	<attribute name="AP"><![CDATA[1]]></attribute>
+	<attribute name="MaxHP" max="28"><![CDATA[28]]></attribute>
+	<attribute name="CurHP" />
+	<attribute name="TempHP" />
+	<attribute name="Surges"><![CDATA[6]]></attribute>
+	<attribute name="CurSurges" />
+	<attribute name="SecondWind"><![CDATA[false]]></attribute>
+	<attribute name="DeathSave" />
+	<attribute name="SaveMods" />
+	<attribute name="Resist" />
+	<attribute name="Conditions" />
+	<attribute name="RaceFeatures">
+		<item><![CDATA[Furious Assault]]></item>
+		<item><![CDATA[Half-Orc Resilience]]></item>
+		<item><![CDATA[Swift Charge]]></item>
+	</attribute>
+	<attribute name="ClassFeatures">
+		<item><![CDATA[Spell Source]]></item>
+		<item><![CDATA[Wild Magic]]></item>
+	</attribute>
+	<attribute name="ParagonFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="EpicFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="Languages">
+		<item><![CDATA[Common]]></item>
+		<item><![CDATA[Giant]]></item>
+	</attribute>
+	<attribute name="Feats">
+		<item><![CDATA[Implement Expertise (staff)]]></item>
+		<item><![CDATA[Arcane Spellfury]]></item>
+	</attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Acrobatics]]></name>
+			<bonus><![CDATA[4]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Arcana]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Athletics]]></name>
+			<bonus><![CDATA[2]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Str]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Bluff]]></name>
+			<bonus><![CDATA[10]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Diplomacy]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Dungeoneering]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Endurance]]></name>
+			<bonus><![CDATA[3]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Con]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Heal]]></name>
+			<bonus><![CDATA[0]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[History]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Insight]]></name>
+			<bonus><![CDATA[0]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Intimidate]]></name>
+			<bonus><![CDATA[7]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Nature]]></name>
+			<bonus><![CDATA[0]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Perception]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Religion]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<bonus><![CDATA[4]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Streetwise]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Thievery]]></name>
+			<bonus><![CDATA[4]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+		<item>
+			<name><![CDATA[Melee Basic Attack]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Implement, Staff: Strength vs. AC, Damage: 1d8+1.\nStaff of the War Mage +1: Strength vs. AC, Damage: 1d8+2.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Ranged Basic Attack]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Chaos Bolt]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Implement, Staff: Charisma vs. Will, Damage: 1d10+7.\nStaff of the War Mage +1: Charisma vs. Will, Damage: 1d10+8.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Burning Spray]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Implement, Staff: Charisma vs. Reflex, Damage: 1d8+7.\nStaff of the War Mage +1: Charisma vs. Reflex, Damage: 1d8+8.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Furious Assault]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Free]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Bedeviling Burst]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Implement, Staff: Charisma vs. Will, Damage: 1d10+7.\nStaff of the War Mage +1: Charisma vs. Will, Damage: 1d10+8.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Unseen Aid]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Minor]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Second Wind]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Action Point]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Free]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Dazzling Ray]]></name>
+			<keywords />
+			<use-type><![CDATA[Daily]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Implement, Staff: Charisma vs. Will, Damage: 6d6+7.\nStaff of the War Mage +1: Charisma vs. Will, Damage: 6d6+8.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+	</attribute>
+	<attribute name="MagicItems">
+		<item><![CDATA[Amulet of Protection +1]]></item>
+		<item><![CDATA[Cloth Armor (Basic Clothing), Robe of Eyes +1]]></item>
+		<item><![CDATA[Staff of the War Mage +1]]></item>
+	</attribute>
+	<attribute name="MIUsed" />
+	<attribute name="Rituals"><![CDATA[
+	]]></attribute>
+	<attribute name="Allies" />
+	<attribute name="Equipment">
+		<item><![CDATA[Implement, Staff]]></item>
+		<item><![CDATA[Adventurer's Kit]]></item>
+		<item><![CDATA[Cloth Armor (Basic Clothing)]]></item>
+	</attribute>
+	<attribute name="Personality" />
+	<attribute name="Appearance" />
+	<attribute name="Background" />
+	<attribute name="Wealth" />
+	<attribute name="Notes" />
+	<attribute name="Token"><![CDATA[contentId,token:GSL40-HalfOrc]]></attribute>
+</character>

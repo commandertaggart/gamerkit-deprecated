@@ -1,0 +1,279 @@
+<sheet system="SVG10" type="PC">
+	<style tag="default"><![CDATA[
+	
+.gtk_ui_CharSection
+{
+	&#top_bar
+	{
+		position: relative;
+		margin-left: 138px;
+	}
+	
+	.gtk_ui_CharBlock#vitals
+	{
+		width: 100%;
+		margin: 0px;
+		position: relative;
+
+		.gtk_ui_CharAttribute
+		{
+			&#Name { width: 50%; min-width: 244px; margin-right: 1%; }
+			&#Player { width: 49%; min-width: 244px; }
+			&#Origin { width: 50%; min-width: 122px; margin-right: 1%; }
+			&#Rating { width: 49%; min-width: 122px; }
+	
+			&#Fatigue { width: 33%; min-width: 81px; margin-right: 1%; }
+			&#Wounds { width: 33%; min-width: 81px; margin-right: 1%; }
+			&#Bennies { width: 32%; min-width: 81px; }
+	
+			&#Agility,
+			&#Smarts,
+			&#Strength,
+			&#Spirit,
+			&#Vigor,
+			&#Charisma,
+			&#Pace,
+			&#Parry
+			{ width: 10%; min-width: 40px; margin-right: 1%; }
+			&#Toughness
+			{ width: 12%; min-width: 40px; }
+		}
+	}
+	
+	&#main_body
+	{
+		width: 100%;
+	}
+	
+	&#left_column
+	{
+		margin-right: 1%;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		width: 49%;
+	}
+	
+	&#right_column
+	{
+		margin-left: 1%;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		width: 48%;
+	}
+	
+	&.combined#left_column,
+	&.combined#right_column
+	{
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+	}
+	
+	&.combined#right_column .layout-tab-header
+	{
+		text-align: right;
+	}
+	
+	&#abilities,
+	&#notes,
+	&#stuff,
+	&#dice
+	{
+		border: 1px solid black;
+		margin-top: -1px;
+		width: 100%;
+		padding-top: 5px;
+	}
+}
+
+.gtk_ui_CharAttribute#token
+{
+	position: absolute;
+	top: 0px;
+	right: 100%;
+	width: 20%;
+	max-width: 128px;
+	max-height: 128px;
+	min-width: 64px;
+	min-height: 64px;
+	padding: 0px;
+	padding-right: 10px;
+	float: left;
+}
+#Token IMG { width: 100%; }
+
+.gtk_ui_CharAttribute
+{
+	&#PowerPoints { width: 100%; min-width: 75px; }
+		
+	&#ArmorHead { width: 49%; margin-right: 1%; }
+	&#ArmorTorso { width: 50%; }
+	&#ArmorArms { width: 49%; margin-right: 1%; }
+	&#ArmorLegs { width: 50%; }
+	&#WTCarried { width: 48%; margin-right: 1%; }
+	&#WTLimit { width: 25%; margin-right: 1%; }
+	&#WTPenalty { width: 25%; }
+			
+	&#Injuries { width: 100%; }
+	
+	&#Wealth { width: 100%; }
+	&#Description { width: 100%; }
+	&#Personality { width: 100%; }
+	&#Background { width: 100%; }
+	&#Notes { width: 100%; }
+			
+	&#Wealth .attribute-label,
+	&#Description .attribute-label,
+	&#Personality .attribute-label,
+	&#Background .attribute-label
+	{
+		color: white;
+		background-color: black;
+		text-transform: uppercase;
+		width: 100%;
+		height: 24px;
+		text-align: center;
+		font-family: GTTitle;
+		font-size: 24px;
+	}
+}
+
+.gtk_ui_CharList
+{
+	&#Skills .gtk_ui_CharAttribute,
+	&#Skills .gtk_ui_CharList_columnTag
+	{
+		&#name { width: 80%; margin-right: 1%; }
+		&#rank { width: 19%; }
+	}
+	
+	&#Powers .gtk_ui_CharAttribute,
+	&#Powers .gtk_ui_CharList_columnTag
+	{
+		&#name { width: 100%; }
+		&#trapping { width: 100%; }
+		&#cost { width: 32%; margin-right: 1%; }
+		&#range { width: 33%; margin-right: 1%; }
+		&#duration { width: 33%; }
+		&#effect { width: 100%; }
+	}
+	
+	&#Weapons .gtk_ui_CharAttribute,
+	&#Weapons .gtk_ui_CharList_columnTag
+	{
+		/* &#name { width: 100%; } */
+		&#range { width: 49%; margin-right: 1%; }
+		&#damage { width: 50%; }
+		&#rof { width: 33%; margin-right: 1%; }
+		&#ap { width: 33%; margin-right: 1%; }
+		&#wt { width: 32%; }
+		&#notes { width: 100%; }
+	}
+	
+	&#DieRolls .gtk_ui_CharAttribute,
+	&#DieRolls .gtk_ui_CharList_columnTag
+	{
+		&#name { width: 39%; margin-right: 1%; }
+		&#roll { width: 60%; }
+	}
+}
+
+.gtk_ui_CharBlock#notes .gtk_ui_CharAttribute#Notes .gtk_ui_CharAttribute_name
+{
+	color: white;
+	background-color: black;
+	text-transform: uppercase;
+	width: 100%;
+	height: 24px;
+	text-align: center;
+	font-family: GTTitle;
+	font-size: 24px;
+}
+	]]></style>
+	
+	
+	<block id="token" priority="placed">
+		<attribute name="Token" />
+	</block>
+	<block id="vitals" priority="placed">
+		<attribute name="Token" />
+		<attribute name="Name" />
+		<attribute name="Rating" />
+		<attribute name="Wounds" />
+		<attribute name="Fatigue" />
+		<attribute name="Agility" />
+		<attribute name="Smarts" />
+		<attribute name="Strength" />
+		<attribute name="Spirit" />
+		<attribute name="Vigor" />
+		<attribute name="Charisma" />
+		<attribute name="Pace" />
+		<attribute name="Parry" />
+		<attribute name="Toughness" />
+	</block>
+	<block id="skills" priority="required">
+		<attribute name="Skills" />
+	</block>
+	<block id="hindrances_edges" priority="required">
+		<attribute name="Hindrances" />
+		<attribute name="Edges" />
+	</block>
+	<block id="power_points" priority="placed">
+		<attribute name="PowerPoints" />
+	</block>
+	<block id="powers" priority="optional">
+		<attribute name="Powers">
+			<header id="power_points" />
+		</attribute>
+	</block>
+	<block id="weapons" priority="required">
+		<attribute name="Weapons" />
+	</block>
+	<block id="stuff" priority="required">
+		<attribute name="Equipment" />
+		<attribute name="ArmorHead" />
+		<attribute name="ArmorTorso" />
+		<attribute name="ArmorArms" />
+		<attribute name="ArmorLegs" />
+	</block>
+	<block id="injuries" priority="required">
+		<attribute name="Injuries" />
+	</block>
+	<block id="description" priority="required">
+		<attribute name="Description" />
+	</block>
+	<block id="notes" priority="required">
+		<attribute name="Notes" />
+	</block>
+	<block id="dice" priority="optional">
+		<attribute name="DieRolls" />
+	</block>
+	
+	<default-layout>
+		<section id='top_bar'>
+			<block id="vitals" />
+		</section>
+		<section id='main_body' column-width="600">
+			<section id='left_column' tabbed="true">
+				<section id="abilities" display="Abilities">
+					<block id="skills" />
+					<block id="hindrances_edges" />
+					<block id="powers" />
+				</section>
+				<section id="notes" display="Notes">
+					<block id="description" />
+					<block id="notes" />
+				</section>
+			</section>
+			<section id='right_column' tabbed="true">
+				<section id="stuff" display="Stuff">
+					<block id="weapons" />
+					<block id="stuff" />
+				</section>
+				<section id="dice" display="Dice">
+					<block id="dice" />
+				</section>
+			</section>
+		</section>
+	</default-layout>
+</sheet>

@@ -1,0 +1,105 @@
+<character system="HEX10" display-name="Imperiled Actress" type="PC">
+	<attribute name="Name">Imperiled Actress</attribute>
+	<attribute name="Player"></attribute>
+	<attribute name="Archetype">Celebrity</attribute>
+	<attribute name="Motivation">Escape</attribute>
+	<attribute name="Body">2</attribute>
+	<attribute name="Dexterity">3</attribute>
+	<attribute name="Strength">2</attribute>
+	<attribute name="Charisma">4 (5)</attribute>
+	<attribute name="Intelligence">2</attribute>
+	<attribute name="Willpower">2</attribute>
+	<attribute name="Size">0</attribute>
+	<attribute name="Style">3</attribute>
+	<attribute name="Health">4</attribute>
+	<attribute name="Skills">
+		<item>
+			<name>Acrobatics</name>
+			<attribute>Dexterity</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Con</name>
+			<attribute>Charisma</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Diplomacy</name>
+			<attribute>Charisma</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Empathy</name>
+			<attribute>Intelligence</attribute>
+			<ranks>4</ranks>
+		</item>
+		<item>
+			<name>Performance</name>
+			<attribute>Charisma</attribute>
+			<ranks>3</ranks>
+		</item>
+		<item>
+			<name>Stealth</name>
+			<attribute>Dexterity</attribute>
+			<ranks>3</ranks>
+		</item>
+		<item>
+			<name>Streetwise</name>
+			<attribute>Charisma</attribute>
+			<ranks>2</ranks>
+		</item>
+	</attribute>
+	<attribute name="Specializations">
+		<item>
+			<name>Tumbling</name>
+			<skill>Acrobatics</skill>
+			<ranks>1</ranks>
+		</item>
+		<item>
+			<name>Acting</name>
+			<skill>Performance</skill>
+			<ranks>1</ranks>
+		</item>
+	</attribute>
+	<attribute name="Talents">
+		<item>Attractive 1</item>
+	</attribute>
+	<attribute name="Resources">
+		<item>Fame 1</item>
+	</attribute>
+	<attribute name="Flaws">
+		<item>Danger Magnet</item>
+	</attribute>
+	<attribute name="Weapons">
+		<item>
+			<name>Punch</name>
+			<lethal>false</lethal>
+			<damage>0</damage>
+			<modifier>0</modifier>
+			<attack>0</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+	</attribute>
+	<attribute name="Equipment">
+	</attribute>
+	<attribute name="Wealth"></attribute>
+	<attribute name="Age"></attribute>
+	<attribute name="Gender"></attribute>
+	<attribute name="Height"></attribute>
+	<attribute name="Eyes"></attribute>
+	<attribute name="Hair"></attribute>
+	<attribute name="Skin"></attribute>
+	<attribute name="Languages">
+	</attribute>
+	<attribute name="Background"></attribute>
+	<attribute name="Notes"></attribute>
+	<attribute name="Campaign"></attribute>
+	<attribute name="Experience">0</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:HEX10-Celebrity]]></attribute>
+</character>

@@ -1,0 +1,822 @@
+
+@import "style/char-defs.less";
+
+.block#attributes
+{
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+
+.block#vitals2,
+.block#hp
+{
+	display: inline-block;
+	width: 50%;
+}
+
+/*
+.section#top_bar
+{
+	margin-left: 20%;
+	position: relative;
+	@media (max-width: 360px)
+	{ margin-left: 72px; }
+	@media (min-width: 680px)
+	{ margin-left: 136px; }
+}
+
+.section#main_body
+{
+	margin-top: 10px;
+}
+
+.block#vitals
+{
+	margin: 0px;
+	position: relative;
+
+	.attribute
+	{
+		&#Token IMG
+		{
+			position: absolute;
+			top: 0px;
+			right: 100%;
+			padding: 0px;
+			padding-right: 10px;
+			float: left;
+			
+			width: 23%;
+			@media (max-width: 360px)
+			{ width: 64px; }
+			@media (min-width: 680px)
+			{ width: 128px; }
+		}
+		
+		&#Name { width: 40%; }
+		&#Align { width: 20%; }
+		&#Player { width: 40%; }
+		&#Levels { width: 70%; }
+		&#Deity { width: 15%; }
+		&#Homeland { width: 15%; }
+
+		&#Race { width: 30%; }
+		&#Size { width: 10%; }
+		&#Age { width: 10%; }
+		&#Gender { width: 10%; }
+		&#Height { width: 10%; }
+		&#Weight { width: 10%; }
+		&#Hair { width: 10%; }
+		&#Eyes { width: 10%; }
+	}
+}
+
+&.print .block#vitals .attribute#Token IMG
+{
+	max-width: 110px;
+}
+
+.block#vitals2
+{
+	width: 48%;
+	.attribute
+	{
+		&#XP
+		{ width: 50%; }
+		&#NextLevel
+		{ width: 50%; }
+
+		&#Init
+		{
+			width: 60%;
+			padding-top: 15px;
+			.attribute-label
+			{
+				.attribute-label-large;
+				width: 66%;
+				font-size: 15pt;
+				height: 27px;
+			}
+			.attribute-value
+			{
+				width: 33%;
+				border: 1px solid black;
+				text-align: center;
+			}
+		}
+		&#InitBase,
+		&#InitMod
+		{
+			width: 20%;
+			.attribute-label
+			{
+				.attribute-label-small;
+			}
+
+			.attribute-value
+			{
+				border: 1px solid black;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.block#attributes
+{
+	margin-top: 3px;
+	margin-bottom: 5px;
+	width: 48%;
+	display: inline-block;
+	float: left;
+	
+	.dataset#Str,
+	.dataset#Dex,
+	.dataset#Con,
+	.dataset#Int,
+	.dataset#Wis,
+	.dataset#Cha
+	{
+		margin-bottom: 4px;
+
+		.attribute#base,
+		.attribute#mod,
+		.attribute#adjust,
+		.attribute#total
+		{
+			border: 1px solid black;
+			width: 17%;
+			margin-left: 1%;
+			text-align: center;
+
+			.attribute-label
+			{ display: none; }
+		}
+
+		&> .attribute-label
+		{
+			.attribute-label-large;
+			font-family: 'Heavy Label', 'Default Label';
+			width: 28%;
+			text-transform: uppercase;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			border: 1px solid black;
+			font-size: 15pt;
+		}
+
+		.attribute-value
+		{
+			font-size: 14pt;
+			font-family: sans-serif;
+			text-align: center;
+			height: auto;
+			margin: 0px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+	}
+
+	.dataset#Str 
+	{
+		margin-top: 10px;
+		position: relative;
+
+		.attribute#base .attribute-label,
+		.attribute#mod .attribute-label,
+		.attribute#adjust .attribute-label,
+		.attribute#total .attribute-label
+		{
+			display: inline-block;
+			position: absolute;
+			top: -18px;
+			left: 0px;
+			font-size: 5pt;
+			height: auto;
+			white-space: inherit;
+			border: 0px;
+		}
+	}
+
+	.rollbutton
+	{
+		right: -66%;
+		top: 4px;
+	}
+}
+&.print .block#attributes
+{
+	.attribute
+	{
+		height: 25px;
+	
+		.attribute-label,
+		.attribute-value
+		{
+			font-size: 11pt;
+		}
+	}
+}
+	
+.block#saves
+{
+	.attribute#Fort,
+	.attribute#Ref,
+	.attribute#Will
+	{
+		width: 50%;
+		text-align: center;
+
+		.attribute-label
+		{
+			.attribute-label-large;
+			width: 80%;
+		}
+		.attribute-value
+		{
+			width: 20%;
+		}
+	}
+	.attribute#Fort
+	{ padding-top: 15px; }
+
+	.attribute#FortBase,
+	.attribute#FortAttr,
+	.attribute#FortMagic,
+	.attribute#FortMisc,
+	.attribute#FortTemp,
+	.attribute#RefBase,
+	.attribute#RefAttr,
+	.attribute#RefMagic,
+	.attribute#RefMisc,
+	.attribute#RefTemp,
+	.attribute#WillBase,
+	.attribute#WillAttr,
+	.attribute#WillMagic,
+	.attribute#WillMisc,
+	.attribute#WillTemp
+	{
+		text-align: center;
+		width: 10%;
+		.attribute-label
+		{
+			.attribute-label-small;
+		}
+
+		&:before
+		{
+			content: "+";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			bottom: 13px;
+			left: -5px;
+		}
+	}
+	.attribute#FortBase:before,
+	.attribute#RefBase:before,
+	.attribute#WillBase:before
+	{ content: "="; }
+}
+
+.block#speed
+{
+	.attribute
+	{
+		&#BaseSpeed { width: 33%; }
+		&#ArmoredSpeed { width: 33%; }
+		&#FlySpeed { width: 33%; }
+		&#SwimSpeed { width: 33%; }
+		&#ClimbSpeed { width: 33%; }
+		&#BurrowSpeed { width: 33%; }
+	}
+}
+
+.block#AC
+{
+	.attribute#AC
+	{
+		width: 30%;
+		margin-top: 15px;
+		.attribute-label
+		{
+			.attribute-label-large;
+			width: 50%;
+			height: 27.5px;
+		}
+		.attribute-value
+		{
+			text-align: center;
+			border: 1px solid black;
+			width: 50%;
+		}
+	}
+	.attribute#ACArmor,
+	.attribute#ACBase,
+	.attribute#ACDexMod,
+	.attribute#ACSizeMod,
+	.attribute#NaturalArmor,
+	.attribute#DeflectionMod,
+	.attribute#MiscAC,
+	{
+		width: 10%;
+		.attribute-value
+		{ text-align: center; }
+		.attribute-label
+		{ .attribute-label-small; }
+
+		&:before
+		{
+			content: "+";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			bottom: 13px;
+			left: -5px;
+		}
+	}
+	.attribute#ACBase:before
+	{ content: "="; }
+
+	.attribute#TouchAC,
+	.attribute#FlatAC
+	{ width: 20%; }
+	.attribute#ACMods
+	{ width: 60%; }
+}
+
+.block#hp
+{
+	width: 48%;
+	.attribute
+	{
+		&#MaxHP,
+		&#NonlethalDamage
+		{ width: 50%; }
+	}
+}
+
+.block#attack
+{
+	.attribute
+	{
+		INPUT, .attribute-value
+		{ text-align: center; }
+
+		&#BAB,
+		&#SpellSave
+		{
+			.attribute-label
+			{
+				.attribute-label-large;
+				width: 80%;
+				font-size: 15px;
+				height: 27.5px;
+				padding-top: 4px;
+			}
+			.attribute-value
+			{
+				width: 20%;
+				border: 1px solid black;
+			}
+		}
+		&#SpellSave
+		{ width: 40%; }
+
+		&#CMB,
+		&#CMD
+		{
+			padding-top: 15px;
+			.attribute-label
+			{
+				.attribute-label-large;
+				height: 27.5px;
+				padding-top: 4px;
+				width: 67%;
+			}
+			.attribute-value
+			{
+				width: 33%;
+				border: 1px solid black;
+			}
+			width: 30%;
+		}
+		&#CMBBAB,
+		&#CMBAttr,
+		&#CMBSize,
+		&#CMDBase,
+		&#CMDBAB,
+		&#CMDStr,
+		&#CMDDex,
+		&#CMDSize
+		{
+			.attribute-label
+			{ .attribute-label-small; }
+			width: 10%;
+
+			&:before
+			{
+				content: "+";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				bottom: 13px;
+				left: -5px;
+			}
+		}
+		&#CMDBase
+		{
+			padding-top: 15px;
+		}
+		&#CMBBAB,
+		&#CMDBase
+		{
+			&:before
+			{ content: "="; }
+		}
+	}
+
+	.list#Attacks
+	{
+		.edit-button,
+		.unedit-button
+		{
+			.button-style-underlist;
+			position: static;
+		}
+	}
+
+	.dataset#attack
+	{
+		INPUT, .attribute-value
+		{ text-align: left; }
+
+		.attribute#name
+		{
+			width: 60%;
+			.attribute-label
+			{ .attribute-label-large; }
+		}
+		.attribute#bonus
+		{ width: 20%; padding-top: 11px; }
+		.attribute#damage
+		{ width: 20%; padding-top: 11px; }
+		.attribute#critical
+		{ width: 16.5%; }
+		.attribute#range
+		{ width: 16.5%; }
+		.attribute#type
+		{ width: 16.5%; }
+		.attribute#notes
+		{}
+		.attribute#ammo-type
+		{ width: 25%; }
+		.attribute#ammo-count
+		{ width: 25%; }
+	}
+}
+
+.block#stuff
+{
+	text-align: right;
+
+	.list#Armor
+	{
+		text-align: left;
+		.list-labels
+		{
+			padding-left: 32px;
+			.attribute-label
+			{
+				&#in-use { width: 10%; }
+				&#name { width: 70%; }
+				&#ac-bonus { width: 20%; }
+			}
+		}
+
+		.dataset#protection .attribute
+		{
+			&#in-use { width: 10%; }
+			&#name { width: 70%; }
+			&#ac-bonus { width: 20%; }
+
+			&#type { width: 50%; }
+			&#weight { width: 50%; }
+
+			&#max-dex { width: 33%; }
+			&#check-penalty { width: 33%; }
+			&#spell-fail { width: 33%; }
+
+			&#properties { width: 100%; }
+		}
+	}
+
+	.attribute#ArmorAC,
+	.attribute#ArmorCheckPenalty,
+	.attribute#ACMaxDexBonus,
+	.attribute#SpellFailure
+	{ width: 25%;}
+
+	.list#Equipment
+	{
+		position: relative;
+		text-align: left;
+
+		.dataset#equipment .attribute,
+		.list-labels .attribute-label
+		{
+			&#name { width: 80%; }
+			&#weight 
+			{
+				width: 20%;
+				text-align: right;
+				INPUT { text-align: right; }
+			}
+		}
+	}
+
+	.attribute#Encumbrance
+	{
+		position: relative;
+		top: -24px;
+		width: 80%;
+		margin-left: 20%;
+
+		.attribute-label
+		{
+			border: 0px;
+			font-size: 12pt;
+			height: auto;
+		}
+
+		.attribute-label,
+		.attribute-value
+		{ width: 25%; }
+	}
+	.attribute#LightLoad,
+	.attribute#MediumLoad,
+	.attribute#HeavyLoad,
+	.attribute#LiftHigh,
+	.attribute#LiftLow,
+	.attribute#Drag
+	{
+		width: 33%;
+		text-align: left;
+	}
+
+	.attribute#Wealth .attribute-label
+	{ .list-title-style; }
+}
+
+.block#skills
+{
+	.list#skills
+	{
+		.list-labels 
+		{
+			position: relative;
+			text-align: right;
+			height: 20px;
+			vertical-align: bottom;
+
+			.attribute-label
+			{
+				text-align: left;
+
+				&#name
+				{
+					position: absolute;
+					left: 0px;
+					right: 260px;
+					width: auto;
+				}
+				&#attribute { width: 40px; }
+				&#attrbonus { width: 40px; }
+				&#ranks { width: 40px; }
+				&#mods { width: 40px; }
+				&#total { width: 40px; }
+				&#class-skill,
+				&#trained-only
+				{
+					width: 30px;
+					white-space: inherit;
+					font-size: 5pt;
+					text-align: center;
+					height: 24px;
+				}
+			}
+		}
+		
+		.dataset
+		{
+			position: relative;
+			text-align: right;
+
+			.attribute
+			{
+				&#name
+				{
+					position: absolute;
+					left: 0px;
+					right: 260px;
+					width: auto;
+				}
+				&#attribute { width: 40px; }
+				&#attrbonus { width: 40px; }
+				&#ranks { width: 40px; }
+				&#mods { width: 40px; }
+				&#total { width: 40px; }
+				&#class-skill,
+				&#trained-only
+				{
+					width: 30px;
+					.attribute-value
+					{
+						color: lightgray;
+						&:after
+						{
+							position: absolute;
+							top: 2px;
+							text-align: center;
+						}
+						&:checked, &.on
+						{
+							background-color: lightgray;
+							color: black;
+						}
+					}
+				}
+				&#class-skill .attribute-value:after
+				{ content: "C"; left: 11px; }
+				&#trained-only .attribute-value:after
+				{ content: "T"; left: 12px; top: 3px; }
+
+				.attribute-value#attrbonus,
+				.attribute-value#ranks,
+				.attribute-value#mods,
+				.attribute-value#total
+				{ text-align: center; }
+			}
+			
+			INPUT.attribute-value#bonus
+			{ text-align: center; }
+
+			.attribute#trained
+			{ padding-top: 5px; }
+		}
+	}
+}
+&.print .block#skills
+{
+	.list#skills
+	{
+		.dataset
+		{
+			height: 26px;
+		}
+	}
+}
+
+.block#spells
+{
+	.list#SpellCap
+	{
+		.attribute#known,
+		.attribute#save-dc,
+		.attribute#level,
+		.attribute#per-day,
+		.attribute#bonus
+		{
+			width: 20%;
+			text-align: center;
+
+			INPUT
+			{ text-align: center; }
+
+			.attribute-value#known,
+			.attribute-value#save-dc,
+			.attribute-value#per-day,
+			.attribute-value#bonus
+			{ border: 1px solid black; }
+		}
+		.attribute-label
+		{
+			width: 20%;
+			text-align: center;
+		}
+	}
+
+	.list#Spells
+	{
+		.attribute#level
+		{
+			.attribute-value
+			{
+				width: auto;
+				float: left;
+				font-family: 'Default Label';
+				padding-right: 5px;
+				color: gray;
+			}
+
+			.attribute-label
+			{
+				border: 0px;
+				width: auto;
+				height: auto;
+				font-size: 14pt;
+			}
+		}
+
+		.attribute#used
+		{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: auto;
+		}
+
+		.list#spells
+		{
+			.edit-button,
+			.unedit-button
+			{
+				.button-style-underlist;
+				position: static;
+			}
+
+			.add-button:before,
+			.add-button,
+			.edit-button,
+			.unedit-button
+			{
+				font-size: 10pt;
+				height: auto;
+			}
+		}
+	}
+}
+
+.block#notes .attribute,
+.block#description .attribute
+{
+	&#Description .attribute-label,
+	&#Personality .attribute-label,
+	&#Background .attribute-label,
+	&#Appearance .attribute-label,
+	&#Allies .attribute-label,
+	&#Notes .attribute-label
+	{
+		.list-title-style;
+	}
+}
+
+&.print .attribute
+{
+	&#Wealth .attribute-label,
+	&#Description .attribute-label,
+	&#Personality .attribute-label,
+	&#Background .attribute-label,
+	&#Appearance .attribute-label,
+	&#Allies .attribute-label,
+	&#Notes .attribute-label
+	{
+		font-size: 11pt;
+	}
+	
+	&#Wealth .attribute-value,
+	&#Description .attribute-value,
+	&#Personality .attribute-value,
+	&#Appearance .attribute-value,
+	&#Allies .attribute-value
+	{ height: 97px; }
+	
+	&#Background .attribute-value
+	{ height: 193px; }
+	
+	&#Notes .attribute-value
+	{ height: 426px; }
+}
+
+.list
+{
+	
+	&#DieRolls 
+	{
+		.attribute,
+		.attribute-label
+		{
+			&#name { width: 40%; }
+			&#roll { width: 60%; }
+		}
+		
+		.rollbutton
+		{
+			width: 32px;
+			height: 32px;
+			background-size: 32px;
+			top: 8px;
+		}
+	}
+} */

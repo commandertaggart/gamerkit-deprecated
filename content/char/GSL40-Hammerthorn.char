@@ -1,0 +1,326 @@
+<character system="GSL40" display-name="Hammerthorn" type="PC">
+	<attribute name="Player" />
+	<attribute name="Name"><![CDATA[Hammerthorn]]></attribute>
+	<attribute name="Level"><![CDATA[2]]></attribute>
+	<attribute name="Class"><![CDATA[Avenger]]></attribute>
+	<attribute name="Paragon" />
+	<attribute name="Epic" />
+	<attribute name="XP"><![CDATA[1000]]></attribute>
+	<attribute name="Race"><![CDATA[Dwarf]]></attribute>
+	<attribute name="Size"><![CDATA[M]]></attribute>
+	<attribute name="Age" />
+	<attribute name="Gender" />
+	<attribute name="Height" />
+	<attribute name="Weight" />
+	<attribute name="Align"><![CDATA[Good]]></attribute>
+	<attribute name="Deity" />
+	<attribute name="Company" />
+	<attribute name="Str"><![CDATA[10]]></attribute>
+	<attribute name="Dex"><![CDATA[14]]></attribute>
+	<attribute name="Con"><![CDATA[13]]></attribute>
+	<attribute name="Int"><![CDATA[10]]></attribute>
+	<attribute name="Wis"><![CDATA[20]]></attribute>
+	<attribute name="Cha"><![CDATA[8]]></attribute>
+	<attribute name="AC"><![CDATA[17]]></attribute>
+	<attribute name="Fort"><![CDATA[14]]></attribute>
+	<attribute name="Ref"><![CDATA[15]]></attribute>
+	<attribute name="Will"><![CDATA[18]]></attribute>
+	<attribute name="Init"><![CDATA[3]]></attribute>
+	<attribute name="Speed"><![CDATA[5]]></attribute>
+	<attribute name="AP"><![CDATA[1]]></attribute>
+	<attribute name="MaxHP" max="33"><![CDATA[33]]></attribute>
+	<attribute name="CurHP" />
+	<attribute name="TempHP" />
+	<attribute name="Surges"><![CDATA[8]]></attribute>
+	<attribute name="CurSurges" />
+	<attribute name="SecondWind"><![CDATA[false]]></attribute>
+	<attribute name="DeathSave" />
+	<attribute name="SaveMods" />
+	<attribute name="Resist" />
+	<attribute name="Conditions" />
+	<attribute name="RaceFeatures">
+		<item><![CDATA[Dwarven Weapon Proficiency]]></item>
+		<item><![CDATA[Cast-Iron Stomach]]></item>
+		<item><![CDATA[Encumbered Speed]]></item>
+		<item><![CDATA[Dwarven Resilience]]></item>
+		<item><![CDATA[Stand Your Ground]]></item>
+	</attribute>
+	<attribute name="ClassFeatures">
+		<item><![CDATA[Armor of Faith]]></item>
+		<item><![CDATA[Avenger's Censure]]></item>
+		<item><![CDATA[Censure of Pursuit]]></item>
+		<item><![CDATA[Channel Divinity]]></item>
+		<item><![CDATA[Oath of Enmity]]></item>
+	</attribute>
+	<attribute name="ParagonFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="EpicFeatures"><![CDATA[
+	]]></attribute>
+	<attribute name="Languages">
+		<item><![CDATA[Common]]></item>
+		<item><![CDATA[Dwarven]]></item>
+	</attribute>
+	<attribute name="Feats">
+		<item><![CDATA[Weapon Expertise (Heavy Blade)]]></item>
+		<item><![CDATA[Weapon Focus (Heavy Blade)]]></item>
+	</attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Acrobatics]]></name>
+			<bonus><![CDATA[3]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Arcana]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Athletics]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Str]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Bluff]]></name>
+			<bonus><![CDATA[0]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Diplomacy]]></name>
+			<bonus><![CDATA[0]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Dungeoneering]]></name>
+			<bonus><![CDATA[8]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Endurance]]></name>
+			<bonus><![CDATA[4]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Con]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Heal]]></name>
+			<bonus><![CDATA[11]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[History]]></name>
+			<bonus><![CDATA[1]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Insight]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Intimidate]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Nature]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Perception]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Wis]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Religion]]></name>
+			<bonus><![CDATA[6]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Int]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<bonus><![CDATA[3]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Streetwise]]></name>
+			<bonus><![CDATA[5]]></bonus>
+			<trained><![CDATA[true]]></trained>
+			<attribute><![CDATA[Cha]]></attribute>
+		</item>
+		<item>
+			<name><![CDATA[Thievery]]></name>
+			<bonus><![CDATA[3]]></bonus>
+			<trained><![CDATA[false]]></trained>
+			<attribute><![CDATA[Dex]]></attribute>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+		<item>
+			<name><![CDATA[Melee Basic Attack]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Luckblade Greatsword +1: Strength vs. AC, Damage: 1d10+2.\nGreatsword: Strength vs. AC, Damage: 1d10+1.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Ranged Basic Attack]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Radiant Vengeance]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Holy Symbol: Wisdom vs. Reflex, Damage: 1d8+5.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Overwhelming Strike]]></name>
+			<keywords />
+			<use-type><![CDATA[AtWill]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Luckblade Greatsword +1: Wisdom vs. AC, Damage: 1d10+7.\nGreatsword: Wisdom vs. AC, Damage: 1d10+6.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Abjure Undead]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Holy Symbol: Wisdom vs. Will, Damage: 3d10+5.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Divine Guidance]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type />
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Oath of Enmity]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Minor]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Angelic Alacrity]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Luckblade Greatsword +1: Wisdom vs. AC, Damage: 2d10+7.\nGreatsword: Wisdom vs. AC, Damage: 2d10+6.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Second Wind]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Minor]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Action Point]]></name>
+			<keywords />
+			<use-type><![CDATA[Encounter]]></use-type>
+			<action-type><![CDATA[Free]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Aspect of Might]]></name>
+			<keywords />
+			<use-type><![CDATA[Daily]]></use-type>
+			<action-type><![CDATA[Standard]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect><![CDATA[Luckblade Greatsword +1: Wisdom vs. AC, Damage: 3d10+7.\nGreatsword: Wisdom vs. AC, Damage: 3d10+6.\n]]></effect>
+			<used><![CDATA[false]]></used>
+		</item>
+		<item>
+			<name><![CDATA[Blessing of Vengeance]]></name>
+			<keywords />
+			<use-type><![CDATA[Daily]]></use-type>
+			<action-type><![CDATA[Free]]></action-type>
+			<category><![CDATA[Utility]]></category>
+			<target />
+			<range />
+			<effect />
+			<used><![CDATA[false]]></used>
+		</item>
+	</attribute>
+	<attribute name="MagicItems">
+		<item><![CDATA[Amulet of Protection +1]]></item>
+		<item><![CDATA[Cloth Armor (Basic Clothing), Vigorous Resolve Vestments +1]]></item>
+		<item><![CDATA[Greatsword, Luckblade +1]]></item>
+	</attribute>
+	<attribute name="MIUsed" />
+	<attribute name="Rituals"><![CDATA[
+	]]></attribute>
+	<attribute name="Allies" />
+	<attribute name="Equipment">
+		<item><![CDATA[Adventurer's Kit]]></item>
+		<item><![CDATA[Holy Symbol]]></item>
+		<item><![CDATA[Greatsword]]></item>
+		<item><![CDATA[Cloth Armor (Basic Clothing)]]></item>
+	</attribute>
+	<attribute name="Personality" />
+	<attribute name="Appearance" />
+	<attribute name="Background" />
+	<attribute name="Wealth" />
+	<attribute name="Notes" />
+	<attribute name="Token"><![CDATA[contentId,token:GSL40-Dwarf]]></attribute>
+</character>

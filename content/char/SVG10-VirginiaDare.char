@@ -1,0 +1,113 @@
+<character system="SVG10" type="PC" display-name="Virginia Dare">
+	<attribute name="Name"><![CDATA[Virginia Dare]]></attribute>
+	<attribute name="Player"><![CDATA[]]></attribute>
+	<attribute name="Origin"><![CDATA[]]></attribute>
+	<attribute name="Rating"><![CDATA[Seasoned (25 XP)]]></attribute>
+	<attribute name="Destination"><![CDATA[]]></attribute>
+	<attribute name="Agility"><![CDATA[8]]></attribute>
+	<attribute name="Smarts"><![CDATA[8]]></attribute>
+	<attribute name="Strength"><![CDATA[8]]></attribute>
+	<attribute name="Spirit"><![CDATA[6]]></attribute>
+	<attribute name="Vigor"><![CDATA[6]]></attribute>
+	<attribute name="Charisma"><![CDATA[+2]]></attribute>
+	<attribute name="Pace"><![CDATA[6]]></attribute>
+	<attribute name="Parry"><![CDATA[5]]></attribute>
+	<attribute name="Toughness"><![CDATA[5]]></attribute>
+	<attribute name="Fatigue"><![CDATA[]]></attribute>
+	<attribute name="Wounds"><![CDATA[]]></attribute>
+	<attribute name="PowerPoints"><![CDATA[]]></attribute>
+	<attribute name="Bennies"><![CDATA[3]]></attribute>
+	<attribute name="Hindrances">
+		<item><![CDATA[Curious]]></item>
+		<item><![CDATA[Loyal]]></item>
+		<item><![CDATA[Stubborn]]></item>
+	</attribute>
+	<attribute name="Edges">
+		<item><![CDATA[Alertness]]></item>
+		<item><![CDATA[Attractive]]></item>
+		<item><![CDATA[Danger Sense]]></item>
+	</attribute>
+	<attribute name="Equipment">
+		<item><![CDATA[2 spare clips for Colt 1911]]></item>
+	</attribute>
+	<attribute name="ArmorHead"><![CDATA[]]></attribute>
+	<attribute name="ArmorTorso"><![CDATA[]]></attribute>
+	<attribute name="ArmorArms"><![CDATA[]]></attribute>
+	<attribute name="ArmorLegs"><![CDATA[]]></attribute>
+	<attribute name="WTCarried"><![CDATA[]]></attribute>
+	<attribute name="WTLimit"><![CDATA[]]></attribute>
+	<attribute name="WTPenalty"><![CDATA[]]></attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Boating]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Climb]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Fighting]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Guts]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Intimidation]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Investigation]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Notice]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Persuasion]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Shooting]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Stealth]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+	</attribute>
+	<attribute name="Weapons">
+		<item>
+			<name><![CDATA[Large Knife]]></name>
+			<range><![CDATA[1]]></range>
+			<rof><![CDATA[]]></rof>
+			<damage><![CDATA[1da[Strength]+1da4]]></damage>
+			<ap><![CDATA[]]></ap>
+			<wt><![CDATA[]]></wt>
+			<notes><![CDATA[]]></notes>
+		</item>
+		<item>
+			<name><![CDATA[Colt 1911]]></name>
+			<range><![CDATA[12/24/48]]></range>
+			<rof><![CDATA[1]]></rof>
+			<damage><![CDATA[2da6+1]]></damage>
+			<ap><![CDATA[1]]></ap>
+			<wt><![CDATA[]]></wt>
+			<notes><![CDATA[7 shots, semi-auto]]></notes>
+		</item>
+	</attribute>
+	<attribute name="Injuries"><![CDATA[]]></attribute>
+	<attribute name="Wealth"><![CDATA[]]></attribute>
+	<attribute name="Description"><![CDATA[]]></attribute>
+	<attribute name="Personality"><![CDATA[]]></attribute>
+	<attribute name="Background"><![CDATA[Virginia’s parents raised her to be a dancer, but her tomboyish nature often got the better of her. More than one boy who was too forward with her received a broken nose. By the age of 21, the bored socialite was jolted out of her boring life when her brother, Danny Dare, went missing during a visit to Cairo. Not only did she find him, but they became embroiled in an incredible fight against an ancient mummy, and ever since she has become a renowned tomb raider.Virginia met Buck Savage during this same adventure, and formed a lovehate relationship with him. The two know they’re destined to be together, but their stubborn natures have so far kept them from cementing the deal.]]></attribute>
+	<attribute name="Notes"><![CDATA[Languages: English, Arabic, French, Russian]]></attribute>
+	<attribute name="DieRolls">
+	</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:SVG10-Virginia]]></attribute>
+</character>

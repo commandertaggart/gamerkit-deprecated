@@ -1,0 +1,423 @@
+<sheet system="OGL35" type="PC">
+	<block id="token" priority="placed">
+		<attribute name="Token" />
+	</block>
+	<block id="vitals" priority="placed">
+		<column width="128">
+			<attribute name="Token" />
+		</column>
+		<column>
+			<line>
+				<attribute name="Name" width="50%" />
+				<attribute name="Player" width="50%" />
+				<attribute id="SystemTools" width="100" />
+			</line>
+			<line>
+				<attribute name="Levels" width="55%" />
+				<attribute name="Align" width="15%" />
+				<attribute name="Deity" width="15%" />
+				<attribute name="Homeland" width="15%" />
+			</line>
+			<line>
+				<attribute name="Race" width="30%" />
+				<attribute name="Size" width="10%" />
+				<attribute name="Gender" width="10%" />
+				<attribute name="Age" width="10%" />
+				<attribute name="Height" width="10%" />
+				<attribute name="Weight" width="10%" />
+				<attribute name="Hair" width="10%" />
+				<attribute name="Eyes" width="10%" />
+			</line>
+		</column>
+	</block>
+	<block id="attributes" priority="required">
+		<line>
+			<attribute name="Str" label="large:60">
+				<data name="base" label="small" />
+				<data name="mod" label="small" />
+				<data name="adjust" label="small" />
+				<data name="total" label="small" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="Dex" label="large:60">
+				<data name="base" label="none" />
+				<data name="mod" label="none" />
+				<data name="adjust" label="none" />
+				<data name="total" label="none" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="Con" label="large:60">
+				<data name="base" label="none" />
+				<data name="mod" label="none" />
+				<data name="adjust" label="none" />
+				<data name="total" label="none" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="Int" label="large:60">
+				<data name="base" label="none" />
+				<data name="mod" label="none" />
+				<data name="adjust" label="none" />
+				<data name="total" label="none" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="Wis" label="large:60">
+				<data name="base" label="none" />
+				<data name="mod" label="none" />
+				<data name="adjust" label="none" />
+				<data name="total" label="none" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="Cha" label="large:60">
+				<data name="base" label="none" />
+				<data name="mod" label="none" />
+				<data name="adjust" label="none" />
+				<data name="total" label="none" />
+			</attribute>
+		</line>
+	</block>
+	<block id="vitals2" priority="placed">
+		<line>
+			<attribute name="XP" width="50%" />
+			<attribute name="NextLevel" width="50%" />
+		</line>
+		<line>
+			<attribute name="Init" width="60%" label="large:66.7%" />
+			<attribute name="InitBase" width="20%" label="small" content="computed">
+				value = i(@{Dex});
+			</attribute>
+			<attribute name="InitMod" width="20%" label="small" />
+		</line>
+	</block>
+	<block id="hp" priority="required">
+		<line>
+			<attribute name="MaxHP" />
+			<attribute name="NonlethalDamage" />
+		</line>
+		<line>
+			<attribute name="DmgReduction" />
+		</line>
+		<line>
+			<attribute name="Wounds" display-type="textbox" />
+		</line>
+	</block>
+	<block id="attack" priority="required">
+		<line><attribute name="BAB" label="large:80%" /></line>
+
+		<line>
+			<attribute name="CMB" width="30%" label="large:66.7%" />
+			<attribute name="CMBBAB" width="10%" label="small" content="computed">
+				value = i(@{BAB});
+			</attribute>
+			<attribute name="CMBAttr" width="10%" label="small" />
+			<attribute name="CMBSize" width="10%" label="small" />
+		
+			<attribute name="SpellSave" width="40%" />
+		</line>
+
+		<line>
+			<attribute name="CMD" width="30%" label="large:66.7%" />
+			<attribute name="CMDBase" content="constant" width="10%">10</attribute>
+			<attribute name="CMDBAB" width="10%" content="computed">
+				value = i(@{BAB});
+			</attribute>
+			<attribute name="CMDStr" width="10%" content="computed">
+				value = i(@{Str});
+			</attribute>
+			<attribute name="CMDDex" width="10%" content="computed">
+				value = i(@{Dex});
+			</attribute>
+			<attribute name="CMDSize" width="10%" content="computed">
+				value = i(@{CMBSize});
+			</attribute>
+		</line>
+
+		<attribute name="Attacks" item-label="default">
+			<line>
+				<data name="name" width="60%" label="large:100%" />
+				<data name="bonus" width="20%" />
+				<data name="damage" width="20%" />
+			</line>
+			<line>
+				<data name="critical" width="16.6%" />
+				<data name="range" width="16.6%" />
+				<data name="type" width="16.6%" />
+				<data name="ammo-type" width="25%" />
+				<data name="ammo-count" width="25%" />
+			</line>
+			<data name="notes" display-type="autosizetextbox" />
+		</attribute>
+	</block>
+	<block id="AC" priority="required">
+		<line>
+			<attribute name="AC" width="30%" label="large:67%" />
+			<attribute name="ACBase" content="constant" width="10%">10</attribute>
+			<attribute name="ACArmor" width="10%" content="computed">
+				value = i(@{ArmorAC});
+			</attribute>
+			<attribute name="ACDexMod" width="10%" />
+			<attribute name="ACSizeMod" width="10%" />
+			<attribute name="NaturalArmor" width="10%" />
+			<attribute name="DeflectionMod" width="10%" />
+			<attribute name="MiscAC" width="10%" />
+		</line>
+		<line>
+			<attribute name="TouchAC" width="20%" />
+			<attribute name="FlatAC" width="20%" />
+			<attribute name="ACMods" width="60%" />
+		</line>
+	</block>
+	<block id="saves" priority="require">
+		<line>
+			<attribute name="Fort" width="50%" label="large:80%" />
+			<attribute name="FortBase" width="10%" label="small" />
+			<attribute name="FortAttr" width="10%" label="small" content="computed">
+				value = m(@{Con});
+			</attribute>
+			<attribute name="FortMagic" width="10%" label="small" />
+			<attribute name="FortMisc" width="10%" label="small" />
+			<attribute name="FortTemp" width="10%" label="small" />
+		</line>
+		<line>
+			<attribute name="Ref" width="50%" label="large:80%" />
+			<attribute name="RefBase" width="10%" label="small" />
+			<attribute name="RefAttr" width="10%" label="small" content="computed">
+				value = m(@{Dex});
+			</attribute>
+			<attribute name="RefMagic" width="10%" label="small" />
+			<attribute name="RefMisc" width="10%" label="small" />
+			<attribute name="RefTemp" width="10%" label="small" />
+		</line>
+		<line>
+			<attribute name="Will" width="50%" label="large:80%" />
+			<attribute name="WillBase" width="10%" label="small" />
+			<attribute name="WillAttr" width="10%" label="small" content="computed">
+				value = m(@{Wis});
+			</attribute>
+			<attribute name="WillMagic" width="10%" label="small" />
+			<attribute name="WillMisc" width="10%" label="small" />
+			<attribute name="WillTemp" width="10%" label="small" />
+		</line>
+
+		<line><attribute name="SaveMods" /></line>
+		<line><attribute name="Conditions" /></line>
+	</block>
+	<block id="speed" priority="required">
+		<line>
+			<attribute name="BaseSpeed" />
+			<attribute name="ArmoredSpeed" />
+			<attribute name="FlySpeed" />
+		</line>
+		<line>
+			<attribute name="SwimSpeed" />
+			<attribute name="ClimbSpeed" />
+			<attribute name="BurrowSpeed" />
+		</line>
+		<attribute name="SpeedMods" />
+	</block>
+	<block id="skills" priority="required">
+		<attribute name="Skills" item-label="column">
+			<data name="name" />
+			<data name="attribute" width="40" />
+			<data name="attrbonus" content="computed" width="40">
+				value = "(" + m(@{parent.attribute}) + ")";
+			</data>
+			<data name="ranks" width="40" />
+			<data name="mods" width="40" />
+			<data name="total" width="40" />
+			<data name="class-skill" width="30" />
+			<data name="trained-only" width="30" />
+		</attribute>
+	</block>
+	<block id="feats">
+		<line><attribute name="Feats" item-label="none" /></line>
+		<line><attribute name="Specials" item-label="none" /></line>
+		<line><attribute name="Languages" item-label="none" /></line>
+	</block>
+	<block id="spells">
+		<line>
+			<attribute name="Spells" item-label="default">
+				<data name="level" content="computed">
+					value = o(@{parent.index});
+				</data>
+				<data name="used" display-type="pipslider" max-value="9" />
+				<data name="spells" label="none" item-label="none" />
+			</attribute>
+		</line>
+		<line>
+			<attribute name="SpellCap" item-label="column">
+				<data name="known" />
+				<data name="save-dc" />
+				<data name="level" content="computed">
+					value = o(@{parent.index});
+				</data>
+				<data name="per-day" />
+				<data name="bonus" />
+			</attribute>
+		</line>
+	</block>
+	<block id="stuff">
+		<line><attribute name="Wealth" label="title" display-type="autosizetextbox" /></line>
+		<line>
+			<attribute name="Armor">
+				<line collapse="true">
+					<data name="in-use" width="25" />
+					<data name="name" />
+					<data name="ac-bonus" width="50" />
+				</line>
+				<line>
+					<line>
+						<data name="type" label="default" />
+						<data name="weight" labels="default" />
+						<data name="max-dex" labels="default" />
+						<data name="check-penalty" labels="default" />
+						<data name="spell-fail" labels="default" />
+					</line>
+					<line><data name="properties" labels="default" display-type="autosizetextbox" /></line>
+				</line>
+			</attribute>
+		</line>
+		<line>
+			<attribute name="ArmorAC" />
+			<attribute name="ArmorCheckPenalty" />
+			<attribute name="ACMaxDexBonus" />
+			<attribute name="SpellFailure" />
+		</line>
+		<line>
+			<attribute name="Equipment" item-label="column">
+				<data name="name" width="80%" />
+				<data name="weight" width="20%" />
+			</attribute>
+		</line>
+		<line><attribute name="Encumbrance" /></line>
+		<line>
+			<attribute name="LightLoad" />
+			<attribute name="MediumLoad" />
+			<attribute name="HeavyLoad" />
+		</line>
+		<line>
+			<attribute name="LiftHigh" content="computed">
+				value = @{HeavyLoad};
+			</attribute>
+			<attribute name="LiftLow" content="computed">
+				var pass = {};
+				value = n_w(w_n(@{HeavyLoad}, pass)*2, pass.system);
+			</attribute>
+			<attribute name="Drag" content="computed">
+				var pass = {};
+				value = n_w(w_n(@{HeavyLoad}, pass)*5, pass.system);
+			</attribute>
+		</line>
+	</block>
+	<block id="description">
+		<line><attribute name="Personality" label="title" /></line>
+		<line><attribute name="Appearance" label="title" /></line>
+		<line><attribute name="Background" label="title" /></line>
+	</block>
+	<block id="notes">
+		<attribute name="Notes" label="title" />
+	</block>
+	<block id="dice" priority="optional">
+		<attribute name="DieRolls" />
+	</block>
+	
+
+
+	<layout type="display" name="default" display-name="Default">
+		<section id='top_bar'>
+			<block id="vitals" />
+		</section>
+		<section id='main_body'>
+			<tabs id='main_tabs'>
+				<section id="abilities" display="Abilities" column-bias="0">
+					<block id="attributes" />
+					<block id="vitals2" />
+					<block id="hp" />
+					<block id="attack" />
+					<block id="AC" />
+					<block id="saves" />
+					<block id="speed" />
+				</section>
+				<section id="stuff" display="Stuff" column-bias="0">
+					<block id="stuff" />
+				</section>
+				<section id="notes" display="Notes" column-bias="0">
+					<block id="description" />
+					<block id="notes" />
+				</section>
+				<section id="skills" display="Skills" column-bias="1">
+					<block id="skills" />
+					<block id="feats" />
+				</section>
+				<section id="spells" display="Spells" column-bias="1">
+					<block id="spells" />
+				</section>
+				<section id="dice" display="Dice" column-bias="1">
+					<block id="dice" />
+				</section>
+			</tabs>
+		</section>
+	</layout>
+	
+	<layout type="print" name="default" display-name="Default">
+		<page>
+			<section id='top_bar'>
+				<block id="vitals" />
+			</section>
+			<section id='top_bar2'>
+				<block id="vitals2" />
+			</section>
+			<section id='page1_body'>
+				<column>
+					<section id="abilities" display="Abilities">
+						<block id="attributes" />
+						<block id="defenses" />
+						<block id="hp" />
+						<block id="saves" />
+						<block id="feats" />
+					</section>
+				</column>
+				<column>
+					<section id="skills" display="Skills">
+						<block id="skills" />
+					</section>
+				</column>
+			</section>
+		</page>
+		<page>
+			<section id='page2'>
+				<column>
+					<section id="stuff" display="Stuff">
+						<block id="stuff" />
+					</section>
+				</column>
+				<column>
+					<section id="notes" display="Notes">
+						<block id="features" />
+					</section>
+				</column>
+			</section>
+		</page>
+		<page>
+			<section id='page3'>
+				<block id="description" />
+				<block id="notes" />
+			</section>
+		</page>
+		<page id='powercards'>
+			<section id="powers">
+				<block id="powers" />
+			</section>
+		</page>
+	</layout>
+	
+	<layout type="print" name="powercards" display-name="Power Cards">
+		<section id="powers">
+			<block id="powers" />
+		</section>
+	</layout>
+</sheet>

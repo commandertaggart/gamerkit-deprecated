@@ -1,0 +1,173 @@
+<ruleset name="SVG10" display-name="Savage Worlds" app-version="2.0">
+	<datasets>
+		<dataset name="skill" labels="columns">
+			<data name="name" display-name="Skill" value-type="string" />
+			<data name="rank" display-name="Rank" value-type="int" display-type="dieselect" default-value="4" valid="4,6,8,10,12" />
+		</dataset>
+		<dataset name="power" display-type="blocks" collapse-to="name">
+			<data name="name" display-name="Power" value-type="string" />
+			<data name="trapping" display-name="Trapping" value-type="string" />
+			<data name="cost" display-name="Cost" value-type="int" />
+			<data name="range" display-name="Range" value-type="int" />
+			<data name="duration" display-name="Duration" value-type="string" />
+			<data name="effect" display-name="Effect/Damage" value-type="string" display-type="autosizetextbox" />
+		</dataset>
+		<dataset name="weapon" display-type="blocks" collapse-to="name">
+			<data name="name" display-name="Weapon" value-type="string" />
+			<data name="range" display-name="Range" value-type="string" default-value="1" />
+			<data name="damage" display-name="Damage" value-type="string" />
+			<data name="rof" display-name="ROF" value-type="string" default-value="1" />
+			<data name="ap" display-name="AP" value-type="string" />
+			<data name="wt" display-name="WT" value-type="string" />
+			<data name="notes" display-name="Notes" value-type="string" display-type="autosizetextbox" />
+		</dataset>
+		<dataset name="roll" display-type="columns" roll="'{.name}':{.roll}">
+			<data name="name" display-name="Tag" value-type="string" />
+			<data name="roll" display-name="Notation" value-type="string" />
+		</dataset>
+	</datasets>
+	
+	<attributes>
+		<attribute name="Name" display-name="Name" value-type="string" />
+		<attribute name="Player" display-name="Player Name" value-type="string" />
+		<attribute name="Origin" display-name="Port of Origin" value-type="string" />
+		<attribute name="Rating" display-name="Rating (XP)" value-type="string" />
+		<attribute name="Agility" display-name="Agility" value-type="int" default-value="4" 
+			display-type="dieselect" valid="4,6,8,10,12" 
+			roll="max('Agility':1d{*}!,'Wild Die':1d6!)" />
+		<attribute name="Smarts" display-name="Smarts" value-type="int" default-value="4" 
+			display-type="dieselect" valid="4,6,8,10,12" 
+			roll="max('Smarts':1d{*}!,'Wild Die':1d6!)" />
+		<attribute name="Strength" display-name="Strength" value-type="int" default-value="4" 
+			display-type="dieselect" valid="4,6,8,10,12" 
+			roll="max('Strength':1d{*}!,'Wild Die':1d6!)" />
+		<attribute name="Spirit" display-name="Spirit" value-type="int" default-value="4" 
+			display-type="dieselect" valid="4,6,8,10,12" 
+			roll="max('Spirit':1d{*}!,'Wild Die':1d6!)" />
+		<attribute name="Vigor" display-name="Vigor" value-type="int" default-value="4" 
+			display-type="dieselect" valid="4,6,8,10,12" 
+			roll="max('Vigor':1d{*}!,'Wild Die':1d6!)" />
+		<attribute name="Charisma" display-name="Charisma" value-type="int" default-value="0" />
+		<attribute name="Pace" display-name="Pace" value-type="int" default-value="6" />
+		<attribute name="Parry" display-name="Parry" value-type="int" />
+		<attribute name="Toughness" display-name="Toughness" value-type="int" />
+		<attribute name="Fatigue" display-name="Fatigue" value-type="int" default-value="0" display-type="pipslider" max="3" always-edit="true" />
+		<attribute name="Wounds" display-name="Wounds" value-type="int" default-value="0" display-type="pipslider" max="4" always-edit="true" />
+		<attribute name="PowerPoints" display-name="Power Points" value-type="int" display-type="maxrange" default-value="10" min="0" sensitivity="8" />
+		<attribute name="Bennies" display-name="Bennies" value-type="int" default-value="3" />
+		
+		<attribute name="Hindrances" display-name="Hindrances" value-type="string" list="true" />
+		<attribute name="Edges" display-name="Edges" value-type="string" list="true" />
+		<attribute name="Equipment" display-name="Equipment" value-type="string" list="true" display-type="autosizetextbox" />
+		<attribute name="ArmorHead" display-name="Head Armor" value-type="string" />
+		<attribute name="ArmorTorso" display-name="Torso Armor" value-type="string" />
+		<attribute name="ArmorArms" display-name="Arms Armor" value-type="string" />
+		<attribute name="ArmorLegs" display-name="Legs Armor" value-type="string" />
+		<attribute name="WTCarried" display-name="Total WT Carried" value-type="string" />
+		<attribute name="WTLimit" display-name="Weight Limit" value-type="string" />
+		<attribute name="WTPenalty" display-name="Enc. Penalty" value-type="string" />
+		
+		<attribute name="Skills" display-name="Skills" value-type="skill" list="true" />
+		<attribute name="Powers" display-name="Powers/Trappings" value-type="power" list="true" />
+		<attribute name="Weapons" display-name="Weapons" value-type="weapon" list="true" />
+		
+		<attribute name="Injuries" display-name="Permanent Injuries" value-type="string" />
+
+		<attribute name="Wealth" display-name="Money" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Description" display-name="Description" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Personality" display-name="Personality" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Background" display-name="Background" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Notes" display-name="Session and Campaign Notes" value-type="string" display-type="autosizetextbox" always-edit="true" />
+		
+		<attribute name="DieRolls" display-name="Common Die Rolls" value-type="roll" list="true" />
+		<attribute name="Token" display-name="Token" value-type="token" />
+	</attributes>
+	
+	<character-types>
+		<character-type name="PC" display-name="Wild Card" type-sort="PC" rank-sort="Rating"
+			preview="&lt;h1&gt;@{Name}&lt;/h1&gt;&lt;h2&gt;@{Rating} Wild Card&lt;/h2&gt;&lt;img src='/api/token/@{id}' /&gt;&lt;p&gt;@{Description}&lt;/p&gt;">
+			<attribute name="Name" />
+			<attribute name="Player" />
+			<attribute name="Origin" />
+			<attribute name="Rating" />
+			<attribute name="Agility" />
+			<attribute name="Smarts" />
+			<attribute name="Strength" />
+			<attribute name="Spirit" />
+			<attribute name="Vigor" />
+			<attribute name="Charisma" />
+			<attribute name="Pace" />
+			<attribute name="Parry" />
+			<attribute name="Toughness" />
+			<attribute name="Fatigue" />
+			<attribute name="Wounds" />
+			<attribute name="PowerPoints" />
+			<attribute name="Bennies" />
+			<attribute name="Hindrances" />
+			<attribute name="Edges" />
+			<attribute name="Equipment" />
+			<attribute name="ArmorHead" />
+			<attribute name="ArmorTorso" />
+			<attribute name="ArmorArms" />
+			<attribute name="ArmorLegs" />
+			<attribute name="WTCarried" />
+			<attribute name="WTLimit" />
+			<attribute name="WTPenalty" />
+			<attribute name="Skills" />
+			<attribute name="Powers" />
+			<attribute name="Weapons" />
+			<attribute name="Injuries" />
+			<attribute name="Wealth" />
+			<attribute name="Description" />
+			<attribute name="Personality" />
+			<attribute name="Background" />
+			<attribute name="Notes" />
+			<attribute name="DieRolls" />
+			<attribute name="Token" />
+		</character-type>
+		<character-type name="NPC" display-name="Extra" type-sort="NPC"
+			preview="&lt;h1&gt;@{Name}&lt;/h1&gt;&lt;h2&gt;@{Rating} Extra&lt;/h2&gt;&lt;img src='/api/token/@{id}' /&gt;&lt;p&gt;@{Description}&lt;/p&gt;">
+			<attribute name="Name" />
+			<attribute name="Rating" />
+			<attribute name="Agility" />
+			<attribute name="Smarts" />
+			<attribute name="Strength" />
+			<attribute name="Spirit" />
+			<attribute name="Vigor" />
+			<attribute name="Charisma" />
+			<attribute name="Pace" />
+			<attribute name="Parry" />
+			<attribute name="Toughness" />
+			<attribute name="Fatigue" />
+			<attribute name="Wounds" />
+			<attribute name="PowerPoints" />
+			<attribute name="Hindrances" />
+			<attribute name="Edges" />
+			<attribute name="Equipment" />
+			<attribute name="ArmorHead" />
+			<attribute name="ArmorTorso" />
+			<attribute name="ArmorArms" />
+			<attribute name="ArmorLegs" />
+			<attribute name="Skills" />
+			<attribute name="Powers" />
+			<attribute name="Weapons" />
+			<attribute name="Injuries" />
+			<attribute name="Wealth" />
+			<attribute name="Description" />
+			<attribute name="Notes" />
+			<attribute name="DieRolls" />
+			<attribute name="Token" />
+		</character-type>
+	</character-types>
+	
+	<character-sheets>
+		<character-sheet name="PC-FULL" type="PC" display-name="Full Sheet" />
+	</character-sheets>
+
+	<imports>
+	</imports>
+	
+	<encounter-elements>
+		<encounter-element name="encelem" display-name="Not sure what goes here" />
+	</encounter-elements>
+</ruleset>

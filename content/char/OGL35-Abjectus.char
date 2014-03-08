@@ -1,0 +1,208 @@
+<character system="OGL35" display-name="Abjectus" type="PC">
+	<attribute name="Name">Abjectus</attribute>
+	<attribute name="Player"></attribute>
+	<attribute name="Levels">Fighter 7</attribute>
+	<attribute name="Str">16</attribute>
+	<attribute name="Con">12</attribute>
+	<attribute name="Dex">16</attribute>
+	<attribute name="Int">13</attribute>
+	<attribute name="Wis">8</attribute>
+	<attribute name="Cha">10</attribute>
+	<attribute name="Align">NG</attribute>
+	<attribute name="Race">Human</attribute>
+	<attribute name="XP"></attribute>
+	<attribute name="Size">M</attribute>
+	<attribute name="Age">28</attribute>
+	<attribute name="Gender">Male</attribute>
+	<attribute name="Height">6' 2"</attribute>
+	<attribute name="Weight">192lbs.</attribute>
+	<attribute name="Deity"></attribute>
+	<attribute name="Homeland"></attribute>
+	<attribute name="Eyes">Brown</attribute>
+	<attribute name="Hair">Black</attribute>
+	<attribute name="Skin"></attribute>
+	<attribute name="AC">20</attribute>
+	<attribute name="Fort">+6</attribute>
+	<attribute name="Ref">+5</attribute>
+	<attribute name="Will">+1</attribute>
+	<attribute name="Init">+7</attribute>
+	<attribute name="Touch">13</attribute>
+	<attribute name="FlatFooted">17</attribute>
+	<attribute name="Speed">20 ft.</attribute>
+	<attribute name="BAB">+7</attribute>
+	<attribute name="MaxHP">50</attribute>
+	<attribute name="CurHP">50</attribute>
+	<attribute name="NonlethalDamage"></attribute>
+	<attribute name="DmgReduction"></attribute>
+	<attribute name="Conditions"></attribute>
+	<attribute name="Specials">
+	</attribute>
+	<attribute name="Languages">
+		<item>Common</item>
+		<item>Goblinoid</item>
+	</attribute>
+	<attribute name="Feats">
+		<item>Big Game Hunter</item>
+		<item>Combat Expertise</item>
+		<item>Improved Initiative</item>
+		<item>Power Attack</item>
+		<item>Two-Weapon Defense</item>
+		<item>Two-Weapon Fighting</item>
+		<item>Weapon Focus (longsword)</item>
+		<item>Weapon Focus (short sword)</item>
+		<item>Weapon Specialization (longsword)</item>
+	</attribute>
+	<attribute name="Skills">
+		<item>
+			<name>Climb</name>
+			<bonus>+10</bonus>
+			<attribute>Str</attribute>
+			<class-skill>true</class-skill>
+		</item>
+		<item>
+			<name>Intimidate</name>
+			<bonus>+10</bonus>
+			<attribute>Cha</attribute>
+			<class-skill>true</class-skill>
+		</item>
+		<item>
+			<name>Ride</name>
+			<bonus>+13</bonus>
+			<attribute>Dex</attribute>
+			<class-skill>true</class-skill>
+		</item>
+		<item>
+			<name>Swim</name>
+			<bonus>+7</bonus>
+			<attribute>Str</attribute>
+			<class-skill>true</class-skill>
+		</item>
+	</attribute>
+	<attribute name="Attacks">
+		<item>
+			<name>+1 Frost longsword</name>
+			<bonus>+10/+5</bonus>
+			<damage>1d8+6</damage>
+			<critical>19-20 plus 1d6 cold</critical>
+			<range></range>
+			<type>Slash/Pierce</type>
+			<notes></notes>
+			<ammo-type></ammo-type>
+			<ammo-count></ammo-count>
+		</item>
+		<item>
+			<name>+1 short sword</name>
+			<bonus>+10</bonus>
+			<damage>1d6+2</damage>
+			<critical>19-20 x2</critical>
+			<range></range>
+			<type>Slash/Pierce</type>
+			<notes></notes>
+			<ammo-type></ammo-type>
+			<ammo-count></ammo-count>
+		</item>
+		<item>
+			<name>Masterwork composite longbow</name>
+			<bonus>+11/+6</bonus>
+			<damage>1d8+3</damage>
+			<critical>x3</critical>
+			<range></range>
+			<type></type>
+			<notes></notes>
+			<ammo-type>Arrow</ammo-type>
+			<ammo-count>20</ammo-count>
+		</item>
+	</attribute>
+	<attribute name="Armor">
+		<item>
+			<name>+1 breastplate</name>
+			<type>plate</type>
+			<ac-bonus>+6</ac-bonus>
+			<max-dex>+3</max-dex>
+			<check-penalty>-4</check-penalty>
+			<spell-fail>25%</spell-fail>
+			<weight>30lb.</weight>
+			<properties></properties>
+		</item>
+	</attribute>
+	<attribute name="Spells">
+	</attribute>
+	<attribute name="SpellSave"></attribute>
+	<attribute name="SpellCap0">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap1">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap2">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap3">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap4">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap5">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap6">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap7">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap8">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="SpellCap9">
+		<known></known>
+		<save-dc></save-dc>
+		<per-day></per-day>
+		<bonus></bonus>
+	</attribute>
+	<attribute name="Equipment">
+		<item>Alchemist's fire x2</item>
+		<item>Elixir of fire breath</item>
+		<item>Potion of bear's endurance</item>
+		<item>potion of cure moderate wounds x3</item>
+		<item>Silver dagger</item>
+		<item>Gauntlets of ogre power</item>
+		<item>backpack</item>
+		<item>Rations x6</item>
+		<item>50 ft. Silken rope</item>
+	</attribute>
+	<attribute name="Personality"></attribute>
+	<attribute name="Appearance"></attribute>
+	<attribute name="Background"></attribute>
+	<attribute name="Wealth">30pp, 17gp</attribute>
+	<attribute name="Notes"></attribute>
+	<attribute name="Token"><![CDATA[contentId,token:GSL40-Abjectus]]></attribute>
+</character>

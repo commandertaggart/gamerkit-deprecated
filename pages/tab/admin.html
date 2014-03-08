@@ -1,0 +1,58 @@
+<script>
+	function showAdminPage(page)
+	{
+		loadSnippet($("DIV.admin_page").empty(), "/api/" + page);
+		$("DIV.admin_tabs A").removeClass('active');
+		$("DIV.admin_tabs A#admin_" + page).addClass('active');
+		window.__toolkit_admin_page = page;
+	}
+	
+	window.addEventListener("message", function (message)
+	{
+		try
+		{
+			if (message.data.indexOf("feedback:") == 0)
+			{
+				var data = JSON.parse(message.data.substr(9));
+				
+				window.__feedback_state = {
+					state: "form",
+					values: {
+						type: data.type || "bug",
+						about: data.about || "app",
+						"about-specific": data["about-specific"] || ""
+					}
+				};
+				showAdminPage("feedback");
+				if (window.showContent)
+				{ window.showContent("admin"); }
+			}
+		}
+		catch (e)
+		{
+			if (console && console.log)
+			{ console.log("could not handle message: " + message.data); }
+		}
+	});
+
+	loadStyle('tab/admin.css');
+</script>
+<div class='admin_tabs'>
+	<a href='javascript:void(0);' id='admin_news' onclick='javascript:showAdminPage("news")'>News</a>
+	<!-- a href='javascript:void(0);' id='admin_shop' onclick='javascript:showAdminPage("shop")'>Shop</a>
+	<a href='javascript:void(0);' id='admin_settings' onclick='javascript:showAdminPage("settings")'>Settings</a -->
+	<a href='javascript:void(0);' id='admin_feedback' onclick='javascript:showAdminPage("feedback")'>Feedback</a>
+</div>
+
+<div class='admin_page'>
+</div>
+
+<script>
+	setTimeout(function () 
+	{
+		if (window.__toolkit_admin_page == null)
+		{ showAdminPage("news"); }
+		else
+		{ showAdminPage(window.__toolkit_admin_page); }
+	}, 0);
+</script>

@@ -1,0 +1,131 @@
+<ruleset name="HEX10" display-name="Hollow Earth Expedition">
+	<datasets>
+		<dataset name="skill" labels="column">
+			<data name="name" value-type="string" default="Skill" />
+			<data name="attribute" value-type="linked-option" link-group="priattr" />
+			<data name="ranks" value-type="int" default="0" />
+			<data name="specs" value-type="specialization" list="true" />
+		</dataset>
+		<dataset name="specialization">
+			<data name="name" value-type="string" />
+			<data name="skill" value-type="string" />
+			<data name="ranks" value-type="int" />
+		</dataset>
+		<dataset name="weapon">
+			<data name="name" value-type="string" />
+			<data name="lethal" value-type="bool" />
+			<data name="damage" value-type="int" />
+			<data name="modifier" value-type="int" />
+			<data name="attack" value-type="string" />
+			<data name="range" value-type="string" />
+			<data name="capacity" value-type="string" />
+			<data name="rate" value-type="string" />
+			<data name="speed" value-type="string" />
+			<data name="weight" value-type="string" />
+			<data name="ammo" value-type="string" />
+			<data name="notes" value-type="string" />
+		</dataset>
+		
+	</datasets>
+	
+	<attributes>
+		<attribute name="Name" display-name="Name" value-type="string" />
+		<attribute name="Player" display-name="Player Name" value-type="string" />
+		<attribute name="Archetype" display-name="Archetype" value-type="string" />
+		<attribute name="Motivation" display-name="Motivation" value-type="string" />
+		<attribute name="Body" display-name="Body" value-type="int" link-group="priattr" />
+		<attribute name="Dexterity" display-name="Dexterity" value-type="int" link-group="priattr" />
+		<attribute name="Strength" display-name="Strength" value-type="int" link-group="priattr" />
+		<attribute name="Charisma" display-name="Charisma" value-type="int" link-group="priattr" />
+		<attribute name="Intelligence" display-name="Intelligence" value-type="int" link-group="priattr" />
+		<attribute name="Willpower" display-name="Willpower" value-type="int" link-group="priattr" />
+		<attribute name="Size" display-name="Size" value-type="int" />
+		<attribute name="Initiative" value-type="computed">
+			value = @{Dexterity} + @{Intelligence};
+		</attribute>
+		<attribute name="Move" value-type="computed">
+			value = @{Dexterity} + @{Strength};
+		</attribute>
+		<attribute name="Defense" value-type="computed">
+			value = @{Dexterity} + @{Body} - @{Size};
+		</attribute>
+		<attribute name="Perception" value-type="computed">
+			value = @{Willpower} + @{Intelligence};
+		</attribute>
+		<attribute name="Stun" value-type="computed">
+			value = @{Body};
+		</attribute>
+		<attribute name="Style" display-name="Style" value-type="int" />
+		<attribute name="Health" display-name="Health" value-type="int" />
+		<attribute name="Skills" display-name="Skills" value-type="skill" list="true" />
+		<attribute name="Talents" display-name="Talents" value-type="string" list="true" />
+		<attribute name="Resources" display-name="Resource" value-type="string" list="true" />
+		<attribute name="Flaws" display-name="Flaws" value-type="string" list="true" />
+		<attribute name="Weapons" display-name="Weapons" value-type="weapon" list="true" />
+		<attribute name="Equipment" display-name="Other Equipment" value-type="string" list="true" />
+		<attribute name="Wealth" display-name="Coins and Other Wealth" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Age" display-name="Age" value-type="string" />
+		<attribute name="Gender" display-name="Gender" value-type="string" />
+		<attribute name="Height" display-name="Height" value-type="string" />
+		<attribute name="Eyes" display-name="Eyes" value-type="string" />
+		<attribute name="Hair" display-name="Hair" value-type="string" />
+		<attribute name="Skin" display-name="Skin" value-type="string" />
+		<attribute name="Languages" display-name="Languages Known" value-type="string" list="true" />
+		<attribute name="Background" display-name="Character Background" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Notes" display-name="Session and Campaign Notes" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Campaign" display-name="Campaign" value-type="string" />
+		<attribute name="Experience" display-name="Experience" value-type="int" />
+		
+		<attribute name="DieRolls" display-name="Common Die Rolls" value-type="roll" list="true" />
+		<attribute name="Token" display-name="Token" value-type="token" />
+	</attributes>
+	
+	<character-types>
+		<character-type name="PC" display-name="PC" type-sort="PC" rank-sort="Experience"
+			preview="&lt;h1&gt;@{Name}&lt;/h1&gt;&lt;h2&gt;@{Archetype} (@{Experience} XP)&lt;/h2&gt;&lt;img src='/api/token/@{id}'/&gt;&lt;p&gt;@{Background}&lt;/p&gt;">
+			<attribute name="Name" />
+			<attribute name="Player" />
+			<attribute name="Archetype" />
+			<attribute name="Motivation" />
+			<attribute name="Body" />
+			<attribute name="Dexterity" />
+			<attribute name="Strength" />
+			<attribute name="Charisma" />
+			<attribute name="Intelligence" />
+			<attribute name="Willpower" />
+			<attribute name="Size" />
+			<attribute name="Style" />
+			<attribute name="Health" />
+			<attribute name="Skills" />
+			<attribute name="Talents" />
+			<attribute name="Resources" />
+			<attribute name="Flaws" />
+			<attribute name="Weapons" />
+			<attribute name="Equipment" />
+			<attribute name="Wealth" />
+			<attribute name="Age" />
+			<attribute name="Gender" />
+			<attribute name="Height" />
+			<attribute name="Eyes" />
+			<attribute name="Hair" />
+			<attribute name="Skin" />
+			<attribute name="Languages" />
+			<attribute name="Background" />
+			<attribute name="Notes" />
+			<attribute name="Campaign" />
+			<attribute name="Experience" />
+		</character-type>
+	</character-types>
+	
+	<character-sheets>
+		<character-sheet name="PC" type="PC" display-name="Character Sheet" 
+			use-for-create="true" use-for-edit="true" use-for-tracking="true">
+			<file ref="HEX10-PC.sheet" platform="iphone" />
+			<file ref="HEX10-PC.pad.sheet" platform="ipad" />
+		</character-sheet>
+	</character-sheets>
+
+	<encounter-elements>
+		<encounter-element name="encelem" display-name="Not sure what goes here" />
+	</encounter-elements>
+</ruleset>

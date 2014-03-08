@@ -1,0 +1,318 @@
+<ruleset name="OGL35" display-name="OGL 3.5">
+	<datasets>
+		<dataset name="attribute" value-member="total">
+			<data name="base" value-type="int" />
+			<data name="mod" value-type="computed">
+				value = m((i(@{parent.base})-10)/2);
+			</data>
+			<data name="adjust" value-type="int" />
+			<data name="total"  value-type="computed">
+				value = m(i(@{parent.mod}) + i(@{parent.adjust}));
+			</data>
+		</dataset>
+		<dataset name="skill">
+			<data name="name" value-type="string" default="Skill" />
+			<data name="attribute" value-type="linked-option" link-group="attributes" />
+			<data name="attrbonus" value-type="computed">
+				value = "(" + m(@{parent.attribute}) + ")";
+			</data>
+			<data name="ranks" default-value="0" value-type="int" />
+			<data name="mods" default-value="0" value-type="+int" />
+			<data name="total" value-type="computed">
+				if (b(@{parent.trained-only}) &amp;&amp; i(@{parent.ranks}) &lt; 1)
+				{ value = "N/A"; }
+				else
+				{ value = m(i(@{parent.ranks}) + i(@{parent.mods}) + i(@{parent.attribute})); }
+			</data>
+			<data name="class-skill" value-type="bool" />
+			<data name="trained-only" value-type="bool" />
+		</dataset>
+		<dataset name="attack">
+			<data name="name" value-type="string" />
+			<data name="bonus" value-type="int" />
+			<data name="damage" value-type="string" />
+			<data name="critical" value-type="string" />
+			<data name="range" value-type="string" />
+			<data name="type" value-type="string" />
+			<data name="ammo-type" value-type="string" />
+			<data name="ammo-count" value-type="int" />
+			<data name="notes" value-type="string"  />
+		</dataset>
+		<dataset name="protection" collapse-to="in-use,name,ac-bonus">
+			<data name="in-use" value-type="bool" />
+			<data name="name" value-type="string" />
+			<data name="ac-bonus" value-type="string" />
+			<data name="type" value-type="string" labels="label" />
+			<data name="weight" value-type="string" labels="label" />
+			<data name="max-dex" value-type="string" labels="label" />
+			<data name="check-penalty" value-type="string" labels="label" />
+			<data name="spell-fail" value-type="string" labels="label" />
+			<data name="properties" value-type="string"  labels="label" />
+		</dataset>
+		<dataset name="spell-list">
+			<data name="used" value-type="int"  max-value="9" />
+			<data name="spells" value-type="string" list="true" />
+		</dataset>
+		<dataset name="spell-cap">
+			<data name="known" value-type="int" />
+			<data name="save-dc" value-type="int" />
+			<data name="per-day" value-type="int" />
+			<data name="bonus" value-type="int" />
+		</dataset>
+		<dataset name="equipment">
+			<data name="name" value-type="string" />
+			<data name="weight" value-type="string" />
+		</dataset>
+		<dataset name="roll">
+			<data name="name" value-type="string" />
+			<data name="roll" value-type="string" />
+		</dataset>
+	</datasets>
+	
+	<attributes>
+		<attribute name="Name" value-type="string" />
+		<attribute name="Player" value-type="string" />
+		<attribute name="Levels" value-type="string" />
+
+		<attribute name="Str" value-type="attribute" link-group="attributes" />
+		<attribute name="Con" value-type="attribute" link-group="attributes" />
+		<attribute name="Dex" value-type="attribute" link-group="attributes" />
+		<attribute name="Int" value-type="attribute" link-group="attributes" />
+		<attribute name="Wis" value-type="attribute" link-group="attributes" />
+		<attribute name="Cha" value-type="attribute" link-group="attributes" />
+
+		<attribute name="Align" value-type="option">
+			<option value="LG" />
+			<option value="NG" />
+			<option value="CG" />
+			<option value="LN" />
+			<option value="NN" />
+			<option value="CN" />
+			<option value="LE" />
+			<option value="NE" />
+			<option value="CE" />
+		</attribute>
+		<attribute name="Race" value-type="string" />
+		<attribute name="XP" value-type="int" />
+		<attribute name="NextLevel" value-type="int" />
+		<attribute name="Size" value-type="option">
+			<option value="F" />
+			<option value="D" />
+			<option value="T" />
+			<option value="S" />
+			<option value="M" />
+			<option value="L" />
+			<option value="H" />
+			<option value="G" />
+			<option value="C" />
+		</attribute>
+
+		<attribute name="Age" value-type="int" />
+		<attribute name="Gender" value-type="option...">
+			<option value="M" />
+			<option value="F" />
+		</attribute>
+		<attribute name="Height" value-type="string" />
+		<attribute name="Weight" value-type="string" />
+		<attribute name="Deity" value-type="string" />
+		<attribute name="Homeland" value-type="string" />
+		<attribute name="Eyes" value-type="string" />
+		<attribute name="Hair" value-type="string" />
+		<attribute name="Skin" value-type="string" />
+
+		<attribute name="AC" value-type="computed">
+			value = 10 + i(@{ArmorAC}) + i(@{ACDexMod}) + i(@{ACSizeMod}) + i(@{NaturalArmor}) +
+				i(@{DeflectionMod}) + i(@{MiscAC});
+		</attribute>
+		<attribute name="ACDexMod" value-type="computed">
+			var limit = s(@{ACMaxDexBonus});
+			var dex = i(@{Dex});
+			if (!isNaN(limit))
+			{ value = i(min([dex, i(limit)])); }
+			else
+			{ value = i(dex); }
+		</attribute>
+		<attribute name="ACSizeMod" value-type="computed">
+			value = i({"F":8,"D":4,"T":2,"S":1,"M":0,"L":-1,"H":-2,"G":-4,"C":-8}[s(@{Size})]);
+		</attribute>
+		<attribute name="NaturalArmor" value-type="+int" />
+		<attribute name="DeflectionMod" value-type="+int" />
+		<attribute name="MiscAC" value-type="+int" />
+		<attribute name="TouchAC" value-type="computed">
+			value = 10 + i(@{ACDexMod}) + i(@{ACSizeMod}) + i(@{DeflectionMod}) + i(@{MiscAC});
+		</attribute>
+		<attribute name="FlatAC" value-type="computed">
+			value = 10 + i(@{ACArmor}) + i(@{ACSizeMod}) + i(@{NaturalArmor}) +
+				i(@{DeflectionMod}) + i(@{MiscAC});
+		</attribute>
+		<attribute name="ACMods" value-type="string" />
+
+		<attribute name="FortBase" value-type="int" />
+		<attribute name="FortMagic" value-type="+int" />
+		<attribute name="FortMisc" value-type="+int" />
+		<attribute name="FortTemp" value-type="+int" />
+		<attribute name="Fort" value-type="computed">
+			value = m(i(@{FortBase}) + i(@{Con}) + i(@{FortMagic}) + i(@{FortMisc}) + i(@{FortTemp}));
+		</attribute>
+		
+		<attribute name="RefBase" value-type="int" />
+		<attribute name="RefMagic" value-type="+int" />
+		<attribute name="RefMisc" value-type="+int" />
+		<attribute name="RefTemp" value-type="+int" />
+		<attribute name="Ref" value-type="computed">
+			value = m(i(@{RefBase}) + i(@{Dex}) + i(@{RefMagic}) + i(@{RefMisc}) + i(@{RefTemp}));
+		</attribute>
+		
+		<attribute name="WillBase" value-type="int" />
+		<attribute name="WillMagic" value-type="+int" />
+		<attribute name="WillMisc" value-type="+int" />
+		<attribute name="WillTemp" value-type="+int" />
+		<attribute name="Will" value-type="computed">
+			value = m(i(@{WillBase}) + i(@{Wis}) + i(@{WillMagic}) + i(@{WillMisc}) + i(@{WillTemp}));
+		</attribute>
+
+		<attribute name="SaveMods" value-type="string" />
+		
+		<attribute name="InitMod" value-type="int" />
+		<attribute name="Init" value-type="computed">
+			value = m(i(@{Dex}) + i(@{InitMod}));
+		</attribute>
+
+		<attribute name="MaxHP" value-type="int"  />
+		<attribute name="NonlethalDamage" value-type="int" />
+		<attribute name="DmgReduction" value-type="string" />
+		<attribute name="Wounds" value-type="string"  />
+
+		<attribute name="BaseSpeed" value-type="string" />
+		<attribute name="ArmoredSpeed" value-type="string" />
+		<attribute name="FlySpeed" value-type="string" />
+		<attribute name="SwimSpeed" value-type="string" />
+		<attribute name="ClimbSpeed" value-type="string" />
+		<attribute name="BurrowSpeed" value-type="string" />
+		<attribute name="SpeedMods" value-type="string" />
+
+		<attribute name="BAB" value-type="+int" />
+		<attribute name="CMBAttr" value-type="computed">
+			var dex = i(@{Dex});
+			var str = i(@{Str});
+			var sz = s(@{Size});
+			var sizes = {
+				"F": dex,
+				"D": dex,
+				"T": dex,
+				"S": str,
+				"M": str, 
+				"L": str, 
+				"H": str, 
+				"G": str, 
+				"C": str
+			};
+			value = sizes[sz];
+		</attribute>
+		<attribute name="CMBSize" value-type="computed">
+			var sz = s(@{Size});
+			var sizes = {"F": -8,"D": -4,"T": -2,"S": -1,"M": 0,"L": 1,"H": 2,"G": 4,"C": 8};
+			value = sizes[sz];
+		</attribute>
+		<attribute name="CMB" value-type="computed">
+			value = m(i(@{BAB}) + i(@{CMBSize}) + i(@{CMBAttr}));
+		</attribute>
+		<attribute name="CMD" value-type="computed">
+			value = 10 + i(@{BAB}) + i(@{CMBSize}) + i(@{Str}) + i(@{Dex});
+		</attribute>
+		<attribute name="Conditions" value-type="string"  />
+		<attribute name="Specials" value-type="string" list="true" />
+		<attribute name="Languages" value-type="string" list="true" />
+		<attribute name="Feats" value-type="string" list="true" />
+		<attribute name="Skills" value-type="skill" list="true" labels="column" />
+		<attribute name="Attacks" value-type="attack" list="true" />
+		<attribute name="Spells" value-type="spell-list" list="true" list-type="computed" size="10" />
+		<attribute name="SpellSave" value-type="int" />
+		<attribute name="SpellCap" value-type="spell-cap" list="true" list-type="computed" size="10" labels="column" />
+		<attribute name="Armor" value-type="protection" list="true" labels="column" />
+		<attribute name="ArmorAC" value-type="computed">
+			value = m(sum(@{Armor(.in-use='true').ac-bonus}));
+		</attribute>
+		<attribute name="ArmorCheckPenalty" value-type="computed">
+			value = m(sum(@{Armor(.in-use='true').check-penalty}));
+		</attribute>
+		<attribute name="ACMaxDexBonus" value-type="computed">
+			value = m(min(@{Armor(.in-use='true').max-dex}, i));
+		</attribute>
+		<attribute name="SpellFailure" value-type="computed">
+			value = sum(@{Armor(.in-use='true').spell-fail}) + "%";
+		</attribute>
+		<attribute name="Equipment" value-type="equipment" list="true" labels="column" />
+		<attribute name="Encumbrance" value-type="computed">
+			value = sum(@{Equipment(*).weight}.concat(@{Armor(*).weight}),'w') || "";
+		</attribute>
+		<attribute name="LightLoad" value-type="computed">
+			var table = [  3,  6, 10, 13, 16, 20, 23, 26, 30, 33,
+						  38, 43, 50, 58, 66, 76, 86,100,116,133,
+						 153,173,200,233,266,306,346,400,466];
+						 
+			var str = i(@{Str.base});
+			var factor = 1;
+			while (str &gt;= table.length)
+			{
+				str -= 10;
+				factor *= 4;
+			}
+			if (str &lt;= 0)
+			{ value = w("0 lb"); }
+			else
+			{ value = w(table[str-1] + " lb"); }
+		</attribute>
+		<attribute name="MediumLoad" value-type="computed">
+			var table = [  6, 13, 20, 26, 33, 40, 46, 53, 60, 66,
+						  76, 86,100,116,133,153,173,200,233,266,
+						 306,346,400,466,533,613,693,800,933];
+						 
+			var str = i(@{Str.base});
+			var factor = 1;
+			while (str &gt;= table.length)
+			{
+				str -= 10;
+				factor *= 4;
+			}
+			if (str &lt;= 0)
+			{ value = w("0 lb"); }
+			else
+			{ value = w(table[str-1] + " lb"); }
+		</attribute>
+		<attribute name="HeavyLoad" value-type="computed">
+			var table = [ 10, 20, 30, 40, 50, 60, 70, 80, 90,100,
+						 115,130,150,175,200,230,260,300,350,400,
+						 460,520,600,700,800,920,1040,1200,1400];
+						 
+			var str = i(@{Str.base});
+			var factor = 1;
+			while (str &gt;= table.length)
+			{
+				str -= 10;
+				factor *= 4;
+			}
+			if (str &lt;= 0)
+			{ value = w("0 lb"); }
+			else
+			{ value = w(table[str-1] + " lb"); }
+		</attribute>
+
+		<attribute name="Personality" value-type="string"  />
+		<attribute name="Appearance" value-type="string"  />
+		<attribute name="Background" value-type="string"  />
+		<attribute name="Wealth" value-type="string"  />
+		<attribute name="Notes" value-type="string"  />
+		<attribute name="DieRolls" value-type="roll" list="true" labels="column" />
+		<attribute name="Token" value-type="token" />
+	</attributes>
+	
+	<character-types>
+		<character-type name="PC" type-sort="PC" rank-sort="XP" 
+			preview="&lt;h1&gt;@{Name}&lt;/h1&gt;&lt;h2&gt;@{Race} @{Levels}&lt;/h2&gt;&lt;img src='/api/token/@{id}' /&gt;&lt;p&gt;@{Background}&lt;/p&gt;">
+		</character-type>
+	</character-types>
+
+	<imports>
+	</imports>
+</ruleset>

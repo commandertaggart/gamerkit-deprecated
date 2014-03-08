@@ -1,0 +1,251 @@
+{
+	"system": { "label": "4th Edition Fantasy" },
+	"datasets":
+	{
+		"attribute":
+		{
+			"attributes":
+			{
+				"base": { "label": "Ability Score" },
+				"mod": { "label": "Ability Modifier" },
+				"adjust": { "label": "Temp Adjust." },
+				"total": { "label": "Temp Modifier" }
+			}
+		},
+		"skill":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"attribute": { "label": "Attr" },
+				"attrbonus": { "label": "" },
+				"ranks": { "label": "Ranks" },
+				"mods": { "label": "Mods" },
+				"total": { "label": "Total" },
+				"class-skill": { "label": "Class Skill" },
+				"trained-only": { "label": "Trained Only" }
+			}
+		},
+		"spell-cap":
+		{
+			"attributes":
+			{
+				"known": { "label": "Spells Known" },
+				"save-dc": { "label": "Spell Save DC" },
+				"level": { "label": "Level" },
+				"per-day": { "label": "Spells Per Day" },
+				"bonus": { "label": "Bonus Spells" }
+			}
+		},
+		"spell-list":
+		{
+			"attributes":
+			{
+				"level": { "label": "Level" }
+			}
+		},
+		"equipment":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"weight": { "label": "Weight" }
+			}
+		},
+		"protection":
+		{
+			"attributes":
+			{
+				"name": { "label": "Name" },
+				"in-use": { "label": "Worn" },
+				"weight": { "label": "Weight" },
+				"type": { "label": "Type" },
+				"ac-bonus": { "label": "AC Bonus" },
+				"max-dex": { "label": "Max Dex Bonus" },
+				"check-penalty": { "label": "Check Penalty" },
+				"spell-fail": { "label": "Spell Failure" },
+				"properties": { "label": "Properties" }
+			}
+		},
+		"attack":
+		{
+			"attributes":
+			{
+				"name": { "label": "Weapon" },
+				"bonus": { "label": "Attack Bonus" },
+				"damage": { "label": "Damage" },
+				"critical": { "label": "Crit." },
+				"range": { "label": "Range" },
+				"type": { "label": "Type" },
+				"notes": { "label": "Notes" },
+				"ammo-type": { "label": "Ammo Type" },
+				"ammo-count": { "label": "Amount" }
+			}
+		},
+		"roll": {
+			"attributes":
+			{
+				"name": {
+					"label": "Tag",
+					"tooltip": "Name this roll so you know what it is for."
+				},
+				"roll": {
+					"label": "Notation",
+					"tooltip": "Enter dice notation to roll."
+				}
+			}
+		}
+	},
+
+	"attributes":
+	{
+		"Name": { "label": "Name" },
+		"Player": { "label": "Player Name" },
+		"Level": { "label": "Level" },
+		"Str": { "label": "Str" },
+		"Con": { "label": "Con" },
+		"Dex": { "label": "Dex" },
+		"Int": { "label": "Int" },
+		"Wis": { "label": "Wis" },
+		"Cha": { "label": "Cha" },
+		"Align": 
+		{ 
+			"label": "Alignment",
+			"options":
+			{
+				"LG": { "label": "Lawful Good" },
+				"LN": { "label": "Lawful Neutral" },
+				"LE": { "label": "Lawful Evil" },
+				"NG": { "label": "Neutral Good" },
+				"NN": { "label": "True Neutral" },
+				"NE": { "label": "Neutral Evil" },
+				"CG": { "label": "Chaotic Good" },
+				"CN": { "label": "Chaotic Neutral" },
+				"CE": { "label": "Chaotic Evil" }
+			}
+		},
+		"Race": { "label": "Race" },
+		"Levels": { "label": "Class Levels" },
+		"XP": { "label": "Experience Points" },
+		"NextLevel": { "label": "Next Level" },
+		"Size": 
+		{ 
+			"label": "Size",
+			"options": 
+			{
+				"F": { "label": "Fine" },
+				"D": { "label": "Diminutive" },
+				"T": { "label": "Tiny" },
+				"S": { "label": "Small" },
+				"M": { "label": "Medium" },
+				"L": { "label": "Large" },
+				"H": { "label": "Huge" },
+				"G": { "label": "Gigantic" },
+				"C": { "label": "Collosal" }
+			}
+		},
+		"Age": { "label": "Age" },
+		"Gender": { "label": "Gender" },
+		"Height": { "label": "Height" },
+		"Weight": { "label": "Weight" },
+		"Hair": { "label": "Hair" },
+		"Eyes": { "label": "Eyes" },
+		"Deity": { "label": "Deity" },
+		"Homeland": { "label": "Homeland" },
+		"AC": { "label": "Armor Class" },
+
+		"Fort": { "label": "Fortitude<br /><span style='font-size: 6pt;'>(Constitution)</span>" },
+		"FortBase": { "label": "Base Save" },
+		"FortAttr": { "label": "Attr. Bonus" },
+		"FortMagic": { "label": "Magic Bonus" },
+		"FortMisc": { "label": "Misc Mods" },
+		"FortTemp": { "label": "Temp Mods" },
+
+		"Ref": { "label": "Reflex<br /><span style='font-size: 6pt;'>(Dexterity)</span>" },
+		"Will": { "label": "Willpower<br /><span style='font-size: 6pt;'>(Wisdom)</span>" },
+
+		"SaveMods": { "label": "Save Modifiers" },
+
+		"Init": { "label": "Init." },
+		"InitBase": { "label": "Dex Mod" },
+		"InitMod": { "label": "Misc Mod" },
+
+		"SpellSave": { "label": "Spell Resist." },
+		"BAB": { "label": "Base Attack Bonus" },
+
+		"CMB": { "label": "CMB" },
+		"CMBBAB": { "label": "Base Attack Bonus" },
+		"CMBAttr": { "label": "Str/Dex Mod" },
+		"CMBSize": { "label": "Size Mod" },
+
+		"CMD": { "label": "CMD" },
+		"CMDBAB": { "label": "Base Attack Bonus" },
+		"CMDStr": { "label": "Str Mod" },
+		"CMDDex": { "label": "Dex Mod" },
+		"CMDSize": { "label": "Size Mod" },
+
+		"Attacks":
+		{
+			"type-labels":
+			{
+				"attack": "Attack"
+			}
+		},
+
+		"BaseSpeed": { "label": "Base Speed" },
+		"ArmoredSpeed": { "label": "With Armor" },
+		"FlySpeed": { "label": "Fly" },
+		"SwimSpeed": { "label": "Swim" },
+		"ClimbSpeed": { "label": "Climb" },
+		"BurrowSpeed": { "label": "Burrow" },
+		"SpeedMods": { "label": "Speed Modifiers" },
+
+		"MaxHP": { "label": "Hit Points" },
+		"NonlethalDamage": { "label": "Nonlethal Dmg." },
+		"DmgReduction": { "label": "Damage Reduction" },
+		"Wounds": { "label": "Wounds" },
+		"Resist": { "label": "Resistances" },
+		"Conditions": { "label": "Current Conditions and Effects" },
+		"Languages": { "label": "Languages Known" },
+		"Feats": { "label": "Feats" },
+		"Specials": { "label": "Special Abilities" },
+		"Skills": { "label": "Skills" },
+		"Spells": { "label": "Spells" },
+
+		"AC": { "label": "AC" },
+		"ACBase": { "label": "Base" },
+		"ACArmor": { "label": "Armor Bonus" },
+		"ACDexMod": { "label": "Dex Mod" },
+		"ACSizeMod": { "label": "Size Mod" },
+		"NaturalArmor": { "label": "Natural Armor" },
+		"DeflectionMod": { "label": "Deflect. Mod" },
+		"MiscAC": { "label": "Misc Mod" },
+		"TouchAC": { "label": "Touch" },
+		"FlatAC": { "label": "Flat Footed" },
+		"ACMods": { "label": "AC Modifiers" },
+
+		"Armor": { "label": "Armor/Shield" },
+		"ArmorAC": { "label": "AC Bonus" },
+		"ArmorCheckPenalty": { "label": "Check Penalty" },
+		"ACMaxDexBonus": { "label": "Max Dex Bonus" },
+		"SpellFailure": { "label": "Spell Failure" },
+
+		"Equipment": { "label": "Gear" },
+		"Encumbrance": { "label": "Total Wt." },
+		"LightLoad": { "label": "Light Load" },
+		"MediumLoad": { "label": "Medium Load" },
+		"HeavyLoad": { "label": "Heavy Load" },
+		"LiftHigh": { "label": "Lift Over Head" },
+		"LiftLow": { "label": "Lift Off Ground" },
+		"Drag": { "label": "Drag or Push" },
+
+		"Personality": { "label": "Personality Traits" },
+		"Appearance": { "label": "Mannerisms and Appearance" },
+		"Background": { "label": "Character Background" },
+		"Wealth": { "label": "Coins and Other Wealth" },
+		"Notes": { "label": "Session and Campaign Notes" },
+	
+		"DieRolls": { "label": "Common Die Rolls" },
+		"Token": { "label": "Token" }
+	}
+}

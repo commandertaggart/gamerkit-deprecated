@@ -1,0 +1,493 @@
+<ruleset name="GSL40" display-name="4th Edition Fantasy">
+	<datasets>
+		<dataset name="skill" roll="'{.name} (1d20{.total})':1d20+{.total}">
+			<data name="name" display-name="Name" value-type="string" labels="prompt" />
+			<data name="trained" display-name="Trained" value-type="bool" default-value="false" print-value="true" />
+			<data name="attribute" display-name="Attr" value-type="linked-option" default-value="Int"
+				link-group="attributes">
+			</data>
+			<data name="attrbonus" display-name="" value-type="computed">
+				value = @{parent.attribute};
+				if (value >= 0) { value = "(+" + value + ")"; }
+				else { value = "(" + value + ")"; }
+			</data>
+			<data name="bonus" display-name="Mods" default-value="0" value-type="int" />
+			<data name="total" display-name="Total" value-type="computed">
+				value = @{parent.bonus} + (@{parent.trained}?5:0) + @{parent.attribute};
+				if (value >= 0) { value = "+" + value; }
+			</data>
+		</dataset>
+		<dataset name="weapon"><!-- roll="'Basic Attack':1d20+{.attack},'Damage':{.damage}+{.attack}" -->
+			<data name="name" display-name="Weapon" value-type="string" />
+			<data name="bonus" display-name="Enh. Bonus" value-type="+int" />
+			<data name="attack" display-name="Stat" value-type="linked-option"
+				default-value="Str" link-group="attributes" />
+			<data name="damage" display-name="Damage" value-type="string" />
+		</dataset>
+		<dataset name="magicweapon" collapse-to="name,attack,damage" labels="label">
+			<!-- roll="'Attack':1d20+{.attack}+{.bonus},'Damage':{.damage}+{.bonus}" -->
+			<data name="name" display-name="Name" value-type="string" labels="prompt" />
+			<data name="attack" display-name="Stat" value-type="linked-option"
+				default-value="Str" link-group="attributes" labels="prompt" />
+			<data name="damage" display-name="Base Damage" value-type="string" labels="prompt" />
+			<data name="type" display-name="Type" value-type="string" />
+			<data name="level" display-name="Level" value-type="int" />
+			<data name="bonus" display-name="Enhance. Bonus" value-type="int" />
+			<data name="enhance" display-name="Enhancement" value-type="constant" value="offense">Attack &amp; Damage</data>
+			<data name="goldvalue" display-name="Gold Value" value-type="string" />
+			<data name="crit" display-name="Critical" value-type="string" />
+			<data name="powers" display-name="Powers" value-type="magicpower" 
+				list="true" labels="prompt" />
+		</dataset>
+		<dataset name="magicitem" collapse-to="name,slot" labels="label">
+			<data name="name" display-name="Name" value-type="string" labels="prompt" />
+			<data name="slot" display-name="Body Slot" value-type="option" default-value="Slot">
+				<option value="Slot" />
+				<option value="Arms" />
+				<option value="Feet" />
+				<option value="Hands" />
+				<option value="Head" />
+				<option value="Neck" />
+				<option value="Ring" />
+				<option value="Waist" />
+				<option value="Wondrous" display="Wondrous Item" />
+				<option value="Weapon" display="Weapon/Implement" />
+			</data>
+			<data name="level" display-name="Level" value-type="int" />
+			<data name="bonus" display-name="Enhance. Bonus" value-type="int" />
+			<data name="enhance" display-name="Enhancement" value-type="option" default-value="none">
+				<option value="offense" display="Attack &amp; Damage" />
+				<option value="defense" display="Fort, Ref &amp; Will" />
+				<option value="ac" display="AC" />
+				<option value="none" display="None" />
+			</data>
+			<data name="goldvalue" display-name="Gold Value" value-type="string" />
+			<data name="powers" display-name="Powers" value-type="magicpower" list="true" />
+		</dataset>
+		<dataset name="magicpower" labels="prompt">
+			<data name="type" display-name="Type" value-type="option" default-value="Property">
+				<option value="Property" />
+				<option value="AtWill" display="At-Will" />
+				<option value="Encounter" />
+				<option value="Daily" />
+				<option value="Surge" display="Healing Surge" />
+				<option value="Consumable" />
+				<option value="Special" />
+			</data>
+			<data name="keywords" display-name="Keywords" value-type="string" />
+			<data name="info" display-name="Text" value-type="string" display-type="autosizetextbox" />
+		</dataset>
+		<dataset name="power" collapse-to="name,use-type,used">
+			<data name="name" value-type="string" />
+			<data name="use-type" value-type="option">
+				<option value="AtWill" display="At-Will" />
+				<option value="Encounter" />
+				<option value="Daily" />
+			</data>
+			<data name="used" value-type="bool" />
+			<data name="keywords" display-name="Keywords" value-type="string" />
+			<data name="action-type" display-name="Action Type" value-type="option">
+				<option value="Free" />
+				<option value="Interrupt" />
+				<option value="Minor" />
+				<option value="Move" />
+				<option value="Standard" />
+			</data>
+			<data name="range-type" display-name="Range" value-type="option">
+				<option value="Melee" />
+				<option value="Ranged" />
+				<option value="Close" />
+				<option value="Area" />
+			</data>
+			<data name="range-value" display-name="Range Value" labels="prompt" value-type="string" />
+			<data name="entries" value-type="power-attack|power-damage|power-hit|power-miss|power-attack2|power-effect|power-target" 
+				add-label="Primary Attack|Hit (Damage)|Hit (Other)|Miss|Additional Attack|Effect|Target" list="true" />
+		</dataset>
+		<dataset name="power-hit"><data name="value" display-name="Hit" value-type="string" /></dataset>
+		<dataset name="power-miss"><data name="value" display-name="Miss" value-type="string" /></dataset>
+		<dataset name="power-effect"><data name="value" display-name="Effect" value-type="string" /></dataset>
+		<dataset name="power-target"><data name="value" display-name="Target" value-type="string" /></dataset>
+		<dataset name="power-attack">
+			<data name="attack-attribute" display-name="Attack" default-value="Str" value-type="option">
+				<option value="Str" display="Str" />
+				<option value="Dex" display="Dex" />
+				<option value="Con" display="Con" />
+				<option value="Int" display="Int" />
+				<option value="Wis" display="Wis" />
+				<option value="Cha" display="Cha" />
+			</data>
+			<data name="attack-bonus" display-name="Bonus" labels="prompt" value-type="+int" />
+			<data name="defense" value-type="option">
+				<option value="AC" />
+				<option value="Fort" />
+				<option value="Ref" />
+				<option value="Will" />
+			</data>
+		</dataset>
+		<dataset name="power-damage">
+			<data name="roll" display-name="Hit" default-value="1[W]" value-type="string" />
+			<data name="attribute" value-type="linked-option" default-value="Str"
+				link-group="attributes" />
+			<data name="type" display-name="Type" labels="prompt" value-type="string" />
+		</dataset>
+		<dataset>
+			<data name="weapons" value-type="powerweapon" list="true" labels="column" 
+				list-type="computed" 
+				reference-list="Equipment(.@type=['weapon','magicweapon'] &amp; .attack={parent.attack-attribute})" />
+		</dataset>
+		<dataset name="power-attack2">
+			<data name="which" value-type="option">
+				<option value="Additional" display="Additional Attack" />
+				<option value="Secondary" display="Secondary Attack" />
+				<option value="Tertiary" display="Tertiary Attack" />
+			</data>
+			<data name="range-type" display-name="Range" value-type="option">
+				<option value="Melee" />
+				<option value="Ranged" />
+				<option value="Close" />
+				<option value="Area" />
+			</data>
+			<data name="range-value" display-name="Range Value" labels="prompt" value-type="string" />
+			<data name="target" display-name="Target" value-type="string" />
+			<data name="attack" display-name="Attack" value-type="power-attack" />
+			<data name="entries" value-type="power-hit|power-miss|power-effect" 
+				add-label="Hit|Miss|Effect" list="true" />
+		</dataset>
+		<dataset name="powerweapon" 
+			roll="'{parent.parent.name} Attack with {.name}':1d20+{.attack}, 'Damage':{.damage}">
+			<data name="name" display-name="Weapon" value-type="computed">
+				value = "@{parent.reference.name}";
+			</data>
+			<data name="attack" display-name="Attack Bonus" value-type="computed">
+				value = @{parent.reference.attack} + 
+					(parseInt("@{parent.parent.parent.attack-bonus}") || 0);
+				if (value >= 0)
+				{ value = "+" + value; }
+			</data>
+			<data name="damage" display-name="Damage" value-type="computed">
+				value = "@{parent.reference.damage}";
+			</data>
+		</dataset>
+		<dataset name="utility-power" collapse-to="used,name,use-type">
+			<data name="name" value-type="string" />
+			<data name="keywords" display-name="Keywords" value-type="string" />
+			<data name="use-type" value-type="option">
+				<option value="AtWill" display="At-Will" />
+				<option value="Encounter" />
+				<option value="Daily" />
+			</data>
+			<data name="action-type" display-name="Action Type" value-type="option">
+				<option value="Free" />
+				<option value="Interrupt" />
+				<option value="Minor" />
+				<option value="Move" />
+				<option value="Standard" />
+			</data>
+			<data name="effect" display-name="Effect" value-type="string" display-type="autosizetextbox" />
+			<data name="used" value-type="bool" />
+		</dataset>
+		<dataset name="roll" roll="'Last Result':{.roll}">
+			<data name="name" display-name="Tag" value-type="string" />
+			<data name="roll" display-name="Notation" value-type="string" />
+			<data name="result" value-type="dieresult" />
+		</dataset>
+	</datasets>
+	
+	<attributes>
+		<attribute name="Name" display-name="Name" value-type="string" />
+		<attribute name="Player" display-name="Player Name" value-type="string" />
+		<attribute name="Level" display-name="Level" value-type="int" />
+		<attribute name="StrBase" display-name="Str" value-type="int" roll="'Strength':1d20+({Str})" />
+		<attribute name="Str" display-name="Str" link-group="attributes" value-type="computed">
+			value = Math.floor(@{StrBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="ConBase" display-name="Con" value-type="int" roll="'Constitution':1d20+({Con})" />
+		<attribute name="Con" display-name="Con" link-group="attributes" value-type="computed">
+			value = Math.floor(@{ConBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="DexBase" display-name="Dex" value-type="int" roll="'Dexterity':1d20+({Dex})" />
+		<attribute name="Dex" display-name="Dex" link-group="attributes" value-type="computed">
+			value = Math.floor(@{DexBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="IntBase" display-name="Int" value-type="int" roll="'Intelligence':1d20+({Int})" />
+		<attribute name="Int" display-name="Int" link-group="attributes" value-type="computed">
+			value = Math.floor(@{IntBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="WisBase" display-name="Wis" value-type="int" roll="'Wisdom':1d20+({Wis})" />
+		<attribute name="Wis" display-name="Wis" link-group="attributes" value-type="computed">
+			value = Math.floor(@{WisBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="ChaBase" display-name="Cha" value-type="int" roll="'Charisma':1d20+({Cha})" />
+		<attribute name="Cha" display-name="Cha" link-group="attributes" value-type="computed">
+			value = Math.floor(@{ChaBase}/2)-5+Math.floor(@{Level}/2);
+			if (value >= 0)
+			{ value = "+" + value; }
+		</attribute>
+		<attribute name="Align" display-name="Alignment" value-type="option">
+			<option value="LG" display="Lawful Good" />
+			<option value="LN" display="Lawful Neutral" />
+			<option value="LE" display="Lawful Evil" />
+			<option value="NG" display="Neutral Good" />
+			<option value="NN" display="True Neutral" />
+			<option value="NE" display="Neutral Evil" />
+			<option value="CG" display="Chaotic Good" />
+			<option value="CN" display="Chaotic Neutral" />
+			<option value="CE" display="Chaotic Evil" />
+		</attribute>
+		<attribute name="Race" display-name="Race" value-type="option..." />
+		<attribute name="Class" display-name="Class" value-type="option..." />
+		<attribute name="Paragon" display-name="Paragon Path" value-type="string" />
+		<attribute name="Epic" display-name="Epic Destiny" value-type="string" />
+		<attribute name="XP" display-name="Experience Points" value-type="int" />
+		<attribute name="Size" display-name="Size" value-type="option" default-value='M'>
+			<option value='D' display="Diminutive" />
+			<option value='T' display="Tiny" />
+			<option value='S' display="Small" />
+			<option value='M' display="Medium" />
+			<option value='L' display="Large" />
+			<option value='G' display="Gigantic" />
+			<option value='C' display="Collosal" />
+		</attribute>
+		<attribute name="Age" display-name="Age" value-type="int" />
+		<attribute name="Gender" display-name="Gender" value-type="option..." />
+		<attribute name="Height" display-name="Height" value-type="string" />
+		<attribute name="Weight" display-name="Weight" value-type="string" />
+		<attribute name="Deity" display-name="Deity" value-type="string" />
+		<attribute name="Company" display-name="Adventuring Company" value-type="string" />
+		<attribute name="AC" display-name="Armor Class" value-type="int" />
+		<attribute name="Fort" display-name="Fortitude" value-type="int" />
+		<attribute name="Ref" display-name="Reflex" value-type="int" />
+		<attribute name="Will" display-name="Willpower" value-type="int" />
+		<attribute name="Init" display-name="Initiative" value-type="+int" />
+		<attribute name="Speed" display-name="Speed" value-type="int" />
+		<attribute name="AP" display-name="Action Pts." value-type="int" display-type="maxrange" />
+		<attribute name="MaxHP" display-name="Hit Points" value-type="int" display-type="maxrange" />
+		<attribute name="TempHP" display-name="Temp HP" value-type="int" />
+		<attribute name="Surges" display-name="Heal Surges" value-type="int" display-type="maxrange" />
+		<attribute name="SecondWind" display-name="2nd Wind" value-type="bool" />
+		<attribute name="DeathSave" display-name="Death Save" value-type="int" default-value="0" max-value="3" display-type="pipslider" print-value="false" />
+		<attribute name="SaveMods" display-name="Saving Throw Mods" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Resist" display-name="Resistances" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Conditions" display-name="Current Conditions and Effects" value-type="string" display-type="autosizetextbox" />
+		<attribute name="RaceFeatures" display-name="Race Features" value-type="string" list="true" print-lines="8" />
+		<attribute name="ClassFeatures" display-name="Class Features" value-type="string" list="true" print-lines="8" />
+		<attribute name="ParagonFeatures" display-name="Paragon Path Features" value-type="string" list="true" print-lines="8" />
+		<attribute name="EpicFeatures" display-name="Epic Destiny Features" value-type="string" list="true" print-lines="8" />
+		<attribute name="Languages" display-name="Languages Known" value-type="string" list="true" print-lines="3" />
+		<attribute name="Feats" display-name="Feats" value-type="string" list="true" print-lines="10" />
+		<attribute name="Skills" display-name="Skills" value-type="skill" list="true" labels="column" print-lines="26" />
+		<attribute name="Powers" display-name="Powers" 
+			value-type="magicitem|power"
+			add-label="Magic Item|Power" list="true" />
+		<attribute name="MagicItems" display-name="Magic Items" value-type="string" list="true" />
+		<attribute name="MIUsed" display-name="Daily Item Powers Used" value-type="int" max-value="3" display-type="pipslider" print-value="false" />
+		<attribute name="Rituals" display-name="Rituals" value-type="string" list="true" print-lines="10" />
+		<attribute name="Allies" display-name="Companions and Allies" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Equipment" display-name="Equipment" labels="prompt" print-lines="14"
+			value-type="weapon|string" 
+			add-label="Weapon or Implement|Other Item" list="true" />
+		<attribute name="Personality" display-name="Personality Traits" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Appearance" display-name="Mannerisms and Appearance" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Background" display-name="Character Background" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Wealth" display-name="Coins and Other Wealth" value-type="string" display-type="autosizetextbox" />
+		<attribute name="Notes" display-name="Session and Campaign Notes" value-type="string" display-type="autosizetextbox" />
+		<attribute name="DieRolls" display-name="Common Die Rolls" value-type="roll" list="true" />
+		<attribute name="Token" display-name="Token" value-type="token" />
+	</attributes>
+	
+	<character-types>
+		<character-type name="PC" display-name="PC" type-sort="PC" rank-sort="Level" 
+			preview="&lt;h1&gt;@{Name}&lt;/h1&gt;&lt;h2&gt;@{Race} @{Class} @{Level}&lt;/h2&gt;&lt;img src='/api/token/@{id}' /&gt;&lt;p&gt;@{Background}&lt;/p&gt;">
+			<!-- vitals -->
+			<attribute name="Player" />
+			<attribute name="Name" />
+			<attribute name="Level" />
+			<attribute name="Class" />
+			<attribute name="Paragon" />
+			<attribute name="Epic" />
+			<attribute name="XP" />
+			<attribute name="Race" />
+			<attribute name="Size" />
+			<attribute name="Age" />
+			<attribute name="Gender" />
+			<attribute name="Height" />
+			<attribute name="Weight" />
+			<attribute name="Align" />
+			<attribute name="Deity" />
+			<attribute name="Company" />
+			
+			<!-- ability scores -->
+			<attribute name="Str" />
+			<attribute name="Dex" />
+			<attribute name="Con" />
+			<attribute name="Int" />
+			<attribute name="Wis" />
+			<attribute name="Cha" />
+			
+			<!-- defenses -->
+			<attribute name="AC" />
+			<attribute name="Fort" />
+			<attribute name="Ref" />
+			<attribute name="Will" />
+			
+			<!-- other stats -->
+			<attribute name="Init" />
+			<attribute name="Speed" />
+			<attribute name="AP" />
+			<attribute name="SecondWind" />
+			<attribute name="MaxHP" />
+			<attribute name="CurHP" />
+			<attribute name="TempHP" />
+			<attribute name="Surges" />
+			<attribute name="DeathSave" />
+			<attribute name="SaveMods" />
+			<attribute name="Resist" />
+			<attribute name="Conditions" />
+			<attribute name="RaceFeatures" />
+			<attribute name="ClassFeatures" />
+			<attribute name="ParagonFeatures" />
+			<attribute name="EpicFeatures" />
+			<attribute name="Languages" />
+			
+			<!-- abilities -->
+			<attribute name="Feats" />
+			<attribute name="Skills" />
+			<attribute name="Powers" />
+			<attribute name="MagicItems" />
+			<attribute name="MIUsed" />
+			<attribute name="Rituals" />
+			<attribute name="Allies" />
+			
+			<!-- characteristics -->
+			<attribute name="Equipment" />
+			<attribute name="Personality" />
+			<attribute name="Appearance" />
+			<attribute name="Background" />
+			<attribute name="Wealth" />
+			<attribute name="Notes" />
+			
+			<attribute name="DieRolls" />
+			<attribute name="Token" />
+		</character-type>
+	</character-types>
+	
+	<character-sheets>
+		<character-sheet name="PC-FULL" type="PC" display-name="Full Sheet" />
+	</character-sheets>
+
+	<imports>
+		<import type="Character" subtype="PC" display-name="iPlay4e.com" transform="Systems/GSL40-PC-iplay4e.import">
+			<intro><![CDATA[
+<html>
+    <head><link rel="stylesheet" type="text/css" href="../Systems/core.css" /></head>
+    <body>
+        <p>If you are importing on iPad, browse to the Mobile view by selecting the "Open mobile view in new window" command from the "View" menu.</p>
+        <center><a href="http://iplay4e.com">Continue</a></center>
+    </body>
+</html>
+			]]></intro>
+        </import>
+		<import type="Character" subtype="PC" display-name=".DND4E File" transform="Systems/GSL40-PC-dnd4e.import">
+			<intro><![CDATA[
+<html>
+	<head><link rel="stylesheet" type="text/css" href="../Systems/core.css" /></head>
+	<body>
+		<p>Use the browser bar above to navigate to your .dnd4e file stored on a web server.  
+		Once the file contents are displayed, click the 'Import' button at the bottom of the screen.</p>
+		<p>Use these links to get started, or enter your own above:</p>
+		<ul>
+			<li><a href="http://docs.google.com">Google Docs</a></li>
+			<li><a href="http://www.mediafire.com">MediaFire</a></li>
+			<li><a href="http://www.box.net">Box.net</a></li>
+		</ul>
+	</body>
+</html>
+			]]></intro>
+		</import>
+		<import type="Character" subtype="PC" display-name="Myth-Weavers">
+			<intro><![CDATA[
+<html>
+	<head><link rel="stylesheet" type="text/css" href="../Systems/core.css" /></head>
+	<body>
+		<p>NOTE: Due to the way Myth-Weavers character data is stored, Power types (At-Will, Encounter Daily)
+		will not import correctly.  You will need to fix these yourself.</p>
+		<a href="http://myth-weavers.com">Continue</a>
+	</body>
+</html>
+			]]></intro>
+			<instructions>
+				<match attribute="Name"><![CDATA[title="Name" value="([^"]*)"]]></match>
+				<match attribute="Player"><![CDATA[title="Player" value="([^"]*)"]]></match>
+				<match attribute="Class"><![CDATA[title="Class" value="([^"]*)"]]></match>
+				<match attribute="Paragon"><![CDATA[title="Paragon" value="([^"]*)"]]></match>
+				<match attribute="Epic"><![CDATA[title="Epic" value="([^"]*)"]]></match>
+				<match attribute="Race"><![CDATA[title="Race" value="([^"]*)"]]></match>
+				<match attribute="Size"><![CDATA[title="Size" value="([^"]*)"]]></match>
+				<match attribute="Age"><![CDATA[title="Age" value="([^"]*)"]]></match>
+				<match attribute="Gender"><![CDATA[title="Gender" value="([^"]*)"]]></match>
+				<match attribute="Height"><![CDATA[title="Height" value="([^"]*)"]]></match>
+				<match attribute="Weight"><![CDATA[title="Weight" value="([^"]*)"]]></match>
+				<match attribute="Align"><![CDATA[title="Alignment" value="([^"]*)"]]></match>
+				<match attribute="Deity"><![CDATA[title="Deity" value="([^"]*)"]]></match>
+				<match attribute="Company"><![CDATA[title="Company" value="([^"]*)"]]></match>
+				<match attribute="XP"><![CDATA[title="XPCurrent" value="([^"]*)"]]></match>
+				<match attribute="Level"><![CDATA[title="Level" value="([^"]*)"]]></match>
+				<match attribute="Str"><![CDATA[title="Str" value="([^"]*)"]]></match>
+				<match attribute="Dex"><![CDATA[title="Dex" value="([^"]*)"]]></match>
+				<match attribute="Con"><![CDATA[title="Con" value="([^"]*)"]]></match>
+				<match attribute="Int"><![CDATA[title="Int" value="([^"]*)"]]></match>
+				<match attribute="Wis"><![CDATA[title="Wis" value="([^"]*)"]]></match>
+				<match attribute="Cha"><![CDATA[title="Cha" value="([^"]*)"]]></match>
+				
+				<match attribute="Init"><![CDATA[title="Init" value="([^"]*)"]]></match>
+				<match attribute="Speed"><![CDATA[title="Speed" value="([^"]*)"]]></match>
+				
+				<match attribute="Skills" children="__index__ bonus name attribute trained"><![CDATA[class="skillslot".*\n.*title="Skill([0-9][0-9])Mod" value="([^"]*)".*\n.*title="Skill.." value="([^"]*)".*\n.*title="Skill..Ab" value="([^"]*)".*\n.*name="Skill..Trained" ((?:checked="checked")?)]]></match>
+				<match attribute="AC"><![CDATA[title="AC" value="([^"]*)"]]></match>
+				<match attribute="Fort"><![CDATA[title="Fort" value="([^"]*)"]]></match>
+				<match attribute="Ref"><![CDATA[title="Reflex" value="([^"]*)"]]></match>
+				<match attribute="Will"><![CDATA[title="Will" value="([^"]*)"]]></match>
+
+				<match attribute="RaceFeatures" children="__index__ __value__"><![CDATA[title="RaceFeatures([0-9][0-9])" value="([^"]*)"]]></match>
+				<match attribute="ClassFeatures" children="__index__ __value__"><![CDATA[title="ClassFeatures([0-9][0-9])" value="([^"]*)"]]></match>
+				<match attribute="Equipment" children="__index__ __value__"><![CDATA[title="Equipment([0-9][0-9])" value="([^"]*)"]]></match>
+				
+				<match attribute="CurHP"><![CDATA[title="HPCurrent" value="([^"]*)"]]></match>
+				<match attribute="MaxHP"><![CDATA[title="HPMax" value="([^"]*)"]]></match>
+				<match attribute="CurSurges"><![CDATA[title="HealingSurgeUses" value="([^"]*)"]]></match>
+				<match attribute="Surges"><![CDATA[title="HealingSurgePerDay" value="([^"]*)"]]></match>
+
+				<match attribute="Conditions"><![CDATA[Conditional Modifiers.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				<match attribute="Languages" children="__index__ __value__"><![CDATA[title="Lang([0-9][0-9])" value="([^"]*)"]]></match>
+				
+				<!-- abilities -->
+				<match attribute="Feats" children="__index__ __value__"><![CDATA[title="Feat([0-9][0-9])" value="([^"]*)"]]></match>
+				<match attribute="Powers" children="__index__ name effect"><![CDATA[title="Power([0-9][0-9])" value="([^"]*)".*\n.*\n.*\n.*"d4p..desc[^>]*\>([^<]*)\<]]></match>
+				<match attribute="MagicItems" children="__index__ __value__"><![CDATA[title="MagicItems([0-9][0-9])" value="([^"]*)"]]></match>
+				<match attribute="Rituals" children="__index__ __value__"><![CDATA[title="Ritual([0-9][0-9])" value="([^"]*)"]]></match>
+				<match attribute="Allies"><![CDATA[Companions and Allies.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				
+				<!-- characteristics -->
+				<match attribute="Personality"><![CDATA[Personality Traits.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				<match attribute="Appearance"><![CDATA[Mannerisms and Appearance.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				<match attribute="Background"><![CDATA[Other Notes.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				<match attribute="Wealth"><![CDATA[Coins and Other Wealth.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+				<match attribute="Notes"><![CDATA[Campaign Notes.*\<textarea[^>]*\>([^<]*)\</textarea\>]]></match>
+			</instructions>
+		</import>
+	</imports>
+	
+	<encounter-elements>
+		<encounter-element name="encelem" display-name="Not sure what goes here" />
+	</encounter-elements>
+</ruleset>

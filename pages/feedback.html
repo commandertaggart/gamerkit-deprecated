@@ -1,0 +1,317 @@
+<style>
+#faq-check
+{ text-align: center; }
+#faq-check P
+{ text-align: left; }
+TABLE
+{
+	width: 100%;
+	padding: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+TD
+{
+	width: 50%;
+	margin: 0px;
+	border: 1px solid gray;
+}
+DT, THEAD TD
+{
+	font-weight: bold;
+	font-family: 'Default Label';
+}
+THEAD
+{
+	background-color: darkgray;
+	color: white;
+}
+DT
+{
+	margin-top: 10px;
+	border-top: 1px solid black;
+	cursor: pointer;
+}
+DD, TD
+{
+	font-family: 'Default Value';
+}
+DD
+{
+	display: none;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+TFOOT
+{
+	text-align: center;
+	background-color: darkgray;
+	color: white;
+}
+
+LABEL[name=email]
+{
+	margin-right: 10px;
+}
+
+INPUT[name=email],
+INPUT[name=about-specific]
+{
+	width: 250px;
+}
+
+INPUT[name=type],
+INPUT[name=about]
+{
+	margin-left: 10px;
+}
+
+TEXTAREA[name=description]
+{
+	width: 100%;
+	height: 200px;
+}
+
+@media screen and (max-width: 500px)
+{
+	.radiobutton
+	{
+		display: block;
+	}
+}
+</style>
+<h1 class='admin_page_title'>Feedback</h1>
+<h3 class='admin_page_subtitle'>Let us know how we're doing, what you want, and how things go:</h3>
+<div class='admin_page_body'>
+	<div id="faq-check" style="display: none;">
+		<h2>Please Note:</h2>
+<p>Before sending us your feedback, make sure you check the 
+<a href="javascript:showFeedbackPage('faq');">Frequently Asked Questions</a>.  
+In order to stay focused on awesome app development, we will generally not respond to 
+questions that are answered there.</p>
+		<a href="javascript:showFeedbackPage('faq');">Frequently Asked Questions</a><br />
+		<button onclick="javascript:showFeedbackPage('form')">I understand and have already checked the FAQ</button>
+	</div>
+	<div id="faq" style="display: none;">
+		<h2>Frequently Asked Questions</h2>
+		<dl>
+			<dt>I can't create a new character.  Why not?</dt>
+				<dd>Gamers' Toolkit 2.0 is currently in preview mode.  Creating new
+				characters is not yet implemented.  It will be soon, and when it is,
+				you will need to sign in to Facebook or use the mobile app to create
+				a new character.</dd>
+			<dt>What game systems are supported?</dt>
+				<dd>Because I have not familiarized myself with copyright laws yet, 
+				supported game systems are not always mentioned by name.  Here is a
+				table to help you pick the right package to support your game:
+					<table>
+						<thead>
+							<tr><td>If you play:</td><td>Get this package:</td></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Dungeons & Dragons 4th Edition</td>
+								<td>4th Edition Fantasy (included with the app)</td>
+							</tr>
+							<tr>
+								<td>Dungeons & Dragons 3rd & 3.5 Edition</td>
+								<td rowspan="3">OGL 3.5</td>
+							</tr>
+							<tr><td>Pathfider</td></tr>
+							<tr><td>Other OGL 3.5 games</td></tr>
+							<tr>
+								<td>Savage Worlds</td>
+								<td>Savage Worlds*</td>
+							</tr>
+							<tr>
+								<td>Hollow Earth Expedition</td>
+								<td>Hollow Earth Expedition*</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr><td colspan="2">* Official game support</td></tr>
+						</tfoot>
+					</table>
+				</dd>
+			<dt>I don't see my game in this list.  How do I play my game?</dt>
+				<dd>If it's not in that list, we don't support it yet.  Let us know
+				what game you want added by filling out the 
+				<a href="javascript:showFeedbackPage('form');">feedback form</a>.</dd>
+		</dl>
+		<button onclick="javascript:showFeedbackPage('form')">My question isn't answered here</button>
+	</div>
+	<form id="feedback-form" style="display: none;" action="javascript:void(0);" method="POST">
+		<label name="type">I have a:</label>
+		<span class="radiobutton"><input name="type" type="radio" value="question" checked>question</input></span>
+		<span class="radiobutton"><input name="type" type="radio" value="suggestion">suggestion/request</input></span>
+		<span class="radiobutton"><input name="type" type="radio" value="bug">bug/problem to report</input></span>
+		<span class="radiobutton"><input name="type" type="radio" value="comment">comment or other remark</input></span>
+		<br />
+		<label name="about">About:</label>
+		<span class="radiobutton"><input name="about" type="radio" value="app" checked>the app in general</input></span>
+		<span class="radiobutton"><input name="about" type="radio" value="system">a specific game system</input></span>
+		<br />
+		<label name="about-specific">More specifically about:</label>
+		<input name="about-specific" type="text" placeholder="Game name or app feature"></input>
+		<br />
+		<label name="email">You can reach me at this email address:</label>
+		<input name="email" type="text" placeholder="So we can respond"></input>
+		<br />
+		<label name="description">My comments, questions, etc.: 
+			(<a href="javascript:bugBestPractices()">the best way to report a bug</a>)</label>
+		<textarea name="description"></textarea>
+		<input type="hidden" name="data" value=""></input>
+		<input type="submit" value="Send"></input>
+		<input type="reset" value="Cancel"></input>
+		<div id="bug-best-practices" style="display: none;">
+<h3>The Best Way to Report a Bug</h3>
+<p>We can't fix the problems you are seeing if we can't get them to happen ourselves. To 
+help us recreate your problem, please include as much information as you can, including:</p>
+		<ul>
+			<li>A thorough description of the problem as it happens and what you 
+			expect should happen</li>
+			<li>Detailed steps to get it to happen again.</li>
+			<li>How often (percent of the time) it happens when you try to make it happen.</li>
+			<li>What browser are you using?  What device are you using?  Is your device
+			jailbroken?</li>
+		</ul>
+<p>The more information you give us, the easier it will be to track down and fix the problem.</p>
+<p>Thanks in advance.  -- The Management</p>
+		</div>
+	</form>
+	<div id="feedback-thanks" style="display: none;">
+<h2>Feedback Sent</h2>
+<p>Thank you for your input.  We will contact you with answers to your questions, or with questions
+of our own</p>
+<a href="javascript:showFeedbackPage('faq');">Return to F.A.Q.</a>
+	</div>
+	<div id="feedback-error" style="display: none;">
+<h2>Erorr</h2>
+<p>We were unable to post your feedback at this time.  Please check your internet connection and try again later.</p>
+<a href="javascript:showFeedbackPage('faq');">Return to F.A.Q.</a>
+	</div>
+</div>
+<script>
+
+
+var pages = [
+	{ n: "check", $: $("#faq-check") },
+	{ n: "faq", $: $("#faq") },
+	{ n: "form", $: $("#feedback-form") },
+	{ n: "thanks", $: $("#feedback-thanks") },
+	{ n: "error", $: $("#feedback-error") }
+];
+
+function showFeedbackPage(page)
+{
+	var p = null;
+	var i = 0;
+	window.__feedback_state.state = page;
+	function next()
+	{
+		if (i >= pages.length)
+		{
+			if (p != null)
+				{ pages[p].$.fadeIn(100); }
+			else
+				{ pages[0].$.fadeIn(100); }
+		}
+		else if (pages[i].n == page)
+		{
+			p = i++;
+			next();
+		}
+		else
+		{
+			pages[i].$.fadeOut(100, function fadeDone()
+			{
+				++i;
+				next();
+			});
+		}
+	}
+	next();
+}
+
+function bugBestPractices()
+{
+	$("#bug-best-practices").slideDown(250, function ()
+	{
+		$(".ContentPage#admin").scrollTop($("#bug-best-practices").offset().top);
+	});
+}
+
+if (typeof(window["__feedback_state"]) == "undefined")
+{
+	window.__feedback_state = {
+		state: "check",
+		values: {}
+	};
+}
+else if (window.__feedback_state.values)
+{
+	var form = $("#feedback-form");
+	for (var n in window.__feedback_state.values)
+	{
+		var input = form.find("INPUT[name=" + n + "],TEXTAREA[name=" + n + "]");
+		if (input.length > 1)
+		{
+			input.filter("[value=" + window.__feedback_state.values[n] + "]")
+				.get(0).checked = true;
+		}
+		else
+		{
+			input.val(window.__feedback_state.values[n]);
+		}
+	}
+}
+
+showFeedbackPage(window.__feedback_state.state || "check");
+
+$("DT").each(function setToggleQuestion()
+{
+	var node = this.nextSibling;
+	while (node && node.nodeName != "DD")
+	{ node = node.nextSibling; }
+	
+	if (node)
+	{
+		this.onclick = function ()
+		{
+			$(node).slideToggle(250);
+		};
+	}
+});
+
+
+var form = $("#feedback-form");
+
+form.find("INPUT,TEXTAREA").change(function onValueChanged()
+{
+	if (this.type == "radio" && this.checked == false)
+	{ return; }
+	
+	window.__feedback_state.values[this.name] = this.value;
+});
+
+form.submit(function submitForm()
+{
+	$.ajax({
+		type: "POST",
+		data: form.serializeArray(),
+		url: "/api/feedback",
+		success: function feedbackSuccess()
+		{
+			showFeedbackPage("thanks");
+		},
+		error: function feedbackError()
+		{
+			showFeedbackPage("error");
+		}
+	})
+});
+</script>
+
+

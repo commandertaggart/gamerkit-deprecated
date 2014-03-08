@@ -1,0 +1,88 @@
+<sheet system="SVG10" type="PC">
+	<block id="token" priority="placed">
+		<attribute name="Token" />
+	</block>
+	<block id="vitals" priority="placed">
+		<attribute name="Token" />
+		<attribute name="Name" />
+		<attribute name="Player" />
+		<attribute name="Style" />
+		<attribute name="Health" />
+		<attribute name="Archetype" />
+		<attribute name="Motivation" />
+	</block>
+	<block id="priattr" priority="placed">
+		<attribute name="Body" />
+		<attribute name="Dexterity" />
+		<attribute name="Strength" />
+		<attribute name="Charisma" />
+		<attribute name="Intelligence" />
+		<attribute name="Willpower" />
+	</block>
+	<block id="secattr" priority="placed">
+		<attribute name="Size" />
+		<attribute name="Initiative" />
+		<attribute name="Move" />
+		<attribute name="Defense" />
+		<attribute name="Perception" />
+		<attribute name="Stun" />
+	</block>
+	<block id="skills" priority="required">
+		<attribute name="Skills" />
+	</block>
+	<block id="weapons" priority="required">
+		<attribute name="Weapons" />
+	</block>
+	<block id="misc" priority="optional">
+		<attribute name="Player" />
+		<attribute name="Campaign" />
+		<attribute name="Experience" />
+		<attribute name="Age" />
+		<attribute name="Gender" />
+		<attribute name="Height" />
+		<attribute name="Eyes" />
+		<attribute name="Hair" />
+		<attribute name="Skin" />
+	</block>
+	<block id="stuff" priority="required">
+		<attribute name="Wealth" />
+		<attribute name="Equipment" />
+		<attribute name="Languages" />
+	</block>
+	<block id="background" priority="required">
+		<attribute name="Background" />
+	</block>
+	<block id="notes" priority="required">
+		<attribute name="Notes" />
+	</block>
+	<block id="dice" priority="optional">
+		<attribute name="DieRolls" />
+	</block>
+	
+	<layout type="display" name="default" display-name="Default">
+		<section id='top_bar'>
+			<block id="vitals" />
+		</section>
+		<section id='main_body'>
+			<tabs id='main_tabs'>
+				<section id="abilities" display="Abilities" column-bias='0'>
+					<block id="priattr" />
+					<block id="secattr" />
+					<block id="skills" />
+					<block id="weapons" />
+				</section>
+				<section id="notes" display="Notes" column-bias='0'>
+					<block id="background" />
+					<block id="notes" />
+				</section>
+				<section id="stuff" display="Stuff" column-bias='1'>
+					<block id="misc" />
+					<block id="stuff" />
+				</section>
+				<section id="dice" display="Dice" column-bias='1'>
+					<block id="dice" />
+				</section>
+			</tabs>
+		</section>
+	</layout>
+</sheet>

@@ -1,0 +1,132 @@
+<character system="HEX10" display-name="Field Biologist" type="PC">
+	<attribute name="Name">Field Biologist</attribute>
+	<attribute name="Player"></attribute>
+	<attribute name="Archetype">Scientist</attribute>
+	<attribute name="Motivation">Truth</attribute>
+	<attribute name="Body">3</attribute>
+	<attribute name="Dexterity">2</attribute>
+	<attribute name="Strength">3</attribute>
+	<attribute name="Charisma">2</attribute>
+	<attribute name="Intelligence">3</attribute>
+	<attribute name="Willpower">2</attribute>
+	<attribute name="Size">0</attribute>
+	<attribute name="Style">3</attribute>
+	<attribute name="Health">5</attribute>
+	<attribute name="Skills">
+		<item>
+			<name>Animal Handling</name>
+			<attribute>Charisma</attribute>
+			<ranks>4</ranks>
+		</item>
+		<item>
+			<name>Athletics</name>
+			<attribute>Strength</attribute>
+			<ranks>3</ranks>
+		</item>
+		<item>
+			<name>Empathy</name>
+			<attribute>Intelligence</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Medicine</name>
+			<attribute>Intelligence</attribute>
+			<ranks>2</ranks>
+		</item>
+		<item>
+			<name>Biology (Science)</name>
+			<attribute>Intelligence</attribute>
+			<ranks>5</ranks>
+		</item>
+		<item>
+			<name>Survival</name>
+			<attribute>Intelligence</attribute>
+			<ranks>2</ranks>
+		</item>
+	</attribute>
+	<attribute name="Specializations">
+		<item>
+			<name>Body Language</name>
+			<skill>Empathy</skill>
+			<ranks>1</ranks>
+		</item>
+		<item>
+			<name>Veterinary</name>
+			<skill>Medicine</skill>
+			<ranks>1</ranks>
+		</item>
+		<item>
+			<name>Tracking</name>
+			<skill>Survival</skill>
+			<ranks>1</ranks>
+		</item>
+	</attribute>
+	<attribute name="Talents">
+		<item>Animal Affinity</item>
+	</attribute>
+	<attribute name="Resources">
+	</attribute>
+	<attribute name="Flaws">
+		<item>Shy</item>
+	</attribute>
+	<attribute name="Weapons">
+		<item>
+			<name>Winchester rifle</name>
+			<lethal>true</lethal>
+			<damage>3</damage>
+			<modifier>0</modifier>
+			<attack>3</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+		<item>
+			<name>Knife</name>
+			<lethal>true</lethal>
+			<damage>1</damage>
+			<modifier>0</modifier>
+			<attack>2</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+		<item>
+			<name>Punch</name>
+			<lethal>false</lethal>
+			<damage>0</damage>
+			<modifier>0</modifier>
+			<attack>1</attack>
+			<range></range>
+			<capacity></capacity>
+			<rate></rate>
+			<speed></speed>
+			<weight></weight>
+			<ammo></ammo>
+			<notes></notes>
+		</item>
+	</attribute>
+	<attribute name="Equipment">
+	</attribute>
+	<attribute name="Wealth"></attribute>
+	<attribute name="Age"></attribute>
+	<attribute name="Gender"></attribute>
+	<attribute name="Height"></attribute>
+	<attribute name="Eyes"></attribute>
+	<attribute name="Hair"></attribute>
+	<attribute name="Skin"></attribute>
+	<attribute name="Languages">
+	</attribute>
+	<attribute name="Background"></attribute>
+	<attribute name="Notes"></attribute>
+	<attribute name="Campaign"></attribute>
+	<attribute name="Experience">0</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:HEX10-Scientist]]></attribute>
+</character>

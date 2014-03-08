@@ -1,0 +1,114 @@
+<character system="SVG10" type="PC" display-name="Doc Gold">
+	<attribute name="Name"><![CDATA[Doc Gold]]></attribute>
+	<attribute name="Player"><![CDATA[]]></attribute>
+	<attribute name="Origin"><![CDATA[]]></attribute>
+	<attribute name="Rating"><![CDATA[Seasoned (25 XP)]]></attribute>
+	<attribute name="Destination"><![CDATA[]]></attribute>
+	<attribute name="Agility"><![CDATA[6]]></attribute>
+	<attribute name="Smarts"><![CDATA[10]]></attribute>
+	<attribute name="Strength"><![CDATA[6]]></attribute>
+	<attribute name="Spirit"><![CDATA[6]]></attribute>
+	<attribute name="Vigor"><![CDATA[6]]></attribute>
+	<attribute name="Charisma"><![CDATA[0]]></attribute>
+	<attribute name="Pace"><![CDATA[6]]></attribute>
+	<attribute name="Parry"><![CDATA[4]]></attribute>
+	<attribute name="Toughness"><![CDATA[5]]></attribute>
+	<attribute name="Fatigue"><![CDATA[]]></attribute>
+	<attribute name="Wounds"><![CDATA[]]></attribute>
+	<attribute name="PowerPoints"><![CDATA[20]]></attribute>
+	<attribute name="Bennies"><![CDATA[3]]></attribute>
+	<attribute name="Hindrances">
+		<item><![CDATA[Curious]]></item>
+		<item><![CDATA[Doubting Thomas]]></item>
+		<item><![CDATA[Stubborn]]></item>
+	</attribute>
+	<attribute name="Edges">
+		<item><![CDATA[Arcane Background (Weird Science)]]></item>
+		<item><![CDATA[New Power (bolt)]]></item>
+		<item><![CDATA[Power Points x2]]></item>
+	</attribute>
+	<attribute name="Equipment">
+		<item><![CDATA[Doc Gold's Amazing Wonder Tonic]]></item>
+		<item><![CDATA[Electromagnetic Dischargement Apparatus]]></item>
+		<item><![CDATA[Tool Kit]]></item>
+	</attribute>
+	<attribute name="ArmorHead"><![CDATA[]]></attribute>
+	<attribute name="ArmorTorso"><![CDATA[]]></attribute>
+	<attribute name="ArmorArms"><![CDATA[]]></attribute>
+	<attribute name="ArmorLegs"><![CDATA[]]></attribute>
+	<attribute name="WTCarried"><![CDATA[]]></attribute>
+	<attribute name="WTLimit"><![CDATA[]]></attribute>
+	<attribute name="WTPenalty"><![CDATA[]]></attribute>
+	<attribute name="Skills">
+		<item>
+			<name><![CDATA[Fighting]]></name>
+			<rank><![CDATA[4]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Guts]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Healing]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Investigation]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Knowledge (Science)]]></name>
+			<rank><![CDATA[10]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Notice]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Repair]]></name>
+			<rank><![CDATA[8]]></rank>
+		</item>
+		<item>
+			<name><![CDATA[Shooting]]></name>
+			<rank><![CDATA[6]]></rank>
+		</item>
+	</attribute>
+	<attribute name="Powers">
+		<item>
+			<name><![CDATA[Bolt]]></name>
+			<trapping><![CDATA[Electromagnetic Dischargement Apparatus]]></trapping>
+			<cost><![CDATA[1-6]]></cost>
+			<range><![CDATA[12/24/48]]></range>
+			<effect><![CDATA[Cost 1 per bolt for 2d6, 2 per bolt for 3d6, 3 bolts max.]]></effect>
+			<duration><![CDATA[Instant]]></duration>
+		</item>
+		<item>
+			<name><![CDATA[Heal]]></name>
+			<trapping><![CDATA[Doc Gold's Amazing Wonder Tonic]]></trapping>
+			<cost><![CDATA[3]]></cost>
+			<range><![CDATA[Touch]]></range>
+			<effect><![CDATA[Roll is -1 per wound of the target.  Success heals 1 wound, raise heals 2.
+Can cure poison or disease if used within 10 minutes of the event.]]></effect>
+			<duration><![CDATA[Instant]]></duration>
+		</item>
+	</attribute>
+	<attribute name="Weapons"><![CDATA[
+	]]></attribute>
+	<attribute name="Injuries"><![CDATA[]]></attribute>
+	<attribute name="Wealth"><![CDATA[]]></attribute>
+	<attribute name="Description"><![CDATA[]]></attribute>
+	<attribute name="Personality"><![CDATA[]]></attribute>
+	<attribute name="Background"><![CDATA[Buck contacted Doc Gold a few years back when he was looking for a suit that could venture into the depths (to find the lost city of Atlantis). The English inventor hasn’t been able to perfect that invention yet, but he’s working on it. In the meantime, the two have struck up a working relationship. Doc Gold accompanies Buck on some of his expeditions and whips up his miraculous Wonder Tonic (healing salves), and gets a share of the loot to further fund his research. Doc Gold is anxious to field test his latest gizmo—the Electromagnetic Dischargement Apparatus. Buck annoys the hell out of the scientist by constantly calling it a “lightning gun.”]]></attribute>
+	<attribute name="Notes"><![CDATA[Languages: English, German, Latin, Mayan, Tibetan]]></attribute>
+	<attribute name="DieRolls">
+		<item>
+			<name><![CDATA[Bolt]]></name>
+			<roll><![CDATA[2da6]]></roll>
+		</item>
+		<item>
+			<name><![CDATA[Charged Bolt]]></name>
+			<roll><![CDATA[3da6]]></roll>
+		</item>
+	</attribute>
+	<attribute name="Token"><![CDATA[contentId,token:SVG10-Doc]]></attribute>
+</character>

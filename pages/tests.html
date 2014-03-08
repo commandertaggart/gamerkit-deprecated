@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Test: Dice</title>
+		<script data-main="js/tests.js" src="/js/util/require.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style/dice.css" />
+		<style>
+.test
+{
+	font-family: typewriter, monospace;
+	white-space: pre-wrap;
+	font-size: 8pt;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+}
+.test.collapsed
+{
+	overflow: hidden;
+	height: 16px;
+}
+
+.test-title
+{
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+.test.succeeded
+{ background-color: rgba(128, 255, 128, 1); }
+.test.failed
+{ background-color: rgba(255, 128, 128, 1); }
+
+.test .test-expected,
+.test .test-actual
+{
+	display: inline-block;
+	width: 47%;
+	margin-right: 1%;
+	vertical-align: top;
+}
+
+.test.succeeded .test-expected,
+.test.succeeded .test-actual
+{ background-color: rgba(200, 255, 200, 1); }
+.test.failed .test-expected,
+.test.failed .test-actual
+{ background-color: rgba(255, 200, 200, 1); }
+
+.test .result-line.mismatch
+{
+	background-color: rgba(255, 0, 0, 1);
+}
+
+.console-output
+{
+	border: 1px solid black;
+	background-color: white;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+		</style>
+	</head>
+	<body>
+		<div class='test-output'></div>
+	</body>
+</html>

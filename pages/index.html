@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Gamers' Toolkit - 2.0</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no" />  		<script data-main="js/app.js" src="/js/util/require.js"></script>
+		<script type="text/javascript">
+function toggleSidebar()
+{
+	require(['jquery'], function ($)
+	{
+		var node = document.getElementById('sidebar-mover');
+		if (node.style.left == "0px")
+		{
+			hideSidebar();
+		}
+		else
+		{
+			showSidebar();
+		}
+	});
+}
+
+function hideSidebar()
+{
+	require(['jquery'], function ($)
+	{
+		var node = document.getElementById('sidebar-mover');
+		var cover = document.getElementById('body_cover');
+		cover.style.right = "100%";
+		cover.style.bottom = "100%";
+		$(node).animate({ left: '-300px' }, 250);
+	});
+}
+
+function showSidebar()
+{
+	require(['jquery'], function ($)
+	{
+		var node = document.getElementById('sidebar-mover');
+		var cover = document.getElementById('body_cover');
+		cover.style.right = "0px";
+		cover.style.bottom = "0px";
+		$(node).animate({ left: '0px' }, 250);
+	});
+}
+
+function showContent(id)
+{
+	require(["content/ContentManager"], function (ContentManager)
+	{
+		ContentManager.showContent('main', id);
+	});
+}
+
+		</script>
+		<link rel="stylesheet" type="text.css" href="/style/toolkit.css" />
+	</head>
+	<body class='toolkit2 app_page'>
+		<div class='app_header'>
+			<a class='sidebar_handle' href='javascript:void(0);' onclick='javascript:toggleSidebar();'></a>
+			<div class='app_title'>Gamers' Toolkit</div>
+			<div class='company_logo'></div>
+		</div>
+		<div id='body_cover' onclick='javascript:toggleSidebar();' style='right:100%;bottom:100%;'></div>
+		<div class='app_body'>
+		</div>
+	</body>
+</html>
